@@ -2,23 +2,44 @@
 id: index
 slug: /
 title: Welcome to GrideX
+hide_title: true
 description: Public guide to access, organisations and rights in GrideX.
 ---
 
-# Clear access is the start of energy management
+import DocsHero from '@site/src/components/DocsHero';
+import GuideCard from '@site/src/components/GuideCard';
+import GuideNotice from '@site/src/components/GuideNotice';
 
-GrideX helps organisations manage energy Sites. This guide explains verified
-access, invitation and permission workflows. The [portal demo](https://gridex.tech/demo/)
-requires no sign-in and contains sample data, not customer measurements.
+<DocsHero
+  eyebrow="GRIDEX ENERGY OS · GUIDE"
+  title="Energy in control. Access made clear."
+  description="Verified steps for signing in, organisations, permissions and using GrideX. Start in the right place without mixing demo and live data."
+  imageAlt="Illustrative image of solar panels and energy infrastructure"
+  primaryHref="./organisations-and-access/"
+  primaryLabel="How to get access"
+  secondaryHref="https://gridex.tech/demo/"
+  secondaryLabel="Explore the demo"
+/>
 
-## Live access requires an invitation
+<GuideNotice label="The demo is open; live access needs an invitation">
+  <p>The demo uses sample values, not measurements from customer Sites. A real account requires an invitation from an administrator.</p>
+</GuideNotice>
 
-You cannot create an administrator account on your own. The platform
-administrator invites the first administrator of a new organisation. That
-person can then invite colleagues within the organisation.
+## Where should you start?
 
-Start with [Organisations, invitations and rights](./organisations-and-access.md).
-If you have no invitation, contact your organisation administrator.
+<p className="gridex-guide-intro">Choose a topic for your next step. We only publish guidance that has been checked against the live portal.</p>
 
-Some guides are [still being prepared](./coming-soon.md). Unverified features
-are not presented as complete.
+<div className="gridex-guide-grid">
+  <GuideCard number="01" label="ACCESS" title="Organisations and invitations" description="Who invites you, how to accept and when permissions become active." href="./organisations-and-access/" action="Open the guide" />
+  <GuideCard number="02" label="PORTAL" title="Sign in and first steps" description="Start at the secure sign-in and see what happens after accepting an invitation." href="./organisations-and-access/" action="See the steps" />
+  <GuideCard number="03" label="COMING NEXT" title="More guides" description="Other sections are being written and verified. Unconfirmed features are not shown as finished." href="./coming-soon/" action="View status" pending />
+</div>
+
+## Who is this guide for?
+
+GrideX serves owners, operators and teams managing energy Sites. If you already
+work in an organisation, ask its administrator for an invitation. If you are
+the first person from a new organisation, contact the GrideX team. There is
+no self-service administrator registration.
+
+The photograph above is **illustrative**, not a real customer Site.

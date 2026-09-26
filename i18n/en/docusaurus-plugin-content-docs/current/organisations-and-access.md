@@ -2,14 +2,28 @@
 id: organisations-and-access
 slug: /organisations-and-access/
 title: Organisations, invitations and rights
+hide_title: true
 description: Who can invite, how invitations are accepted and how Site access is granted.
 ---
 
-# Organisations, invitations and rights
+import DocsHero from '@site/src/components/DocsHero';
+import GuideNotice from '@site/src/components/GuideNotice';
 
-Live GrideX access is **invitation-only**. The anonymous demo contains sample
-values, not customer Site data. The Sign in button does not self-register an
-account or grant administrator permissions.
+<DocsHero
+  compact
+  eyebrow="GRIDEX · ACCESS AND ORGANISATIONS"
+  title="Organisations, invitations and rights"
+  description="A clear path from the first invitation to the right permissions for each person and Site."
+  imageAlt="Illustrative image of solar panels and energy infrastructure"
+  primaryHref="#steps-for-the-recipient"
+  primaryLabel="See the steps"
+  secondaryHref="https://gridex.tech/"
+  secondaryLabel="Open the portal"
+/>
+
+<GuideNotice label="Live access is by invitation only">
+  <p>The demo is open, but it contains sample values. Sign in does not create an account or grant permissions for customer Sites.</p>
+</GuideNotice>
 
 ## Who sends the invitation?
 
@@ -23,14 +37,16 @@ GrideX team.
 
 ## Steps for the recipient
 
-1. Open the email and verify your address.
-2. Set your password only on the secure sign-in screen. Never share it.
-3. Sign in to the organisation named in the invitation.
-4. Accept the pending invitation in Profile.
+<div className="gridex-step-grid">
+  <div className="gridex-step"><span>01</span><strong>Open the email</strong><p>Verify your address using the received link.</p></div>
+  <div className="gridex-step"><span>02</span><strong>Set a password</strong><p>Do this only on the secure sign-in screen.</p></div>
+  <div className="gridex-step"><span>03</span><strong>Sign in</strong><p>Use the organisation named in your invitation.</p></div>
+  <div className="gridex-step"><span>04</span><strong>Accept access</strong><p>Open Profile and confirm the pending invitation.</p></div>
+</div>
 
-Sending an invitation **does not automatically grant access**. If a link
-expired or was revoked, request another invitation rather than creating a
-second account as a workaround.
+<GuideNotice label="Never share your password" tone="amber">
+  <p>Sending an invitation <strong>does not automatically grant access</strong>. If the link expired or was revoked, request another invitation rather than creating a second account.</p>
+</GuideNotice>
 
 ## Roles and Sites
 
@@ -56,4 +72,5 @@ email. Permissions activate only after acceptance and verification. First
 real customer delivery and acceptance have **not yet been verified end to
 end**; do not confuse a sent email with an activated organisation.
 
-Content last reviewed: 26 September 2026.
+The photograph is illustrative, not a customer Site. Content last reviewed:
+27 September 2026.

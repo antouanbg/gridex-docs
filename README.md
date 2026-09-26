@@ -13,6 +13,17 @@ the `build/` directory and Docker retains the old bind mount, resulting in 404
 until the docs service is recreated. The script rebuilds, recreates only the
 docs service and checks both locales through local HTTPS.
 
+The public-facing design follows the GrideX portal's deep green, lime accent,
+card and rounded-control language. `docusaurus.config.ts`, `src/components/`
+and `src/theme/` contain typed configuration, content and theme components;
+run `npm run typecheck` before publication. The solar-site hero image is an
+original generated illustration, **not a photograph of a customer Site**.
+The final prompt was: “an original editorial photograph of a modern solar
+energy site with panels, a distant control building, deep forest-green and
+sage palette, early morning light, negative space for a heading, no people,
+logos, text or watermark.” It was generated with the built-in image tool and
+saved as `static/img/solar-hero.jpg`.
+
 The proxy uses a separate trusted certificate for `doc.gridex.tech`; existing
 API, auth and Manager TLS routes remain unchanged. `docs/coming-soon.md` is the
 honest destination for sections whose user documentation has not been verified

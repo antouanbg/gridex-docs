@@ -5,6 +5,7 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$root"
 npm ci
+npm run typecheck
 npm run build
 
 # Docusaurus replaces build/ on each build. The running container retains its

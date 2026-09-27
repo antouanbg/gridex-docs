@@ -10,7 +10,9 @@ acceptance, and the warning not to retry blindly after an ambiguous send.
 The first real customer invitation and acceptance remain unverified. The
 approved visual design was unchanged. `sh scripts/deploy-local.sh` passed
 TypeScript, both locale builds, local HTTPS and CSS/JavaScript MIME checks;
-the docs container was recreated. Source commit/publication follows.
+the docs container was recreated. Source was published on `main` as
+`c26c676`. An external request from this Mac timed out; the local HTTPS
+proxy passed, so external rendering for this revision remains unverified.
 
 ## 2026-09-27 — public source repository
 

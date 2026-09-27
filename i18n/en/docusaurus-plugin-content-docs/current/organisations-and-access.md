@@ -63,13 +63,20 @@ session; the email alone does not activate access.
 <div className="gridex-step-grid">
   <div className="gridex-step"><span>01</span><strong>Open the email</strong><p>Verify your address using the received link.</p></div>
   <div className="gridex-step"><span>02</span><strong>Set a password</strong><p>Do this only on the secure sign-in screen.</p></div>
-  <div className="gridex-step"><span>03</span><strong>Sign in</strong><p>Use the organisation named in your invitation.</p></div>
+  <div className="gridex-step"><span>03</span><strong>Sign in</strong><p>Choose Sign in at gridex.tech, enter the invited email and the portal will route you to the right organisation.</p></div>
   <div className="gridex-step"><span>04</span><strong>Access confirmed</strong><p>For a first administrator, the portal completes the invitation after sign-in. An invited colleague still accepts in Profile.</p></div>
 </div>
 
 <GuideNotice label="Never share your password" tone="amber">
   <p>The email alone <strong>does not grant access</strong>. A first administrator does not press a second button: after verified email, password setup and sign-in, the backend checks the invitation and rights. On failure access remains pending. If the link expired or was revoked, request another invitation rather than creating a second account.</p>
 </GuideNotice>
+
+Generic sign-in asks only for an email first. If that address was invited to
+multiple organisations, choose the one you want. Enter the password **only**
+on the secure Keycloak screen, not in GrideX. The portal does not confirm
+whether an account exists for an address without a valid invitation. If sign-in
+fails, check the invited email and organisation: a wrong realm can look like
+an incorrect username or password.
 
 ## Roles and Sites
 

@@ -69,3 +69,13 @@ the owner has now also accepted the corrected visual revision from outside.
 Remaining: publish additional guide topics only after their related portal
 screens and permissions are verified. The certificate remains manually
 renewed; expiry and procedure are in README.
+# Email-first sign-in help / Вход по имейл — 2026-09-28
+
+Потвърденото решение за общия вход е описано двуезично на страницата
+„Организации, покани и права“: имейл от поканата → правилен Keycloak realm →
+парола само там. При няколко организации има избор. Това не заменя проверките
+за членство/Обекти и не обявява още непубликуван frontend за продукционен.
+
+EN: The BG/EN access guide now documents email-first realm routing and
+Keycloak-only passwords. Publish together with the frontend/backend change;
+do not claim a live rollout from this docs commit alone.

@@ -64,11 +64,11 @@ session; the email alone does not activate access.
   <div className="gridex-step"><span>01</span><strong>Open the email</strong><p>Verify your address using the received link.</p></div>
   <div className="gridex-step"><span>02</span><strong>Set a password</strong><p>Do this only on the secure sign-in screen.</p></div>
   <div className="gridex-step"><span>03</span><strong>Sign in</strong><p>Use the organisation named in your invitation.</p></div>
-  <div className="gridex-step"><span>04</span><strong>Accept access</strong><p>Open Profile and confirm the pending invitation.</p></div>
+  <div className="gridex-step"><span>04</span><strong>Access confirmed</strong><p>For a first administrator, the portal completes the invitation after sign-in. An invited colleague still accepts in Profile.</p></div>
 </div>
 
 <GuideNotice label="Never share your password" tone="amber">
-  <p>Sending an invitation <strong>does not automatically grant access</strong>. If the link expired or was revoked, request another invitation rather than creating a second account.</p>
+  <p>The email alone <strong>does not grant access</strong>. A first administrator does not press a second button: after verified email, password setup and sign-in, the backend checks the invitation and rights. On failure access remains pending. If the link expired or was revoked, request another invitation rather than creating a second account.</p>
 </GuideNotice>
 
 ## Roles and Sites
@@ -89,9 +89,10 @@ administrator role.
 
 ## Status of the first live test
 
-Sending, acceptance and exact permission scope for the first real customer
-have **not yet been verified end to end**. Do not confuse confirmed email
-dispatch with active access.
+The owner reports that the first customer received the email and signed in.
+Automatic invitation completion and tenant isolation have **not yet been
+verified on the published portal**. Do not confuse email dispatch or sign-in
+with proven active access.
 
 The photograph is illustrative, not a customer Site. Content last reviewed:
 27 September 2026.

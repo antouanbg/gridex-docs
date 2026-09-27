@@ -87,6 +87,33 @@ explicit: membership without a Site grant does not expose another customer's
 data. The current member invitation flow cannot delegate the organisation
 administrator role.
 
+## Sites, devices and commissioning {#sites-and-devices}
+
+1. **Only an organisation administrator creates Sites** in GrideX. Each Site
+   belongs to that organisation's separate OpenRemote realm. The platform
+   administrator can see users and rights across organisations; that does not
+   move customer devices between them.
+2. The administrator grants Site access to invited and approved members.
+   They see only explicitly permitted Sites. A member with the **Integrator**
+   role, as well as the organisation administrator, can prepare device settings.
+   A Viewer only reads them.
+3. Under **Sites → Devices**, choose only confirmed GrideX hardware:
+   **ROCK Pi E** as controller/backend link and **OLIMEX ESP32-EVB** as
+   communication node. Define at most two roles and a communication peer per
+   device. Selection and draft settings neither send commands nor prove
+   connectivity. External protocol references are not GrideX production drivers.
+4. **Only the organisation administrator commissions and activates equipment
+   for now.** Ownership and OpenRemote links, configuration, ROCK Pi
+   acknowledgement and real heartbeats must be checked first. ESP32 is
+   configured through ROCK Pi; battery commands remain locked until separately
+   approved commissioning.
+
+**Current status:** already registered ROCK Pi/ESP32 units can be viewed and
+their roles drafted. Self-service creation of a new customer Site or device
+in the portal is **not active yet**. Do not bypass this through OpenRemote
+Manager or a local database; the form will be released after tenant-aware
+backend provisioning and acceptance testing.
+
 ## Status of the first live test
 
 The owner reports that the first customer received the email and signed in.

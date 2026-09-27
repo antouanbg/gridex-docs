@@ -6,6 +6,7 @@ npm run build`. The static `build/` output is served by a read-only container
 on the existing private Docker ingress network; only the existing HTTPS proxy
 may expose it publicly. Do not publish private runbooks, credentials, live
 device identifiers or infrastructure addresses in this repository.
+The source repository is `https://github.com/antouanbg/gridex-docs`.
 
 For subsequent content deployments run `sh scripts/deploy-local.sh` on the Mac.
 Do not run `npm run build` alone against the live container: Docusaurus replaces

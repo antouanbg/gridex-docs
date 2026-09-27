@@ -1,5 +1,11 @@
 # GrideX documentation handoff
 
+## 2026-09-27 — public source repository
+
+The standalone Docusaurus source and its local Git history were published to
+the public `antouanbg/gridex-docs` repository on `main`. The owner confirmed
+the corrected public mobile rendering and approved the current design.
+
 ## 2026-09-27 — approved design and ongoing publication rule
 
 The owner confirmed the corrected public page renders properly and approved
@@ -23,8 +29,7 @@ After redeployment, the local production HTTPS proxy returned 200 with
 `text/css`, `application/javascript`, and `image/jpeg` for the expected assets;
 a 390px Chromium session through that proxy rendered the correct H1, loaded
 the hero image, applied the body font, and logged no failed HTTP responses.
-The owner should refresh the external mobile page to confirm the correction
-from outside the LAN.
+The owner subsequently confirmed the external mobile page renders correctly.
 
 ## 2026-09-27 — portal-aligned redesign
 
@@ -45,8 +50,7 @@ Both locale-specific home → guide → steps links worked in Chromium.
 proxy, BG and EN guide pages returned 200 with trusted TLS, the hero image
 returned 200, and the API's unauthenticated `/api/v1/me` still returned 401.
 The owner previously confirmed the public docs address works from outside;
-external browser acceptance of this *new visual revision* remains. The docs
-Git repository currently has no remote.
+the owner has now also accepted the corrected visual revision from outside.
 
 Remaining: publish additional guide topics only after their related portal
 screens and permissions are verified. The certificate remains manually

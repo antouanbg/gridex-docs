@@ -98,7 +98,7 @@ The photograph is illustrative, not a customer Site. Content last reviewed:
 
 ## Suspending and restoring an approved organisation
 
-Available in the super-admin panel. Access controls were verified with synthetic organisations; the first real customer suspension and its email delivery remain unverified. This is separate from resending any onboarding invitation.
+Prepared for publication; the controls are not yet available in the live portal. Access controls were verified with synthetic organisations; the first real customer suspension and its email delivery remain unverified. This is separate from resending any onboarding invitation.
 
 Only the verified super administrator can use **Customers & contracts → Users & invitations → New organisation → Approved organisations**. The pilot organisation is protected and is not listed. A recent sign-in is required for changes.
 

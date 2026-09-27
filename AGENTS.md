@@ -1,5 +1,14 @@
 # GrideX public documentation rules
 
+- Before documenting or publishing a new feature, control, role, device choice
+  or automatic workflow, verify the owner's exact approval. If it is not
+  explicitly approved, ask a concrete question and wait for confirmation;
+  do not turn an assistant suggestion into product behavior. Device selection
+  belongs in GrideX frontend and authoritative inventory in OpenRemote.
+- Преди описание или публикуване на нова функция, контрола, роля, избор на
+  устройство или автоматичен процес провери изричното одобрение на собственика.
+  Ако липсва, задай конкретен въпрос и изчакай потвърждение. Изборът е в
+  GrideX frontend, а единственият основен инвентар е OpenRemote.
 - Communicate with the owner in Bulgarian. Keep BG and EN guide content in
   parity; do not publish one locale with stale or contradictory instructions.
 - This is the public help site for `gridex.tech`, not an independent product.

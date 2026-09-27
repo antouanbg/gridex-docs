@@ -15,6 +15,8 @@
 - For every change run `npm run typecheck` and `npm run build`; verify BG/EN
   routes and mobile/desktop layout. Deploy with `sh scripts/deploy-local.sh`,
   never with a bare build, because the live read-only Docker mount must be
-  recreated after Docusaurus replaces `build/`.
+  recreated after Docusaurus replaces `build/`. Verify that the live proxy
+  serves CSS as `text/css` and JavaScript as a JavaScript MIME type; HTML 200
+  alone does not prove the site renders with `nosniff` enabled.
 - The docs certificate was issued manually with DNS-01 and is not on automatic
   renewal. See README for its expiration and the required follow-up.

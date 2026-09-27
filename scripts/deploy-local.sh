@@ -20,4 +20,16 @@ curl --fail --silent --show-error --noproxy '*' \
 curl --fail --silent --show-error --noproxy '*' \
   --resolve doc.gridex.tech:14443:127.0.0.1 \
   https://doc.gridex.tech:14443/en/organisations-and-access/ -o /dev/null
+
+# A 200 HTML response is insufficient: browsers refuse CSS/JS served as
+# text/plain when X-Content-Type-Options: nosniff is enabled.
+css_asset=$(grep -o 'href="/assets/css/[^"]*"' build/index.html | head -n 1 | cut -d '"' -f 2)
+js_asset=$(grep -o 'src="/assets/js/[^"]*"' build/index.html | head -n 1 | cut -d '"' -f 2)
+test -n "$css_asset" && test -n "$js_asset"
+curl --fail --silent --show-error --noproxy '*' \
+  --resolve doc.gridex.tech:14443:127.0.0.1 \
+  -I "https://doc.gridex.tech:14443$css_asset" | tr -d '\r' | grep -iq '^content-type: text/css'
+curl --fail --silent --show-error --noproxy '*' \
+  --resolve doc.gridex.tech:14443:127.0.0.1 \
+  -I "https://doc.gridex.tech:14443$js_asset" | tr -d '\r' | grep -Eiq '^content-type: (application|text)/javascript'
 echo GRIDEX_DOCS_DEPLOYED

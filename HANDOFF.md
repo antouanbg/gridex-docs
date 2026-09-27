@@ -1,5 +1,22 @@
 # GrideX documentation handoff
 
+## 2026-09-27 — public rendering incident corrected
+
+The owner showed an external mobile screenshot of an unstyled Docusaurus page.
+The HTML, image and compiled assets returned 200, but the docs Nginx config
+omitted `mime.types`: CSS and JavaScript were served as `text/plain`. Because
+`X-Content-Type-Options: nosniff` is enabled, the browser correctly rejected
+them. Added `include /etc/nginx/mime.types` and an octet-stream default;
+the deploy script now checks the live CSS and JS MIME types, not only HTML.
+This supersedes the earlier visual acceptance claim below.
+
+After redeployment, the local production HTTPS proxy returned 200 with
+`text/css`, `application/javascript`, and `image/jpeg` for the expected assets;
+a 390px Chromium session through that proxy rendered the correct H1, loaded
+the hero image, applied the body font, and logged no failed HTTP responses.
+The owner should refresh the external mobile page to confirm the correction
+from outside the LAN.
+
 ## 2026-09-27 — portal-aligned redesign
 
 Owner reported that the original Docusaurus site looked unformatted and had no

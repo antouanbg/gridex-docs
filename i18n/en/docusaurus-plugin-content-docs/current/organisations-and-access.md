@@ -95,3 +95,17 @@ dispatch with active access.
 
 The photograph is illustrative, not a customer Site. Content last reviewed:
 27 September 2026.
+
+## Suspending and restoring an approved organisation
+
+Available in the super-admin panel. Access controls were verified with synthetic organisations; the first real customer suspension and its email delivery remain unverified. This is separate from resending any onboarding invitation.
+
+Only the verified super administrator can use **Customers & contracts → Users & invitations → New organisation → Approved organisations**. The pilot organisation is protected and is not listed. A recent sign-in is required for changes.
+
+Choose **Suspend organisation**, review the organisation name, then confirm. Access is blocked; existing sessions and streams end. Accounts, roles, Sites and OpenRemote inventory remain intact. Members see “Your organisation is temporarily suspended. Contact the super administrator.”
+
+The verified first administrator receives one BG/EN suspension notice per suspension operation. Queued does not mean delivered. **Check delivery** checks the recipient's provider delivery event without sending again. An unknown or failed result must be investigated; repeating the button never automatically resends an uncertain email. This mandatory access notice is separate from optional event subscriptions.
+
+If a step fails, portal/API access stays blocked and the existing operation remains available for reconciliation. A pending operation is not confirmation that the OpenRemote change has completed. Choose **Complete existing operation** instead of creating another request. Notification problems do not restore access. **Complete notification** can finish a notice that has not yet been attempted.
+
+Choose **Restore access** and confirm to restore the existing permissions after the realm is verified. Members must sign in again; old tokens do not regain access. Restoration sends no new invitation or password email and does not recreate accounts.

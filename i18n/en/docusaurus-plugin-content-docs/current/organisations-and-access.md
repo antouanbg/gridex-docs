@@ -109,10 +109,29 @@ administrator role.
    approved commissioning.
 
 **Current status:** already registered ROCK Pi/ESP32 units can be viewed and
-their roles drafted. Self-service creation of a new customer Site or device
-in the portal is **not active yet**. Do not bypass this through OpenRemote
-Manager or a local database; the form will be released after tenant-aware
-backend provisioning and acceptance testing.
+their roles drafted. Forms for a new customer Site and device have been
+prepared but are **not yet published or accepted with a real customer account**.
+Do not bypass this through OpenRemote Manager or a local database.
+
+### How will a new customer Site be added?
+
+Under [Sites](https://gridex.tech/sites/), the organisation administrator
+enters a **name** and **time zone**, then chooses Create Site. On an empty
+list, the form will appear on that same page. Other roles will not see this
+button. The Site appears only after its OpenRemote asset and administrator
+link have been verified in the correct organisation. On failure there is no
+locally successful Site; retrying unchanged details cannot duplicate it.
+
+### How will a new GrideX device be added?
+
+After selecting a Site, the administrator opens
+[Devices](https://gridex.tech/devices/), chooses an approved **ROCK Pi E** or
+**OLIMEX ESP32-EVB** variant and enters a name. For an ESP32, they select the
+already registered ROCK Pi E as its parent. A Site can have only one ROCK Pi E
+controller. The new asset appears in the list after verification. Device roles
+and communication settings remain a separate draft; merely adding inventory
+does not alter Ethernet, send OTA/Modbus commands or prove a heartbeat. If
+OpenRemote is unavailable, the screen reports an error, not demo values.
 
 ## Status of the first live test
 

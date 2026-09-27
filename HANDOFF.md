@@ -1,5 +1,17 @@
 # GrideX documentation handoff
 
+## 2026-09-27 — customer organisation member-invitation help
+
+The owner limited the new how-to to administrators of an **existing customer
+organisation**, not the platform/super administrator or first-admin creation.
+The BG and EN organisations guides now contain matching member-invitation
+steps at `#invite-a-colleague`, including role/Site limits, recipient
+acceptance, and the warning not to retry blindly after an ambiguous send.
+The first real customer invitation and acceptance remain unverified. The
+approved visual design was unchanged. `sh scripts/deploy-local.sh` passed
+TypeScript, both locale builds, local HTTPS and CSS/JavaScript MIME checks;
+the docs container was recreated. Source commit/publication follows.
+
 ## 2026-09-27 — public source repository
 
 The standalone Docusaurus source and its local Git history were published to

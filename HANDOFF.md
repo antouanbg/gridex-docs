@@ -1,5 +1,14 @@
 # GrideX documentation handoff
 
+## 2026-09-27 — approved design and ongoing publication rule
+
+The owner confirmed the corrected public page renders properly and approved
+the current GrideX-aligned responsive visual design. Preserve this design for
+new and edited pages. Every new or revised user-facing question, workflow,
+menu or feature must be documented in its relevant public guide section and
+published with the implementation; BG and EN content must remain aligned.
+Unverified or not-yet-live behavior must be labeled as such.
+
 ## 2026-09-27 — public rendering incident corrected
 
 The owner showed an external mobile screenshot of an unstyled Docusaurus page.

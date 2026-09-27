@@ -6,6 +6,14 @@
   Preserve the approved portal's deep-green, lime, card and rounded-control
   visual language. Use typed Docusaurus config, components and theme overrides
   in `src/`; do not replace the portal navigation from this repository.
+- The owner approved the current responsive documentation design on
+  2026-09-27. Treat it as the baseline for every new or revised page; do not
+  replace its visual system without the owner's approval.
+- For every new or revised user-facing question, workflow, menu or feature,
+  update the corresponding section of this documentation in the same work and
+  publish the guide with the implementation. Keep Bulgarian and English in
+  sync. If the feature is not live or cannot be verified, say so explicitly in
+  that section; do not present planned behavior as operational.
 - Never put credentials, private IPs, client/device identifiers, internal
   runbooks or unaudited operational claims on this public site. Mark generated
   or illustrative imagery as such; never imply it shows a real customer Site.

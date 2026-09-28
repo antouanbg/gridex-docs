@@ -103,9 +103,15 @@ and have an active administrator role. If the link expires, return to the
 portal and use the button again. Manager is not a bypass for provisioning
 unapproved Sites or devices.
 
-**Status:** this protected entry is being prepared and has not yet been
-verified as published. Treat these steps as pending until live acceptance
-has passed with both accounts.
+This applies to future organisations too: each has its own OpenRemote realm,
+and Manager checks the current administrator and exact realm on every request.
+A customer administrator cannot open another organisation or the service
+`master` realm.
+
+**Status:** the protected entry is deployed. Anonymous denial, blocked service
+access and both current OIDC realms have been checked. Real sign-in through
+the button with pilot and customer accounts still awaits acceptance by those
+users; do not send passwords or one-time links to support if it fails.
 
 ## Sites, devices and commissioning {#sites-and-devices}
 

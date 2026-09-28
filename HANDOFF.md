@@ -3,17 +3,18 @@
 ## 2026-09-28 — OpenRemote Manager from the portal
 
 The owner approved an immediate, one-time Manager launch button in the
-existing GrideX administrator page. Matching BG/EN instructions were added
-to `organisations-and-access.md#openremote-manager` in the already-approved
-Docusaurus design. They explicitly mark the workflow as pending until the
-backend migration, protected proxy and first customer callback are deployed
-and both real accounts are tested. `npm run typecheck` and BG/EN build pass;
-the guide has not been published by this branch. Do not advertise it as live
-or remove the status note before external acceptance.
+existing GrideX administrator page. Matching BG/EN instructions are published
+at `organisations-and-access.md#openremote-manager` in the approved
+Docusaurus design (PR #6). Backend migration 014, protected proxy and the
+first customer callback are deployed and verified locally. `npm run typecheck`,
+BG/EN builds and local HTTPS/CSS/JS MIME checks passed. External positive
+browser acceptance with the pilot and customer administrators is still
+pending; do not claim that this final step has passed.
 
 Същият раздел на български описва бутона, еднократния линк, организацията
-от текущата сесия и отказа на директния адрес. Статусът остава „в подготовка“
-до реалното публикуване и приемане. Дизайнът не е променян.
+от текущата сесия и отказа на директния адрес. Страницата е публикувана,
+backend/proxy са внедрени, но реалният положителен тест от външна мрежа с
+двата акаунта още предстои. Дизайнът не е променян.
 
 ## 2026-09-27 — customer organisation member-invitation help
 

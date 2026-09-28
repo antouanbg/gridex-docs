@@ -1,5 +1,21 @@
 # GrideX documentation handoff
 
+## Main and live docs reconciliation — 2026-09-28
+
+Owner-approved PR #9 merged BG/EN organisation-access guidance with the
+existing protected Manager guide into `main` (`fcf5500`). The unchanged
+approved Docusaurus design was rebuilt and the existing docs container was
+recreated from its live checkout. Typecheck, BG/EN builds, HTTPS pages and
+CSS/JavaScript MIME checks passed. No real customer suspension has been
+performed; the guide marks that limitation. Customer Site/device creation
+PR #4 stays open until backend #43 and frontend #55 can be safely deployed.
+
+PR #9 обедини BG/EN помощта за организационен достъп с Manager ръководството
+в `main` (`fcf5500`). Публикувано е през съществуващия Docusaurus
+контейнер след успешни проверки на типовете, двата езика, HTTPS и MIME за
+CSS/JavaScript. Първо реално спиране не е извършено. PR #4 за нови клиентски
+Обекти/устройства чака безопасното внедряване на backend #43 и портал #55.
+
 ## 2026-09-28 — OpenRemote Manager from the portal
 
 The owner approved an immediate, one-time Manager launch button in the

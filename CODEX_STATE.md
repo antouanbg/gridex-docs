@@ -1,5 +1,12 @@
 # CODEX_STATE
 
+## 2026-09-28 publication checkpoint
+
+PR #9 merged as fcf5500 and deployed through the existing Docusaurus
+container. BG/EN builds and public local HTTPS/CSS/JS checks passed.
+Customer Site/device guide PR #4 remains pending on backend #43 and
+frontend #55. See HANDOFF.
+
 ## Organisation suspension / Спиране на организация — 2026-09-27
 
 EN: Implemented suspension/restoration in the existing super-admin panel, strict verified pilot-subject permission, pilot protection, revision-locked durable operations, audit and one Mailgun attempt per suspension with recipient-specific delivery verification. API responses/SSE and patched OpenRemote HTTP/WebSocket sessions enforce denial; old JWTs stay revoked after restoration. Accounts, roles and inventory are preserved. Request source: delegated owner task `01a0cea9-3cd0-7430-b309-95795bf293a6`; history reader returned empty items, so the explicit request and repository decisions were used.

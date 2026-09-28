@@ -87,6 +87,26 @@ explicit: membership without a Site grant does not expose another customer's
 data. The current member invitation flow cannot delegate the organisation
 administrator role.
 
+## OpenRemote Manager administration {#openremote-manager}
+
+Organisation and platform administrators start at the
+[GrideX portal](https://gridex.tech/), sign in, then open **Customers & contracts
+→ Users & invitations → Organisation administration**. Select **Open OpenRemote
+Manager** to create a one-time link valid for one minute and open Manager for
+the organisation in the current session. No email or separate setup identity
+is involved. The proxy checks access again for the page and its requests;
+the direct `auth.gridex.tech/manager/` address is denied without this entry.
+Do not share the short-lived, one-time link.
+
+If access is denied, check that you signed in to the correct organisation
+and have an active administrator role. If the link expires, return to the
+portal and use the button again. Manager is not a bypass for provisioning
+unapproved Sites or devices.
+
+**Status:** this protected entry is being prepared and has not yet been
+verified as published. Treat these steps as pending until live acceptance
+has passed with both accounts.
+
 ## Sites, devices and commissioning {#sites-and-devices}
 
 1. **Only an organisation administrator creates Sites** in GrideX. Each Site

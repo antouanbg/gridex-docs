@@ -63,13 +63,28 @@ session; the email alone does not activate access.
 <div className="gridex-step-grid">
   <div className="gridex-step"><span>01</span><strong>Open the email</strong><p>Verify your address using the received link.</p></div>
   <div className="gridex-step"><span>02</span><strong>Set a password</strong><p>Do this only on the secure sign-in screen.</p></div>
-  <div className="gridex-step"><span>03</span><strong>Sign in</strong><p>Use the organisation named in your invitation.</p></div>
+  <div className="gridex-step"><span>03</span><strong>Sign in</strong><p>Select Sign in at gridex.tech, enter the invited email and continue to the correct organisation's protected login.</p></div>
   <div className="gridex-step"><span>04</span><strong>Access confirmed</strong><p>For a first administrator, the portal completes the invitation after sign-in. An invited colleague still accepts in Profile.</p></div>
 </div>
 
 <GuideNotice label="Never share your password" tone="amber">
   <p>The email alone <strong>does not grant access</strong>. A first administrator does not press a second button: after verified email, password setup and sign-in, the backend checks the invitation and rights. On failure access remains pending. If the link expired or was revoked, request another invitation rather than creating a second account.</p>
 </GuideNotice>
+
+### Expired link or forgotten password
+
+If the **first administrator** invitation is still **Sent** but its link has
+expired, the platform administrator opens
+[Customers & contracts → Users & invitations](https://gridex.tech/customers/users/)
+and selects **Resend invitation** beside **Revoke**. This sends a fresh 24-hour
+link to the same email and Keycloak account, without creating another
+organisation. The button is unavailable for an accepted or revoked invitation.
+If delivery is uncertain, check the invitation status before another attempt.
+
+**Forgot password** on the protected login page of the **correct organisation**
+is a separate flow for an existing password. It does not extend an invitation
+or activate an organisation. If the login reports invalid credentials, first
+check the invited email and organisation. Never send a password to support.
 
 ## Roles and Sites
 

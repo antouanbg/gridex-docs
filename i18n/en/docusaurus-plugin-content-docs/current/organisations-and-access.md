@@ -156,21 +156,21 @@ users; do not send passwords or one-time links to support if it fails.
    configured through ROCK Pi; battery commands remain locked until separately
    approved commissioning.
 
-**Current status:** already registered ROCK Pi/ESP32 units can be viewed and
-their roles drafted. Forms for a new customer Site and device have been
-prepared but are **not yet published or accepted with a real customer account**.
-Do not bypass this through OpenRemote Manager or a local database.
+**Current status:** forms for a new Site and an approved GrideX device are
+published. Acceptance with a real customer administrator is still pending;
+publication alone does not prove successful provisioning. Do not bypass this
+through OpenRemote Manager or a local database.
 
-### How will a new customer Site be added?
+### How is a new customer Site added?
 
 Under [Sites](https://gridex.tech/sites/), the organisation administrator
 enters a **name** and **time zone**, then chooses Create Site. On an empty
-list, the form will appear on that same page. Other roles will not see this
+list, the form appears on that same page. Other roles do not see this
 button. The Site appears only after its OpenRemote asset and administrator
 link have been verified in the correct organisation. On failure there is no
 locally successful Site; retrying unchanged details cannot duplicate it.
 
-### How will a new GrideX device be added?
+### How is a new GrideX device added?
 
 After selecting a Site, the administrator opens
 [Devices](https://gridex.tech/devices/), chooses an approved **ROCK Pi E** or

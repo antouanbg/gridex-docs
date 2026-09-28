@@ -1,5 +1,11 @@
 # GrideX documentation handoff
 
+## 2026-09-29 — customer device guide prepared, not live
+
+BG: Слях двуезичната помощ за нов Обект, ROCK Pi E/OLIMEX ESP32-EVB и до две роли с актуалния вход по имейл и възстановяване на парола. Docusaurus typecheck и BG/EN build минаха. Публикацията чака изрично одобрената backend миграция/API рестарт и проверен frontend deploy; ръководството още отбелязва, че функцията не е live. Без промяна в одобрения дизайн.
+
+EN: Merged the BG/EN Site/device guide with current login and recovery instructions. Typecheck and both locale builds pass. Do not publish it as live until the authorised backend/frontend rollout and real customer acceptance.
+
 ## Main and live docs reconciliation — 2026-09-28
 
 Owner-approved PR #9 merged BG/EN organisation-access guidance with the
@@ -119,3 +125,13 @@ the owner has now also accepted the corrected visual revision from outside.
 Remaining: publish additional guide topics only after their related portal
 screens and permissions are verified. The certificate remains manually
 renewed; expiry and procedure are in README.
+# Email-first sign-in help / Вход по имейл — 2026-09-28
+
+Потвърденото решение за общия вход е описано двуезично на страницата
+„Организации, покани и права“: имейл от поканата → правилен Keycloak realm →
+парола само там. При няколко организации има избор. Това не заменя проверките
+за членство/Обекти и не обявява още непубликуван frontend за продукционен.
+
+EN: The BG/EN access guide now documents email-first realm routing and
+Keycloak-only passwords. Publish together with the frontend/backend change;
+do not claim a live rollout from this docs commit alone.

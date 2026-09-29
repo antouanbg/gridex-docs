@@ -20,8 +20,8 @@ import GuideNotice from '@site/src/components/GuideNotice';
   secondaryLabel="Open Market"
 />
 
-<GuideNotice label="The archive works; the portal update is not yet published" tone="amber">
-  <p>Live ENTSO-E hourly records have been verified in a separate TimescaleDB. The permissions and new portal screen still await deployment and acceptance testing; demo data are not live data.</p>
+<GuideNotice label="Archive and portal published; acceptance testing pending" tone="amber">
+  <p>Live ENTSO-E hourly records have been verified in a separate TimescaleDB. The permissions and new portal screen are published, but have not yet been verified with real roles in a browser. Demo data are not live prices.</p>
 </GuideNotice>
 
 ## Who has access? {#access}

@@ -147,7 +147,7 @@ service for an active organisation and separately grants its selected price
 zone; that organisation's administrator then enables the specific approved
 member. Visualisations do not inherit Day-ahead access: a BG price dashboard
 requires both service grants and BG zone scope. Site charts also require
-access to that Site; they are **not implemented yet**. Under Users & invitations
+access to that Site. Under Users & invitations
 → Service requests each administrator sees their own decision stage. Declining
 a request never grants access.
 
@@ -157,6 +157,20 @@ grant: no member is enabled automatically. The organisation administrator then
 explicitly enables each approved member in the same section. Without an
 individual grant, the service is hidden from the live menu. Revoking the
 organisation grant removes all member grants; they do not return automatically.
+
+### Site charts {#site-visualisations}
+
+Open **Sites → selected Site → Visualisations** to see measured values from
+the last 24 hours. Data comes from linked OpenRemote Asset history through
+the guarded GrideX API; missing measurements are never replaced by demo
+values. Configured ROCK Pi measurements can include temperature, load, free
+memory/storage and uptime. New sensors appear only after they are
+provisioned and linked to this Site.
+
+Access requires the **Visualisations** service for both the organisation and
+the individual member, plus that member's current permission for the exact
+Site in OpenRemote. Requesting the service alone does not unlock charts.
+This is not a shared customer Grafana dashboard or a cross-tenant datasource.
 
 See the [Day-ahead guide](/market-prices/) for that service. The full archive
 and provider status remain platform-administrator-only. The restricted BG

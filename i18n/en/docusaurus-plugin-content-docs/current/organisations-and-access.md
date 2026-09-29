@@ -135,6 +135,22 @@ administrator role.
 
 ## Additional services
 
+The approved next step is **Profile → Services**: every verified user,
+including a viewer, will see Day-ahead prices, Visualisations, Analysis,
+Meteorology and Forecasting. Only the first two will be **independently
+requestable**; the other three will say Coming soon. A day-ahead request
+selects exactly one country/bidding zone — Bulgaria (BG) only for now. The
+request will appear for that organisation's administrator and the platform
+administrator under Users & invitations → Service requests.
+
+A request **does not grant access**. The platform administrator enables the
+service for an active organisation and separately grants its selected price
+zone; that organisation's administrator then enables the specific approved
+member. Visualisations do not inherit Day-ahead access: a BG price dashboard
+will require both service grants and BG zone scope. Site charts also require
+access to that Site. The catalogue/request UI and Site charts are **not
+implemented yet**; the guarded BG market dashboard is separate.
+
 The platform administrator can grant a service to an active organisation under
 **Customers & contracts → Users & invitations**. This is only an organisation
 grant: no member is enabled automatically. The organisation administrator then
@@ -142,9 +158,10 @@ explicitly enables each approved member in the same section. Without an
 individual grant, the service is hidden from the live menu. Revoking the
 organisation grant removes all member grants; they do not return automatically.
 
-See the [Day-ahead guide](/market-prices/) for that service. Prices and provider
-status are currently platform-administrator-only. These permission controls
-still await publication and real acceptance testing.
+See the [Day-ahead guide](/market-prices/) for that service. The full archive
+and provider status remain platform-administrator-only. The restricted BG
+dashboard in Market requires both individual service grants and organisation
+BG scope; real customer-role acceptance testing is still pending.
 
 ## OpenRemote Manager administration {#openremote-manager}
 

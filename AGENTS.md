@@ -1,14 +1,32 @@
 # GrideX public documentation rules
 
+- Approved target (2026-09-29): all verified members see five service catalog
+  entries. Only day-ahead (one selected country/zone, BG initially) and
+  visualisations are independently requestable; analysis, meteorology and
+  forecasting are Coming soon. Platform admin grants organisation and zone;
+  organisation admin grants individual member. Requests grant nothing. A BG
+  Grafana price dashboard needs **both** services and BG scope. Document
+  target versus currently deployed features separately in BG and EN; never
+  state that customer prices or embedded Grafana are live until verified.
+- Одобрената цел: каталог с пет услуги, но само „Ден напред“ (един избор,
+  първоначално BG) и „Графики“ са отделно заявяеми. Заявката не дава достъп;
+  супер администраторът разрешава организация/зона, после нейният администратор
+  конкретен член. BG ценов график изисква и двете услуги и BG зона. Ясно
+  различавай одобрения процес от реално публикуваните функции на BG и EN.
+
 - Market country policy (owner, 2026-09-29): BG is the sole default collected
   zone. Platform administrator explicitly enables any other collection zone
   and separately grants collected zones to organisations. Service, zone and
   member permissions are distinct. Historical foreign rows may remain; no
-  new foreign collection is allowed by default. Grafana is private operator
-  preparation, not public or tenant-facing. State this accurately in BG/EN.
+  new foreign collection is allowed by default. The later owner decision
+  permits only a guarded embedded BG price dashboard, not a standalone public
+  Grafana login or unrestricted tenant datasource. State current verification
+  status accurately in BG/EN.
 - За пазара само BG се събира по подразбиране. Други зони и организационни
   права се включват поотделно от супер администратора. Старите чужди записи
-  не се трият автоматично; Grafana не е публична или клиентска функция.
+  не се трият автоматично. По-късното решение допуска само защитен вграден
+  BG ценови dashboard, но не и публичен самостоятелен Grafana вход или
+  неограничен източник на клиентски данни.
 
 - Before documenting or publishing a new feature, control, role, device choice
   or automatic workflow, verify the owner's exact approval. If it is not

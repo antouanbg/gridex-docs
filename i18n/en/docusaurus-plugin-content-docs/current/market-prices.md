@@ -26,6 +26,16 @@ import GuideNotice from '@site/src/components/GuideNotice';
 
 ## Who has access? {#access}
 
+The approved future catalogue treats **Day-ahead prices** and
+**Visualisations** as two separate services. A price request selects exactly
+one country/bidding zone; **Bulgaria/BG** will be the only initial choice.
+Users will request a service under Profile → Services, but a request itself
+never unlocks data. Organisation and platform administrators will see its
+stages under Users & invitations → Service requests. A BG price chart will
+require both individual service grants and BG organisation zone scope. The
+**request flow** is not implemented yet; the guarded embedded dashboard is a
+separate capability.
+
 The platform administrator enables **Day-ahead** for an active organisation. This **does not** enable any of its users automatically. The organisation administrator then enables it individually for approved members. Revoking the organisation grant removes all member grants; restoring the organisation grant does not restore them.
 
 ## Which countries are collected?
@@ -34,9 +44,9 @@ The platform administrator enables **Day-ahead** for an active organisation. Thi
 
 After enabling the service for an organisation, the platform administrator may separately grant one of the collected zones under **Customers and contracts → Users and invitations → organisation → Day-ahead countries**. This does not enable any of its members or disclose price values. New customers receive no country automatically.
 
-The service is hidden from a member's live menu until they receive an individual grant. Even after that grant, they cannot see price values or provider status at this stage.
+The service is hidden from a member's live menu until they receive an individual grant. Day-ahead permission alone does not disclose price values: BG charts also need Visualisations and an organisation BG grant. Provider status remains restricted to the platform administrator.
 
-For now, **price values and the archive are platform-administrator-only**. Even a member grant does not disclose prices until customer publication is separately approved. In the live **Market** section (`gridex.tech/market/`), the platform administrator sees only ENTSO-E API status and the time of the last successful refresh. Demo data remain separate.
+The full price archive and direct API remain **platform-administrator-only**. In the live **Market** section (`gridex.tech/market/`), that administrator also sees ENTSO-E API status and the time of the last successful refresh. A customer with both individual grants and organisation BG scope may open only the restricted BG charts. Demo data remain separate.
 
 ## How are prices retained?
 
@@ -48,6 +58,6 @@ Using these prices for automatic battery control is a separate, not-yet-activate
 
 ## Grafana visualisations
 
-A private operator Grafana dashboard for Bulgarian hourly prices and the last successful refresh is prepared using GrideX dark-green and lime chart colours. It is **not yet activated or publicly accessible**. Activation requires a separate read-only database role, private credentials and access review. Future OpenRemote and other-database visualisations need separate data sources and permissions; no customer data are published through Grafana now.
+The BG dashboard shows Bulgarian hourly prices in GrideX dark-green and lime chart colours. Open it inside the portal from **Market → Open charts** through a short-lived one-time launch. The backend rechecks session and permissions on every request; there is no standalone public Grafana login. Its separate database role can read BG-only views, not the full archive. Future OpenRemote/Site visualisations need a separate source and organisation/Site isolation. Real customer-role browser acceptance testing is still pending.
 
 The image above is **illustrative**, not a real customer Site.

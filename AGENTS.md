@@ -11,6 +11,17 @@
   GrideX frontend, а единственият основен инвентар е OpenRemote.
 - Communicate with the owner in Bulgarian. Keep BG and EN guide content in
   parity; do not publish one locale with stale or contradictory instructions.
+- Every new or edited public guide, help answer, menu explanation and workflow
+  MUST have an English version in the same change, not as a later task. Update
+  both `docs/` (BG) and its matching
+  `i18n/en/docusaurus-plugin-content-docs/current/` page (EN), including
+  labels, links and current availability. If either locale is missing or stale,
+  the documentation is unfinished: do not merge, deploy or mark the task done.
+  Verify both public URLs after publication.
+- Всяка нова или редактирана публична страница, отговор в помощта, обяснение
+  на меню и процес ЗАДЪЛЖИТЕЛНО има английска версия в същата промяна. Ако
+  BG или EN липсва или е остарял, не сливай, не публикувай и не обявявай
+  задачата за завършена; след публикация провери и двата адреса.
 - This is the public help site for `gridex.tech`, not an independent product.
   Preserve the approved portal's deep-green, lime, card and rounded-control
   visual language. Use typed Docusaurus config, components and theme overrides

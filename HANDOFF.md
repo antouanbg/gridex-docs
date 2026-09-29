@@ -1,5 +1,13 @@
 # GrideX documentation handoff
 
+## 2026-09-29 — Site графиките са публикувани в документацията
+
+PR #21 е в `main` (`cc61e33`); `sh scripts/deploy-local.sh` завърши с
+`GRIDEX_DOCS_DEPLOYED`. BG/EN Docusaurus build и локалните HTTPS/MIME
+проверки минаха. Външният `doc.gridex.tech` от този Mac не е потвърден
+заради мрежовия път. Реалният вход и графика с клиентски акаунт остават
+за приемателен тест след ръчните org/member одобрения.
+
 ## 2026-09-29 — BG/EN ръководство за графиките на Обект
 
 Към ръководството за организации е добавен `#site-visualisations` и на двата

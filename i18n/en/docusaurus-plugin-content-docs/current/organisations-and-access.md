@@ -133,23 +133,23 @@ explicit: membership without a Site grant does not expose another customer's
 data. The current member invitation flow cannot delegate the organisation
 administrator role.
 
-## Additional services
+## Additional services {#additional-services}
 
-The approved next step is **Profile → Services**: every verified user,
-including a viewer, will see Day-ahead prices, Visualisations, Analysis,
-Meteorology and Forecasting. Only the first two will be **independently
-requestable**; the other three will say Coming soon. A day-ahead request
-selects exactly one country/bidding zone — Bulgaria (BG) only for now. The
-request will appear for that organisation's administrator and the platform
-administrator under Users & invitations → Service requests.
+Under **Profile → Services**, every verified member, including a viewer,
+sees Day-ahead prices, Visualisations, Analysis, Meteorology and Forecasting.
+Only the first two can be requested **independently**; the other three say
+Coming soon. Bulgaria (BG) is currently the only price zone. The requester,
+organisation administrator and platform administrator can see the request
+and its decision history. Repeated submission does not duplicate an open request.
 
 A request **does not grant access**. The platform administrator enables the
 service for an active organisation and separately grants its selected price
 zone; that organisation's administrator then enables the specific approved
 member. Visualisations do not inherit Day-ahead access: a BG price dashboard
-will require both service grants and BG zone scope. Site charts also require
-access to that Site. The catalogue/request UI and Site charts are **not
-implemented yet**; the guarded BG market dashboard is separate.
+requires both service grants and BG zone scope. Site charts also require
+access to that Site; they are **not implemented yet**. Under Users & invitations
+→ Service requests each administrator sees their own decision stage. Declining
+a request never grants access.
 
 The platform administrator can grant a service to an active organisation under
 **Customers & contracts → Users & invitations**. This is only an organisation

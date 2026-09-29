@@ -26,15 +26,11 @@ import GuideNotice from '@site/src/components/GuideNotice';
 
 ## Who has access? {#access}
 
-The approved future catalogue treats **Day-ahead prices** and
-**Visualisations** as two separate services. A price request selects exactly
-one country/bidding zone; **Bulgaria/BG** will be the only initial choice.
-Users will request a service under Profile → Services, but a request itself
-never unlocks data. Organisation and platform administrators will see its
-stages under Users & invitations → Service requests. A BG price chart will
-require both individual service grants and BG organisation zone scope. The
-**request flow** is not implemented yet; the guarded embedded dashboard is a
-separate capability.
+**Day-ahead prices** and **Visualisations** are separate services. For now,
+only **Bulgaria/BG** can be requested under Profile → Services. A request
+does not unlock data. Administrators see its stages under Users & invitations
+→ Service requests. A BG price chart requires both individual service grants
+and the organisation's BG zone scope.
 
 The platform administrator enables **Day-ahead** for an active organisation. This **does not** enable any of its users automatically. The organisation administrator then enables it individually for approved members. Revoking the organisation grant removes all member grants; restoring the organisation grant does not restore them.
 

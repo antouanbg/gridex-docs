@@ -2,7 +2,7 @@
 id: market-prices
 title: Market — day-ahead prices
 hide_title: true
-description: Choosing a country, bidding zone and market product in GrideX.
+description: Service permissions and ENTSO-E provider status.
 ---
 
 import DocsHero from '@site/src/components/DocsHero';
@@ -12,29 +12,31 @@ import GuideNotice from '@site/src/components/GuideNotice';
   compact
   eyebrow="GRIDEX · MARKET"
   title="Electricity prices"
-  description="Official market intervals, a clear bidding zone and visible data provenance."
+  description="A protected hourly price archive with explicit rights for each organisation and user."
   imageAlt="Illustrative image of solar panels and energy infrastructure"
-  primaryHref="#how-to-choose"
-  primaryLabel="Choose a market"
+  primaryHref="#access"
+  primaryLabel="Who has access"
   secondaryHref="https://gridex.tech/market/"
   secondaryLabel="Open Market"
 />
 
-<GuideNotice label="Live prices are not yet published" tone="amber">
-  <p>The code is prepared, but the real provider and public deployment have not yet been verified. Demo values are not exchange quotations.</p>
+<GuideNotice label="The archive works; the portal update is not yet published" tone="amber">
+  <p>Live ENTSO-E hourly records have been verified in a separate TimescaleDB. The permissions and new portal screen still await deployment and acceptance testing; demo data are not live data.</p>
 </GuideNotice>
 
-## Where are prices shown?
+## Who has access? {#access}
 
-After signing in, open **Market** (`gridex.tech/market/`). This is the existing section; no new top-level menu is added. Demo mode uses sample values. A live account must show only actually published prices or an explicit unavailable/not-published state.
+The platform administrator enables **Day-ahead** for an active organisation. This **does not** enable any of its users automatically. The organisation administrator then enables it individually for approved members. Revoking the organisation grant removes all member grants; restoring the organisation grant does not restore them.
 
-## How do I choose a market? {#how-to-choose}
+The service is hidden from a member's live menu until they receive an individual grant. Even after that grant, they cannot see price values or provider status at this stage.
 
-1. Select a **country** and **bidding zone**. A country may have more than one zone; browser language or IP location does not silently select the zone.
-2. Select the market product. The first release supports **Day-ahead** only. Intraday and balancing products are not shown as available.
-3. Select a date. The chart and table use the bidding zone's local time while retaining exact UTC instants. A local hour can repeat at a daylight-saving transition.
+For now, **price values and the archive are platform-administrator-only**. Even a member grant does not disclose prices until customer publication is separately approved. In the live **Market** section (`gridex.tech/market/`), the platform administrator sees only ENTSO-E API status and the time of the last successful refresh. Demo data remain separate.
 
-Prices come from the **ENTSO-E Transparency Platform**, A44 document, in **EUR/MWh**. These are wholesale prices, not a customer's final purchase or export tariff. Grid fees, taxes and contract markups are excluded. Negative prices are valid; a day without published data is not replaced by zero. A partial day is explicitly labelled and must not be used for automatic planning.
+## How are prices retained?
+
+The market worker retrieves ENTSO-E A44 and stores complete hourly prices per bidding zone in a separate TimescaleDB with no automatic deletion policy. When the source publishes 15-minute prices, the hourly value is the mean of **four complete consecutive intervals** and is labelled as aggregated; an incomplete hour is not stored as a real price. UTC identifies both local hours during a daylight-saving transition. Each zone/hour is retained once, not copied for every customer.
+
+Prices are in **EUR/MWh**. They are wholesale prices, not a customer's final contracted tariff; grid fees, taxes and markups are excluded. Negative prices are valid, and an unpublished day is never replaced by zero.
 
 Using these prices for automatic battery control is a separate, not-yet-activated workflow requiring explicit approval and safety limits.
 

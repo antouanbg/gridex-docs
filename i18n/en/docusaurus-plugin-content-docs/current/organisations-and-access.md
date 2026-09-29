@@ -133,6 +133,19 @@ explicit: membership without a Site grant does not expose another customer's
 data. The current member invitation flow cannot delegate the organisation
 administrator role.
 
+## Additional services
+
+The platform administrator can grant a service to an active organisation under
+**Customers & contracts → Users & invitations**. This is only an organisation
+grant: no member is enabled automatically. The organisation administrator then
+explicitly enables each approved member in the same section. Without an
+individual grant, the service is hidden from the live menu. Revoking the
+organisation grant removes all member grants; they do not return automatically.
+
+See the [Day-ahead guide](/market-prices/) for that service. Prices and provider
+status are currently platform-administrator-only. These permission controls
+still await publication and real acceptance testing.
+
 ## OpenRemote Manager administration {#openremote-manager}
 
 Organisation and platform administrators start at the

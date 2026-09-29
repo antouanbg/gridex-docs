@@ -1,5 +1,14 @@
 # CODEX_STATE
 
+## 2026-09-29 — BG/EN service permissions and market archive
+
+Both market-prices and organisations-and-access guides now describe the
+owner-approved default-off organisation/member service rights, hidden live
+menu and platform-only price archive/status. They state that 240 actual
+hourly ENTSO-E prices are in the separate TimescaleDB, but the frontend
+permission UI is not yet published or accepted with real roles. Typecheck
+and bilingual build passed. See HANDOFF.
+
 ## 2026-09-29 — BG/EN access guide correction
 
 Both locale guides include approved account-switch, automatic member

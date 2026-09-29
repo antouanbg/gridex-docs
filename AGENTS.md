@@ -1,5 +1,15 @@
 # GrideX public documentation rules
 
+- Market country policy (owner, 2026-09-29): BG is the sole default collected
+  zone. Platform administrator explicitly enables any other collection zone
+  and separately grants collected zones to organisations. Service, zone and
+  member permissions are distinct. Historical foreign rows may remain; no
+  new foreign collection is allowed by default. Grafana is private operator
+  preparation, not public or tenant-facing. State this accurately in BG/EN.
+- За пазара само BG се събира по подразбиране. Други зони и организационни
+  права се включват поотделно от супер администратора. Старите чужди записи
+  не се трият автоматично; Grafana не е публична или клиентска функция.
+
 - Before documenting or publishing a new feature, control, role, device choice
   or automatic workflow, verify the owner's exact approval. If it is not
   explicitly approved, ask a concrete question and wait for confirmation;

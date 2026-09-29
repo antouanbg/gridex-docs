@@ -1,5 +1,12 @@
 # CODEX_STATE
 
+## 2026-09-29 — BG-only market country guide
+
+BG/EN market guide describes BG-only default ingestion, explicit platform
+collection and separate organisation zone grants, preserved historical rows,
+and private/unactivated Grafana preparation. Publish via deploy-local after
+backend and portal updates, then verify both locales. See HANDOFF.
+
 ## 2026-09-29 — BG/EN service permissions and market archive
 
 Both market-prices and organisations-and-access guides now describe the

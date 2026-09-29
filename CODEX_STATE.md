@@ -1,5 +1,12 @@
 # CODEX_STATE
 
+## 2026-09-29 — BG/EN access guide correction
+
+Both locale guides include approved account-switch, automatic member
+acceptance, one-time same-email resend, accepted status/last login and
+Sites-only creation. Built locally; live publication depends on backend
+migration 016 and frontend deployment. See HANDOFF.
+
 ## 2026-09-29 — invitation/session/viewer guide
 
 The existing BG/EN Docusaurus organisation guide documents the corrected

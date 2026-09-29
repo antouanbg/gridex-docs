@@ -163,3 +163,11 @@ renewed; expiry and procedure are in README.
 EN: The BG/EN access guide now documents email-first realm routing and
 Keycloak-only passwords. Publish together with the frontend/backend change;
 do not claim a live rollout from this docs commit alone.
+# 2026-09-29 — „Пазар“ / Market day-ahead guide
+
+BG/EN `/market-prices/` guide was added for the owner-approved existing
+`/market/` view and ENTSO-E A44 day-ahead product. It explicitly says the
+integration is prepared but not yet publicly verified. TypeScript and both
+locale builds pass. Do not publish a false live claim; after backend token,
+real A44 and portal browser acceptance, update the status line and deploy
+with `scripts/deploy-local.sh`, verifying HTML/CSS/JS in BG and EN.

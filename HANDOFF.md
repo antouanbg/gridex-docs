@@ -1,5 +1,15 @@
 # GrideX documentation handoff
 
+## 2026-09-29 — покани и смяна на акаунт
+
+Одобрените в текущия разговор правила са описани едновременно в BG/EN
+`organisations-and-access`: вход с друг акаунт без наследен realm, приемане
+на членска покана след проверен вход без втори бутон, еднократно resend от
+поканения до същия имейл, приета покана без срок на стария линк и последен
+записан вход, нов Обект само в „Обекти“. Локалните typecheck/build минаха.
+Още НЕ е публикувано; изчакай backend миграция 016/API и frontend rollout,
+после `sh scripts/deploy-local.sh` и провери BG/EN URL и CSS/JS MIME.
+
 ## 2026-09-29 — member invitation and session guidance
 
 BG/EN Docusaurus organisation guide now explains send confirmation,

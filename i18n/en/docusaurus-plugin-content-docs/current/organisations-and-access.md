@@ -50,8 +50,9 @@ for the platform administrator.
    sent and their statuses remain visible below the form after a page reload.
    If the outcome is unclear, **do not retry blindly** — check the status or
    contact support.
-4. Your colleague verifies their email, sets a password on the secure screen,
-   signs in to their organisation and accepts the invitation in Profile. Only
+4. Your colleague verifies their email, sets a password on the secure screen
+   and signs in to their organisation. The portal accepts the invitation after
+   verifying identity; there is no second Accept button. Only
    then verify that they see no more than their permitted Sites.
 
 This form can grant Viewer, Operator, Energy manager or Integrator, but **not**
@@ -71,7 +72,7 @@ automatically without signing the user out or substituting demo data.
   <div className="gridex-step"><span>01</span><strong>Open the email</strong><p>Verify your address using the received link.</p></div>
   <div className="gridex-step"><span>02</span><strong>Set a password</strong><p>Do this only on the secure sign-in screen.</p></div>
   <div className="gridex-step"><span>03</span><strong>Sign in</strong><p>Select Sign in at gridex.tech, enter the invited email and continue to the correct organisation's protected login.</p></div>
-  <div className="gridex-step"><span>04</span><strong>Access confirmed</strong><p>For a first administrator, the portal completes the invitation after sign-in. An invited colleague still accepts in Profile.</p></div>
+  <div className="gridex-step"><span>04</span><strong>Access confirmed</strong><p>After verified sign-in, the portal completes the invitation without a second action for both the first administrator and invited colleagues.</p></div>
 </div>
 
 <GuideNotice label="Never share your password" tone="amber">
@@ -79,6 +80,18 @@ automatically without signing the user out or substituting demo data.
 </GuideNotice>
 
 ### Expired link or forgotten password
+
+If you did not receive the email, enter the **same email address** on the
+Sign in page and select “Did not receive the invitation — resend”. The
+recipient has one resend attempt per pending invitation. The response does
+not reveal whether the address exists. After acceptance, the button cannot
+send another invitation. Contact your administrator if delivery still fails;
+they can inspect the status and send another link.
+
+An accepted invitation remains **Accepted** in the administrator's list;
+the original link expiry is not an account expiry. The last verified sign-in
+is shown once recorded. Access remains active until separately revoked or
+the organisation is suspended.
 
 If the **first administrator** invitation is still **Sent** but its link has
 expired, the platform administrator opens
@@ -99,6 +112,10 @@ on the secure Keycloak screen, not in GrideX. The portal does not confirm
 whether an account exists for an address without a valid invitation. If sign-in
 fails, check the invited email and organisation: a wrong realm can look like
 an incorrect username or password.
+
+On a shared computer, use “Sign in with another account” and enter that
+person's email. Protected sign-in requires a password again; the portal must
+not mix data from the previous profile with the new identity.
 
 ## Roles and Sites
 
@@ -172,7 +189,7 @@ through OpenRemote Manager or a local database.
 
 Under [Sites](https://gridex.tech/sites/), the organisation administrator
 enters a **name** and **time zone**, then chooses Create Site. On an empty
-list, the form appears on that same page. Other roles do not see this
+list, the form appears on that same page, never under Devices. Other roles do not see this
 button. The Site appears only after its OpenRemote asset and administrator
 link have been verified in the correct organisation. On failure there is no
 locally successful Site; retrying unchanged details cannot duplicate it.

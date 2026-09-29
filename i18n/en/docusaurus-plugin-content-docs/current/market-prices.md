@@ -21,7 +21,7 @@ import GuideNotice from '@site/src/components/GuideNotice';
 />
 
 <GuideNotice label="Archive and portal published; acceptance testing pending" tone="amber">
-  <p>Live ENTSO-E hourly records have been verified in a separate TimescaleDB. Country controls still await portal publication and verification with real roles. Demo data are not live prices.</p>
+  <p>Live ENTSO-E hourly records have been verified in a separate TimescaleDB. Country controls are published in the portal, but still await acceptance verification with real roles. Demo data are not live prices.</p>
 </GuideNotice>
 
 ## Who has access? {#access}

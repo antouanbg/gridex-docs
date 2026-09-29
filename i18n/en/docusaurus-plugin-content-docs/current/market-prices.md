@@ -56,4 +56,10 @@ Using these prices for automatic battery control is a separate, not-yet-activate
 
 The BG dashboard shows Bulgarian hourly prices in GrideX dark-green and lime chart colours. Open it inside the portal from **Market → Open charts** through a short-lived one-time launch. The backend rechecks session and permissions on every request; there is no standalone public Grafana login. Its separate database role can read BG-only views, not the full archive. Future OpenRemote/Site visualisations need a separate source and organisation/Site isolation. Real customer-role browser acceptance testing is still pending.
 
+### Which day do the prices apply to?
+
+“Day-ahead” means a price for electricity delivered on the indicated date, determined in the previous day's auction. The chart's time axis shows the **delivery date and hour in Bulgaria (Europe/Sofia)**, not when you opened the page. The default view covers the past seven days and up to two days ahead; a future hour appears only if ENTSO-E has published a price for it. **“Latest hour with an available price”** identifies the last actual BG delivery hour on the chart.
+
+**“Last successful refresh”** is when GrideX received data from ENTSO-E; it is **not** the delivery date. If tomorrow's prices have not been published, neither zero nor today's price is presented as tomorrow's. Source: [ENTSO-E Transparency Platform — Day-ahead Prices](https://transparency.entsoe.eu/).
+
 The image above is **illustrative**, not a real customer Site.

@@ -10,8 +10,12 @@ The source repository is `https://github.com/antouanbg/gridex-docs`.
 
 The BG/EN Market guide documents the current country collection policy:
 only BG is enabled by default; additional zones and organisation rights need
-explicit platform-administrator action. Grafana is an unactivated private
-operator preparation, not a public documentation or portal login route.
+explicit platform-administrator action. The BG-only Grafana price dashboard
+is embedded from the live Market screen through a guarded one-time launch;
+there is no standalone Grafana login. Customer access needs both individual
+Day-ahead and Visualisations grants plus organisation BG scope. The direct
+price archive API remains platform-administrator-only. The service-request
+screen and Site charts are not implemented yet.
 
 For subsequent content deployments run `sh scripts/deploy-local.sh` on the Mac.
 Do not run `npm run build` alone against the live container: Docusaurus replaces

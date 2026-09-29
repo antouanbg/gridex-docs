@@ -1,5 +1,12 @@
 # CODEX_STATE
 
+## 2026-09-29 — invitation/session/viewer guide
+
+The existing BG/EN Docusaurus organisation guide documents the corrected
+member invitation, scoped sent status/resend, viewer-only navigation and
+automatic session retry. Preserve the accepted visual design. Typecheck and
+both locale builds pass; publish and verify HTTPS assets before marking live.
+
 ## 2026-09-28 publication checkpoint
 
 PR #9 merged as fcf5500 and deployed through the existing Docusaurus

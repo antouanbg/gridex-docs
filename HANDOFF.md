@@ -1,5 +1,13 @@
 # GrideX documentation handoff
 
+## 2026-09-29 — member invitation and session guidance
+
+BG/EN Docusaurus organisation guide now explains send confirmation,
+persistent statuses, sent-only resend for the same identity, viewer menu
+visibility and automatic transient-session retry. Existing design/components
+are unchanged. Typecheck and both locale builds pass. Publication must be
+verified separately before calling the guide live.
+
 ## 2026-09-29 — customer device guide prepared, not live
 
 BG: Слях двуезичната помощ за нов Обект, ROCK Pi E/OLIMEX ESP32-EVB и до две роли с актуалния вход по имейл и възстановяване на парола. Docusaurus typecheck и BG/EN build минаха. Публикацията чака изрично одобрената backend миграция/API рестарт и проверен frontend deploy; ръководството още отбелязва, че функцията не е live. Без промяна в одобрения дизайн.

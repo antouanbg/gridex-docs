@@ -46,17 +46,24 @@ for the platform administrator.
 2. Select your organisation, enter your colleague's email, choose a role and
    select only the Sites they need. If there are no Sites yet, the invitation
    can grant membership **without** Site access.
-3. Select Send invitation. After confirmed dispatch, wait for your colleague
-   to receive the message. If there is an error or the outcome is unclear,
-   **do not assume the email was sent or retry blindly** — check the state or
+3. Select Send invitation. The portal confirms dispatch. The invitations you
+   sent and their statuses remain visible below the form after a page reload.
+   If the outcome is unclear, **do not retry blindly** — check the status or
    contact support.
 4. Your colleague verifies their email, sets a password on the secure screen,
    signs in to their organisation and accepts the invitation in Profile. Only
    then verify that they see no more than their permitted Sites.
 
 This form can grant Viewer, Operator, Energy manager or Integrator, but **not**
-Organisation administrator. A sent invitation can be revoked in the same
-session; the email alone does not activate access.
+Organisation administrator. A **Sent** invitation can be revoked or resent by
+the same administrator. Resending creates a fresh link for the same user
+without duplicating the account or membership. Accepted or revoked invitations
+cannot be resent. The email alone does not activate access.
+
+A Viewer sees only their permitted data. Customers & contracts and Users &
+invitations are hidden from their menu, and a direct URL does not grant access.
+If the session check is temporarily unavailable, the portal retries
+automatically without signing the user out or substituting demo data.
 
 ## Steps for the recipient
 

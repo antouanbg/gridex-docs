@@ -1,5 +1,17 @@
 # GrideX documentation handoff
 
+## 2026-09-29 — права за услуги и пазарен архив
+
+Одобрено: супер администраторът разрешава услуга на организация; нейният
+администратор разрешава на всеки одобрен член поотделно. Без лично право
+услугата не се вижда в реалното меню. Стойности/история на часовите ENTSO-E
+цени са само за супер администратора; в портала засега се показват единствено
+API status и последен успешен час. BG/EN страниците `market-prices` и
+`organisations-and-access` са синхронизирани. Отделната TimescaleDB реално
+съхранява 240 часови реда за 10 зони, без retention. Докато frontend не бъде
+публикуван/тестван с истинските роли, страниците изрично го казват.
+Typecheck и двуезичен Docusaurus build минават.
+
 ## 2026-09-29 — BG/EN помощта е внедрена
 
 PR #15 е слят в `main` като `2c10d73`. От актуалния `main` е изпълнен
@@ -163,3 +175,11 @@ renewed; expiry and procedure are in README.
 EN: The BG/EN access guide now documents email-first realm routing and
 Keycloak-only passwords. Publish together with the frontend/backend change;
 do not claim a live rollout from this docs commit alone.
+# 2026-09-29 — „Пазар“ / Market day-ahead guide
+
+BG/EN `/market-prices/` guide was added for the owner-approved existing
+`/market/` view and ENTSO-E A44 day-ahead product. It explicitly says the
+integration is prepared but not yet publicly verified. TypeScript and both
+locale builds pass. Do not publish a false live claim; after backend token,
+real A44 and portal browser acceptance, update the status line and deploy
+with `scripts/deploy-local.sh`, verifying HTML/CSS/JS in BG and EN.

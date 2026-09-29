@@ -1,5 +1,15 @@
 # GrideX documentation handoff
 
+## 2026-09-29 — BG/EN Grafana guide е публикуван
+
+PR #18 е слят в `main` (`12fbc9d`) и от този commit е изпълнен
+`sh scripts/deploy-local.sh` до `GRIDEX_DOCS_DEPLOYED`. BG/EN guides,
+CSS/JS MIME и локалният HTTPS маршрут са проверени. Публичният маршрут
+от този Mac изтича по мрежовия път, затова външно отваряне на docs и
+пълният iframe тест с човешки акаунт не се твърдят като проверени.
+Екранът за заявки за услуги и графиките за Обекти остават за следваща
+реализация; не ги представяй като налични.
+
 ## 2026-09-29 — защитен BG пазарен dashboard
 
 BG/EN ръководствата `market-prices` и `organisations-and-access` вече описват

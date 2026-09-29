@@ -8,6 +8,11 @@ may expose it publicly. Do not publish private runbooks, credentials, live
 device identifiers or infrastructure addresses in this repository.
 The source repository is `https://github.com/antouanbg/gridex-docs`.
 
+The BG/EN Market guide documents the current country collection policy:
+only BG is enabled by default; additional zones and organisation rights need
+explicit platform-administrator action. Grafana is an unactivated private
+operator preparation, not a public documentation or portal login route.
+
 For subsequent content deployments run `sh scripts/deploy-local.sh` on the Mac.
 Do not run `npm run build` alone against the live container: Docusaurus replaces
 the `build/` directory and Docker retains the old bind mount, resulting in 404

@@ -1,6 +1,15 @@
 # GrideX documentation handoff
 Repository / GitHub: `antouanbg/gridex-docs`
 
+## 2026-09-30 — account switch guide (source gate)
+
+The BG/EN organisation-access guide now explains that choosing a new email
+starts a new explicit login, an old identity is rejected, and the previous
+Site choice does not carry into the new account. No customer credentials are
+included. Source typecheck/build pass. Merge and redeploy the guide with the
+frontend account-switch correction, then verify both locale routes and asset
+MIME. External mobile acceptance remains with the owner.
+
 ## 2026-09-30 — Login guide deployment checkpoint
 
 PR #32 is merged as `1667b62`. The approved `sh scripts/deploy-local.sh`

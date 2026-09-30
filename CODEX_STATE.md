@@ -1,5 +1,11 @@
 # CODEX_STATE
 
+## 2026-09-30 — Login guide deployed
+
+BG/EN guide PR #32 is merged and deployed via the approved script. Local
+HTTPS routes, updated text and CSS/JS MIME pass. Public hostname verification
+from this Mac timed out; external-browser acceptance remains. See HANDOFF.
+
 ## 2026-09-30 — sign-in workflow guide
 
 BG and EN organisation/access pages are updated in parity for top-of-page

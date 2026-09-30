@@ -124,9 +124,12 @@ choose another demo section without manually refreshing or seeing customer
 data. After sign-in is verified, the portal briefly shows “Sign-in successful”
 and opens the Overview home screen.
 
-On a shared computer, use “Sign in with another account” and enter that
-person's email. Protected sign-in requires a password again; the portal must
-not mix data from the previous profile with the new identity.
+On a shared computer, open Sign in and enter the next person's email. The
+new sign-in page does not silently restore the previous user; the protected
+screen asks for a password again. If the identity provider returns the old
+account, the portal rejects that session and offers a retry. The previous
+user's Site selection is cleared as well. No other profile's data is used
+until the new identity has been verified.
 
 ## Roles and Sites
 

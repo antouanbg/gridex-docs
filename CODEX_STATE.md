@@ -1,5 +1,12 @@
 # CODEX_STATE
 
+## 2026-09-30 — account switching documentation (source gate)
+
+The paired BG/EN organisation-access guide documents explicit new-account
+login and rejection of a returned previous account. Publish and verify both
+locale routes with the matching frontend fix; see HANDOFF. Do not call the
+public documentation updated until the deployment gate passes.
+
 ## 2026-09-30 — Login guide deployed
 
 BG/EN guide PR #32 is merged and deployed via the approved script. Local

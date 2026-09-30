@@ -66,6 +66,11 @@ invitations are hidden from their menu, and a direct URL does not grant access.
 If the session check is temporarily unavailable, the portal retries
 automatically without signing the user out or substituting demo data.
 
+After confirmed session expiry or revocation, the portal clears private data
+and opens the public [demo](https://gridex.tech/demo/). It does not redirect
+you automatically to OpenRemote sign-in. Choose Login in the demo to sign in
+again. A temporary connection error is not treated as an expired session.
+
 ## Steps for the recipient
 
 <div className="gridex-step-grid">

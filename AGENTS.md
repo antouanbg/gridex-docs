@@ -1,5 +1,13 @@
 # GrideX public documentation rules
 
+- Owner-approved project display name (2026-09-30): use **Antouan** in both
+  Bulgarian and English project credits and new documentation. Do not invent
+  titles or restore a former full name. Preserve historical Git metadata,
+  existing legal notices and accurate bibliographic citations.
+- Одобрено име на собственика в проекта: **Antouan** на български и английски.
+  Не връщай старото пълно име или титли. Запазвай историята на Git,
+  съществуващите правни бележки и точните библиографски цитати.
+
 - Approved target (2026-09-29): all verified members see five service catalog
   entries. Only day-ahead (one selected country/zone, BG initially) and
   visualisations are independently requestable; analysis, meteorology and

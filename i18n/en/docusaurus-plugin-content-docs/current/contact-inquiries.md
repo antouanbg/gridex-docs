@@ -10,8 +10,10 @@ description: How a visitor or signed-in member can send an enquiry to the team.
 ## Who can send an enquiry?
 
 - A visitor without an account uses **About → Enquiry from the demo** and enters a name, reply email, topic and message.
-- A signed-in member with a verified email uses **About → Send an enquiry** and chooses any topic. The sender address comes from the verified session, not a browser-supplied address.
+- A signed-in member with a verified email uses **About → Send an enquiry** and chooses any topic. The **Reply email** field is prefilled but editable. The verified account email remains recorded separately for identity and abuse prevention; the entered address becomes the reply address of the support message.
 - **Request an offer** in About pre-fills the topic for SunStorage Pro 261 but does not send anything by itself. Only **Send enquiry** submits the form.
+
+The same page shows two photos of the **SunStorage PRO STE-261L-125P** model. Use the arrows or swipe on a phone. [Source: the official Suntech product page](https://www.suntech-power.com/products/storage/sunstorage-pro-ste-261l-125p/).
 
 ## Check and confirmation
 

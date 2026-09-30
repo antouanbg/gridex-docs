@@ -16,3 +16,5 @@ description: How a visitor or signed-in member can send an enquiry to the team.
 ## Check and confirmation
 
 The form uses a short one-time human check, a hidden autofill trap and server-side frequency limits. Do not include passwords, keys or other sensitive information. A success message means the email provider accepted the message for sending; it does **not** guarantee mailbox delivery. If the result is uncertain, do not retry immediately.
+
+The enquiry goes to the support team, with a visible copy to `support@gridex.tech`. This copy applies only to enquiries, not invitations or password-recovery emails.

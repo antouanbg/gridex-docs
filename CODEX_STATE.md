@@ -1,5 +1,11 @@
 # CODEX_STATE
 
+## 2026-09-30 — Market chart range guide (source gate)
+
+BG/EN Market guides document the protected period control and Bulgarian
+delivery-date meaning. Publish only after the matching backend and portal
+changes; then verify both locale routes. See HANDOFF.
+
 ## 2026-09-30 — account switching documentation (source gate)
 
 The paired BG/EN organisation-access guide documents explicit new-account

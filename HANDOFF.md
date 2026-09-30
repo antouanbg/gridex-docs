@@ -1,6 +1,14 @@
 # GrideX documentation handoff
 Repository / GitHub: `antouanbg/gridex-docs`
 
+## 2026-09-30 — Market chart range guide (source gate)
+
+Paired BG/EN Market pages now describe the new short initial range, presets,
+custom Bulgaria-local delivery dates (up to 31 days), and the two status Stats.
+Do not publish before the protected backend proxy/range and portal controls
+are live. Typecheck/build must pass, then deploy with the Docusaurus script
+and verify both locales and asset MIME. Real mobile owner acceptance is open.
+
 ## 2026-09-30 — account switch guide (source gate)
 
 The BG/EN organisation-access guide now explains that choosing a new email

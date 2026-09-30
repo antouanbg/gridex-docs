@@ -19,4 +19,6 @@ The same page shows two photos of the **SunStorage PRO STE-261L-125P** model. Us
 
 The form uses a short one-time human check, a hidden autofill trap and server-side frequency limits. Do not include passwords, keys or other sensitive information. A success message means the email provider accepted the message for sending; it does **not** guarantee mailbox delivery. If the result is uncertain, do not retry immediately.
 
+If the human check does not load, the form shows the failure and **Retry human check** beside the field. **Send enquiry** now explains which field is missing or invalid instead of appearing to do nothing; a reply address, topic, message and correct human-check answer are required. A network failure leaves the entered text on screen. After a rate limit, wait a few minutes. If the mail provider result is uncertain, check with support first to avoid a duplicate message.
+
 The enquiry goes to the support team, with a visible copy to `support@gridex.tech`. This copy applies only to enquiries, not invitations or password-recovery emails.

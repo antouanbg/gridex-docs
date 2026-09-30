@@ -1,6 +1,16 @@
 # GrideX documentation handoff
 Repository / GitHub: `antouanbg/gridex-docs`
 
+## 2026-09-30 — Login guide deployment checkpoint
+
+PR #32 is merged as `1667b62`. The approved `sh scripts/deploy-local.sh`
+completed with `GRIDEX_DOCS_DEPLOYED`; both BG/EN routes and CSS/JS MIME
+passed. The running container serves the new BG and EN sign-in paragraphs.
+The public `doc.gridex.tech` address timed out from this Mac, so external
+browser acceptance is still open; this is not evidence that the container
+failed. Next: open both locale URLs from an external network and confirm
+normal rendering. No credentials are needed for this guide.
+
 ## 2026-09-30 — Login and Demo guide update
 
 The paired BG/EN organisation/access guide now explains that email entry is

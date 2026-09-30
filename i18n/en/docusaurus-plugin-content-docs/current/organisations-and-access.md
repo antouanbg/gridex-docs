@@ -71,6 +71,11 @@ and opens the public [demo](https://gridex.tech/demo/). It does not redirect
 you automatically to OpenRemote sign-in. Choose Login in the demo to sign in
 again. A temporary connection error is not treated as an expired session.
 
+When you select **Sign out**, the portal ends the identity session and returns
+you directly to the public demo, without a blank intermediate page or an
+automatic new sign-in. Other open portal tabs leave the private view as well.
+Select Sign in from the demo when you want to return.
+
 ## Steps for the recipient
 
 <div className="gridex-step-grid">

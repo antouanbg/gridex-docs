@@ -1,6 +1,20 @@
 # GrideX documentation handoff
 Repository / GitHub: `antouanbg/gridex-docs`
 
+## 2026-09-30 — Login and Demo guide update
+
+The paired BG/EN organisation/access guide now explains that email entry is
+near the top of Login, an unfinished sign-in returns directly to the chosen
+Demo section, and verified sign-in briefly confirms success before Overview.
+No credentials or customer data are documented. Typecheck and both locale
+builds pass. This is source-ready, not yet a verified public deployment.
+Next: merge with the frontend correction, run `sh scripts/deploy-local.sh`,
+check BG/EN routes and CSS/JS MIME, then record external browser acceptance.
+
+Двуезичните указания за прекъснат и успешен вход са подготвени. Следва
+публикуване и проверка на живите страници, без предварително да се обявяват
+за достъпни.
+
 ## 2026-09-30 — contact guide publication gate
 
 BG/EN contact guides are built but not deployed. Dependency: backend support

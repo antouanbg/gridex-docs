@@ -118,6 +118,12 @@ whether an account exists for an address without a valid invitation. If sign-in
 fails, check the invited email and organisation: a wrong realm can look like
 an incorrect username or password.
 
+The email field is near the top of the sign-in page, including on mobile.
+If you open Sign in but do not complete authentication, you can immediately
+choose another demo section without manually refreshing or seeing customer
+data. After sign-in is verified, the portal briefly shows “Sign-in successful”
+and opens the Overview home screen.
+
 On a shared computer, use “Sign in with another account” and enter that
 person's email. Protected sign-in requires a password again; the portal must
 not mix data from the previous profile with the new identity.

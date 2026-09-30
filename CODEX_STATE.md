@@ -1,5 +1,12 @@
 # CODEX_STATE
 
+## 2026-09-30 — sign-in workflow guide
+
+BG and EN organisation/access pages are updated in parity for top-of-page
+email, unfinished sign-in returning to Demo, and successful sign-in landing
+on Overview. Both locale builds and typecheck pass. Merge/deploy/live route
+checks are still distinct gates; see HANDOFF.
+
 ## 2026-09-30 — contact enquiry guide (source only)
 
 BG/EN `/contact-inquiries/` explains demo and verified-member enquiries,

@@ -1,6 +1,13 @@
 # GrideX documentation handoff
 Repository / GitHub: `antouanbg/gridex-docs`
 
+## 2026-09-30 — изход към демото
+
+BG/EN указанията за организации и достъп вече описват директното връщане
+към публичното демо след „Изход“ и поведението на другите табове. Публикувай
+след съответната backend callback и frontend поправка; реален потребителски
+тест след внедряване остава отделно потвърждение.
+
 ## 2026-09-30 — Market chart range guide (source gate)
 
 Paired BG/EN Market pages now describe the new short initial range, presets,

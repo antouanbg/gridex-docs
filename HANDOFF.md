@@ -322,3 +322,11 @@ EN: The BG/EN organisations-and-access guide now documents the complete
 platform-admin → organisation-admin → member service grant flow and the
 five-item catalogue. Source is updated; public deployment/verification is
 still pending.
+
+Publication update: PR #37 merged into `main` at `a1268df`. The approved
+`sh scripts/deploy-local.sh` recreated the read-only docs container and
+returned `GRIDEX_DOCS_DEPLOYED`; BG and EN guide routes served the new headings
+over the local HTTPS proxy, with CSS and JavaScript MIME checks passing. Direct
+public-hostname checks from this Mac timed out because the external route/VPN
+was unavailable; verify both URLs from an external network. This is an open
+verification item, not evidence that the docs service failed.

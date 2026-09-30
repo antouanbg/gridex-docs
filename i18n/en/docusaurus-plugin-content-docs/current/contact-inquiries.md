@@ -5,7 +5,7 @@ title: Contacting GrideX
 description: How a visitor or signed-in member can send an enquiry to the team.
 ---
 
-> This feature is prepared in source. This page will be marked operational only after the API and portal are published and a real message is verified. Until then, a demo button is not proof that an email was sent.
+> The form and API are published. A test enquiry on 30 September 2026 was accepted by the email provider (`queued`). Mailbox delivery and a test from an external network are not yet confirmed.
 
 ## Who can send an enquiry?
 

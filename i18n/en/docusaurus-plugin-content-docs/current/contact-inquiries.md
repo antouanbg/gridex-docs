@@ -5,7 +5,7 @@ title: Contacting GrideX
 description: How a visitor or signed-in member can send an enquiry to the team.
 ---
 
-> The form and API are published. A test enquiry on 30 September 2026 was accepted by the email provider (`queued`). Mailbox delivery and a test from an external network are not yet confirmed.
+> The form and API are published. A test enquiry on 30 September 2026 was accepted by the email provider (`queued`), and its receipt in the mailbox was confirmed. Testing the form from an external network is still pending.
 
 ## Who can send an enquiry?
 

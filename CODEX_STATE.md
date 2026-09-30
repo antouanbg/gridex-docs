@@ -1,5 +1,16 @@
 # CODEX_STATE
 
+## 2026-09-30 — contact enquiry guide (source only)
+
+BG/EN `/contact-inquiries/` explains demo and verified-member enquiries,
+the one-use human check, provider-queued versus delivered status and the
+pre-filled offer topic. The guide explicitly says deployment/real delivery
+are pending. Typecheck and both locale builds pass. Publish only after backend
+and portal are reviewed and live; verify both locales and asset MIME.
+
+Ръководството е подготвено на двата езика, но не се представя като работеща
+поща преди истински приемателен тест.
+
 ## 2026-09-29 — BG-only market country guide
 
 BG/EN market guide describes BG-only default ingestion, explicit platform

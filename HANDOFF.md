@@ -1,4 +1,16 @@
 # GrideX documentation handoff
+Repository / GitHub: `antouanbg/gridex-docs`
+
+## 2026-09-30 — contact guide publication gate
+
+BG/EN contact guides are built but not deployed. Dependency: backend support
+mail API, private recipient config and portal About form must be live first.
+Acceptance: publish with `sh scripts/deploy-local.sh`, verify BG/EN routes,
+CSS/JS MIME and the About help link after real visitor/member inbox tests.
+Exact next action: review docs PR and wait for the backend/frontend release;
+only then publish and mark the About help destination ready.
+
+Двуезичният текст е подготвен; живото публикуване и проверките предстоят.
 
 ## 2026-09-29 — дата на доставка в „Пазар“
 

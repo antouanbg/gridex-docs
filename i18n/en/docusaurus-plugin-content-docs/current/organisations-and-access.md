@@ -174,8 +174,33 @@ The platform administrator can grant a service to an active organisation under
 **Customers & contracts → Users & invitations**. This is only an organisation
 grant: no member is enabled automatically. The organisation administrator then
 explicitly enables each approved member in the same section. Without an
-individual grant, the service is hidden from the live menu. Revoking the
+individual grant, the service remains visible in the catalogue but its live
+screen denies access. Revoking the
 organisation grant removes all member grants; they do not return automatically.
+
+### Where services are managed
+
+1. **Profile → Services:** every verified member sees the catalogue and their
+   own state: enabled service, pending request, available to request or Coming
+   soon. Only `day_ahead` and `visualisations` can be requested; requesting
+   alone does not grant access.
+2. **Customers & contracts → Users & invitations → approved organisation:**
+   the platform administrator sees approved services, available but not yet
+   approved services, and future services separately. They may enable a
+   requestable service; Day-ahead additionally needs a BG zone grant. Removing
+   an organisation grant requires confirmation and deletes member grants.
+3. **Users & invitations → Services and member access:** the organisation
+   administrator sees approved services and enables approved members one by
+   one. Services not approved for the organisation are informational only;
+   this administrator cannot enable them at organisation level.
+4. **Users & invitations → Service requests:** each administrator sees their
+   own decision stage and history. No automatic email is sent. The other
+   three future services cannot be requested or granted yet.
+
+The BG price chart requires individual grants for both Day-ahead prices and
+Visualisations, plus both organisation grants and BG zone scope. The full
+archive and ENTSO-E provider health remain platform-administrator-only. This
+screen does not change OpenRemote inventory or Site permissions.
 
 ### Site charts {#site-visualisations}
 

@@ -306,3 +306,19 @@ integration is prepared but not yet publicly verified. TypeScript and both
 locale builds pass. Do not publish a false live claim; after backend token,
 real A44 and portal browser acceptance, update the status line and deploy
 with `scripts/deploy-local.sh`, verifying HTML/CSS/JS in BG and EN.
+
+# 2026-09-30 — Услуги и права по организация / Organisation service rights
+
+BG/EN страницата „Организации, покани и права“ вече описва целия одобрен
+път: каталог в „Профил → Услуги“, заявка без автоматично право, разрешение
+за активна организация от супер администратор, после индивидуално
+разрешение от организационен администратор. Уточнени са петте услуги,
+двете активни за заявки, BG зоната и нужните две права за ценовата
+визуализация. Неразрешените услуги остават видими като каталог, но не
+отварят защитено съдържание. Тази промяна е само в изходния код на
+документацията; публичният сайт още не е проверен след ново внедряване.
+
+EN: The BG/EN organisations-and-access guide now documents the complete
+platform-admin → organisation-admin → member service grant flow and the
+five-item catalogue. Source is updated; public deployment/verification is
+still pending.

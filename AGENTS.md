@@ -22,6 +22,19 @@
   резултата. Разграничи предложение от работещо ръководство; публикувай и
   свържи помощта от реалния екран след проверено внедряване.
 
+- First place each new feature's full process, role-specific desktop/mobile
+  screens and form description in Git as clearly marked DRAFT documentation.
+  Present that exact version to the owner. Implementation starts only after
+  explicit owner approval of both the documented logic and screens. Keep draft
+  specifications out of live help navigation until the implementation is
+  verified; revise and re-approve changed scope.
+- Първо качи пълния процес, отделните desktop/mobile екрани по роли и
+  описанието на формите като ясно означена ЧЕРНОВА в Git документацията.
+  Представи точно тази версия на собственика. Реализацията започва само
+  след изрично одобрение на документираната логика и екраните. Не включвай
+  чернова в публичната помощ преди проверено внедряване; променен обхват
+  иска ново одобрение.
+
 - Owner-approved project display name (2026-09-30): use **Antouan** in both
   Bulgarian and English project credits and new documentation. Do not invent
   titles or restore a former full name. Preserve historical Git metadata,

@@ -1,5 +1,18 @@
 # GrideX public documentation rules
 
+- For each new feature or changed workflow, require an owner-reviewed complete
+  logic diagram and frontend desktop/mobile page mockup before implementation.
+  Identify roles, states, notifications, errors/retries, revocation and exact
+  existing menu placement; state explicitly if no UI changes. Record the
+  owner's approval and exact scope in the implementation repositories first.
+  Do not publish a partial or assistant-invented process as approved or live.
+- За всяка нова функция/променен процес изисквай предварително прегледани от
+  собственика пълна диаграма на логиката и desktop/mobile макет на страницата.
+  Посочи роли, състояния, уведомления, отказ/повторен опит, отнемане и място
+  в менюто; ако UI не се променя, отбележи го. Първо се записват одобрението
+  и точният обхват в хранилищата за реализация. Не публикувай частичен или
+  измислен от асистента процес като одобрен или работещ.
+
 - Owner-approved project display name (2026-09-30): use **Antouan** in both
   Bulgarian and English project credits and new documentation. Do not invent
   titles or restore a former full name. Preserve historical Git metadata,

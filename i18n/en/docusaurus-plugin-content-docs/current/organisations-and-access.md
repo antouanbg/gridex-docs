@@ -76,6 +76,11 @@ you directly to the public demo, without a blank intermediate page or an
 automatic new sign-in. Other open portal tabs leave the private view as well.
 Select Sign in from the demo when you want to return.
 
+**Another user on the same computer:** select Sign out, wait for the demo,
+then choose Sign in. Enter the new user's email and password. The Switch
+account/user option has been removed; accounts are not switched within an
+active portal session.
+
 ## Steps for the recipient
 
 <div className="gridex-step-grid">

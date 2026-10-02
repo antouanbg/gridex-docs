@@ -174,12 +174,12 @@ have separate service permissions.
 
 ### Approved members and their access {#approved-members}
 
-**Status on 2 October 2026:** the new screen below is approved and its source
-has been published, but it is not enabled on the live portal. A live
-OpenRemote check found missing service permissions for user–Site links, so
-the previous API was restored. Until scoped provisioning and retesting are
-complete, use the existing invitation flow and ask your administrator about
-changes to Site access.
+**Status on 2 October 2026:** this screen and the protected API are published.
+The service clients in GrideX and Novacom were verified separately, and the
+existing human roles were verified as restricted to OpenRemote read access.
+A real-user test of role and Site editing through the portal remains a separate
+check. If the screen warns about an unverified link, do not treat the change
+as successful.
 
 Under **Customers & contracts → Users & invitations → Organisation members**,
 the administrator sees all approved members of their organisation, not only

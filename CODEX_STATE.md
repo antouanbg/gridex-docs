@@ -1,5 +1,25 @@
 # CODEX_STATE
 
+## 2026-10-02 — publication and verification checkpoint
+
+Merged PR [#43](https://github.com/antouanbg/gridex-docs/pull/43) into main at `765b0cc780ebd88997cbe1d6c5f15e956626aa5b`.
+The matching Bulgarian and English organisations-and-access guides are deployed using scripts/deploy-local.sh (GRIDEX_DOCS_DEPLOYED). Typecheck, both locale builds, local HTTPS guide routes and CSS/JS MIME checks passed. Docusaurus and the approved GrideX design remain unchanged.
+Paired releases: frontend #100, backend #92, documentation #43.
+Status: source tested, published and deployed; owner acceptance remains open.
+Next acceptance: signed-in organisation administrator reviews the roster and
+all five service rows, requests an unapproved active service, then verifies
+the platform decision, individual member grant and actual notification delivery.
+Do not fabricate grants or treat test fixtures/mail configuration as delivered mail.
+
+Български: PR #43 е слят в main (765b0cc780ebd88997cbe1d6c5f15e956626aa5b).
+Съответстващите BG/EN ръководства organisations-and-access са внедрени чрез scripts/deploy-local.sh (GRIDEX_DOCS_DEPLOYED). Минаха typecheck, двата locale build-а, локалните HTTPS адреси и CSS/JS MIME проверки. Запазени са Docusaurus и одобреният GrideX дизайн.
+Кодът е проверен, публикуван и внедрен; приемането от собственика остава отворено.
+Следва реален тест: администраторът вижда списъка и петте услуги, заявява
+неодобрена активна услуга; проверяват се решението на супер администратора,
+личното разрешение и действително полученият мейл. Без примерни права и без
+приравняване на тестови данни/мейл настройки с реална доставка.
+
+
 ## 2026-09-30 — Market chart range guide (source gate)
 
 BG/EN Market guides document the protected period control and Bulgarian

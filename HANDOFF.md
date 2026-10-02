@@ -340,3 +340,8 @@ links to these anchors. Docusaurus build and TypeScript pass. Keep the
 production-status note until backend role migration, portal deployment and
 real-account acceptance are verified; source documentation alone is not a
 live entitlement.
+
+Live checkpoint: after backend role migration and portal Pages deployment,
+`sh scripts/deploy-local.sh` returned `GRIDEX_DOCS_DEPLOYED` following BG/EN
+typecheck/build and local HTTPS/CSS/JS checks. BG/EN status was updated in
+PR #41. Signed-in real-user acceptance remains pending.

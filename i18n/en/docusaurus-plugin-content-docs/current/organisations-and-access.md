@@ -154,6 +154,13 @@ administrator role.
 
 ### Approved members and their access
 
+**Status on 2 October 2026:** the new screen below is approved and its source
+has been published, but it is not enabled on the live portal. A live
+OpenRemote check found missing service permissions for user–Site links, so
+the previous API was restored. Until scoped provisioning and retesting are
+complete, use the existing invitation flow and ask your administrator about
+changes to Site access.
+
 Under **Customers & contracts → Users & invitations → Organisation members**,
 the administrator sees all approved members of their organisation, not only
 invitations they personally sent. Each entry shows the email address, first

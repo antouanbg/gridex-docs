@@ -172,11 +172,27 @@ that realm, while the backend checks and audits actions. Removing a Site must
 also remove and recheck links to its child Assets. Prices and Visualisations
 have separate service permissions.
 
+### One shared administrative design
+
+Under **Customers & contracts → Users & invitations**, the platform administrator
+first selects an approved organisation and manages its five service rows. This is
+followed by **New organisation invitation**, **Organisation invitations**, and
+**Approved organisations and services**. New invitations require the first
+administrator's first name, last name and email. The organisation administrator
+has the continuous page described below, scoped to their own organisation.
+The member's existing **Profile → Services** page remains unchanged in workflow.
+All roles use the same GrideX cards, colours, status pills and buttons; actions
+remain subject to verified backend permissions. Invitation history includes
+accepted entries, filters and pagination. No additional Accept button is added.
+
 ### Approved members and their access {#approved-members}
 
-The organisation-administrator screen has three views: **Members**,
-**Invitations** and **Services**. In Members, the roster is on the left and
-the selected person's permissions on the right; mobile stacks them. Select
+The organisation-administrator screen is one continuous page, without tabs:
+**Available services → New member invitation → Member invitations → Approved
+members and services**. All five catalogue entries remain visible without
+organisation grants; only the two active services can be requested. The member
+roster is on the left and the selected person's permissions on the right;
+mobile stacks them. Select
 a person by name/email, change their role and Site checkboxes, choose
 **Review changes**, then **Save role and Sites**. Services are separate rows
 below the permissions. Search and pagination support larger rosters. A
@@ -220,14 +236,14 @@ organisation**; Analysis, Meteorology and Forecasting say **Coming soon**.
 A disabled button grants no access. A failed check shows an unverified
 status, not an assumed permission.
 
-1. The organisation administrator opens **Users & invitations → Services**
+1. The organisation administrator opens **Users & invitations**, in **Available services**,
    and chooses **Request** beside either available service. Prices currently
    request Bulgaria / BG. The request is recorded and the platform
    administrator is notified by email. Only the organisation administrator
    who submitted it may choose **Cancel request** while it awaits a decision.
 2. The platform administrator approves or declines the organisation request.
    Approval enables only the organisation, not its members.
-3. The organisation administrator opens **Members**, selects the approved
+3. The organisation administrator opens **Approved members and services**, selects the approved
    person and chooses **Grant and notify**. Access takes effect immediately,
    without another recipient Accept button. **Remove access** revokes it.
 4. A member may request a service for themselves under **Profile → Services**.

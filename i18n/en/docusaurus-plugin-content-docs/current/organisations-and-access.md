@@ -152,6 +152,28 @@ explicit: membership without a Site grant does not expose another customer's
 data. The current member invitation flow cannot delegate the organisation
 administrator role.
 
+### Approved members and their access
+
+Under **Customers & contracts → Users & invitations → Organisation members**,
+the administrator sees all approved members of their organisation, not only
+invitations they personally sent. Each entry shows the email address, first
+and last name when present, current role, assigned Sites, separate services
+and last recorded sign-in. Pending invitations are listed separately and are
+not memberships. A new invitation requires a first and last name.
+
+The administrator may change an approved ordinary member among **Viewer**,
+**Operator**, **Energy manager** and **Integrator**, and explicitly add or
+remove assigned Sites. A change is confirmed only after the corresponding
+OpenRemote Site Asset links are verified. The organisation administrator
+role cannot be delegated or demoted on this screen. Additional services
+are granted separately; a role or Site assignment does not itself enable
+an optional service. The platform administrator can inspect each
+organisation's members without bypassing its permissions.
+
+If the screen warns that an OpenRemote link is unverified, do not treat a
+local record as proof that access works. Contact an administrator before
+granting further rights. Larger rosters are paginated.
+
 ## Additional services {#additional-services}
 
 Under **Profile → Services**, every verified member, including a viewer,

@@ -1,6 +1,8 @@
 # Чернова за одобрение: услуги, заявки и достъпи / DRAFT: service requests and grants
 
-**Статус към 2026-10-01:** ревизирана чернова за окончателен преглед.
+**Статус към 2026-10-02:** собственикът одобри показания екран за членове,
+роля, конкретни Обекти и отделни услуги. Това е одобрена спецификация, не
+твърдение за внедрена функционалност.
 Собственикът уточни, че администраторско разрешаване на услуга действа
 **веднага**, без второ приемане; нова покана изисква собствено и фамилно
 име плюс имейл; потребителският екран не се променя. Новите административни
@@ -9,6 +11,50 @@
 потвърди именно тази ревизирана логика и екрани.
 
 ## Български
+
+### Одобрен екран „Потребители и покани“ — членове и Обекти
+
+Съществуващият адрес `/customers/users/` и структурата на менюто остават.
+Администраторът на организацията вижда всички одобрени членове на **своята**
+активна организация, а не само изпратените лично от него покани. Списъкът
+показва две имена, имейл, текуща роля, изрично разрешените Обекти, отделно
+разрешените услуги, статус и последен потвърден вход. Липсващите имена при
+старите идентичности не се измислят: показват се имейлът и указание за
+попълване на профила. Чакащите покани остават отделен изглед с предложените
+роля и Обекти; нямат ефективни права. Списъците подлежат на странициране.
+
+При нова членска покана администраторът попълва собствено име, фамилия,
+имейл, една от четирите членски роли и нула или повече конкретни Обекти.
+Празният избор не дава достъп до Обекти. Ролите са `viewer` (четене),
+`operator` (оперативни команди, чернови и симулации), `energy_manager`
+(допълнително конфигурация и активиране на стратегии) и `integrator`
+(управление на активи/хардуер в разрешения обхват). Само администраторът на
+организацията създава Обект и пуска commissioning; никоя членска роля не
+получава това право. Нито поканата, нито редакцията на член може да присвои
+`administrator`. При редакция на съществуващ член администраторът може да
+смени само една от четирите членски роли и списъка с Обекти; настоящ
+администратор се показва, но не се понижава/прехвърля през тази форма.
+Услугите остават отделни от ролята и се разрешават само ако организацията
+вече има право; нито една не се включва автоматично при смяна на роля или
+Обект.
+
+Backend проверява активна организация, realm, проверена самоличност,
+администраторско членство, валидна членска роля и всеки разрешаван Обект.
+Промяната на обхвата трябва да се съгласува с OpenRemote Asset връзките;
+при непотвърдена външна промяна не се отчита успех. Всяко действие се
+одитира. Само потвърден от API резултат обновява екрана; грешка запазва
+предишното видимо състояние и предлага безопасен нов опит. При отнемане
+достъпът се прекратява без второ потвърждение от член; покана и отмяна на
+покана запазват съществуващите си имейл и audit правила.
+
+```text
+Клиенти и договори / Потребители и покани
+  [Потребители] [Изпратени покани]                 [+ Покани потребител]
+  Потребители: име + имейл | роля | Обекти | услуги | статус | последен вход
+  Избран член: [членска роля] [избери Обекти] [отделни услуги] [Преглед] [Запази]
+  Покана: [име] [фамилия] [имейл] [членска роля] [Обекти] [Изпрати]
+  На мобилен: същите полета и действия във вертикални редове.
+```
 
 ### Източник на самоличност и данни
 
@@ -134,6 +180,34 @@ backend правата му.
   публичната навигация.
 
 ## English
+
+**Approved member-access screen (2026-10-02):** Keep the existing
+`/customers/users/` location and menu. The organisation administrator sees
+every approved member of that active organisation, not merely invitations
+they personally created. Show verified first and last name where available,
+email, current role, explicitly granted Sites, separately granted services,
+status and last verified login. For legacy identities with missing names,
+show the exact email and a profile-completion prompt, never invented names.
+Pending invitations are separate and confer no effective access. Paginate
+lists. The member's own service-catalog screen does not change.
+
+New member invitations require first name, last name, email, exactly one
+member role (`viewer`, `operator`, `energy_manager` or `integrator`) and an
+explicit Site selection; zero Sites means zero Site access. The organisation
+administrator alone creates Sites and starts commissioning. Neither the
+invitation nor member editing may delegate or demote `administrator`.
+Editing an existing non-admin member may change only those four member roles
+and explicitly granted Sites. Services are separate entitlements, never
+implicitly changed by a role or Site update. An organisation may grant a
+service to its member only after the platform grant exists.
+
+The API checks verified identity, active organisation, exact realm, current
+administrator membership, role and every Site. Site-scope changes must agree
+with OpenRemote user–Asset links before success is reported. Audit each
+action; show only API-confirmed results. On failure retain the previous UI
+state and offer a safe retry. Revocation takes effect without a second member
+acceptance. Existing invitation email and audit rules remain. Desktop uses
+list rows plus an access-detail panel; mobile stacks the same controls.
 
 **Status:** proposal only. The member screen stays unchanged. The revised
 admin lists, request cancellation, offers and email behavior are not yet

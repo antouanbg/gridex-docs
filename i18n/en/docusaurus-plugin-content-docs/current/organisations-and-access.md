@@ -174,6 +174,15 @@ have separate service permissions.
 
 ### Approved members and their access {#approved-members}
 
+The organisation-administrator screen has three views: **Members**,
+**Invitations** and **Services**. In Members, the roster is on the left and
+the selected person's permissions on the right; mobile stacks them. Select
+a person by name/email, change their role and Site checkboxes, choose
+**Review changes**, then **Save role and Sites**. Services are separate rows
+below the permissions. Search and pagination support larger rosters. A
+failed service check must not hide the member list. **Retry** checks the
+current state again.
+
 **Status on 2 October 2026:** this screen and the protected API are published.
 The service clients in GrideX and Novacom were verified separately, and the
 existing human roles were verified as restricted to OpenRemote read access.
@@ -202,6 +211,41 @@ local record as proof that access works. Contact an administrator before
 granting further rights. Larger rosters are paginated.
 
 ## Additional services {#additional-services}
+
+### Visible services without approval
+
+All five services **remain visible** when the organisation has no grants.
+Day-ahead prices and Charts and visualisations say **Not approved for the
+organisation**; Analysis, Meteorology and Forecasting say **Coming soon**.
+A disabled button grants no access. A failed check shows an unverified
+status, not an assumed permission.
+
+1. The organisation administrator opens **Users & invitations → Services**
+   and chooses **Request** beside either available service. Prices currently
+   request Bulgaria / BG. The request is recorded and the platform
+   administrator is notified by email. Only the organisation administrator
+   who submitted it may choose **Cancel request** while it awaits a decision.
+2. The platform administrator approves or declines the organisation request.
+   Approval enables only the organisation, not its members.
+3. The organisation administrator opens **Members**, selects the approved
+   person and chooses **Grant and notify**. Access takes effect immediately,
+   without another recipient Accept button. **Remove access** revokes it.
+4. A member may request a service for themselves under **Profile → Services**.
+   Their own administrator decides; the member cannot request for the
+   organisation, and the platform administrator cannot bypass this level.
+
+```text
+Member → personal request → Organisation administrator
+                               ↓ if organisation permission is missing
+                      organisation request → Platform administrator
+                               ↑ organisation-only approval
+Member ← individual grant ← Organisation administrator
+```
+
+A saved request/change is not proof that email was delivered. Notifications
+are processed separately; an uncertain provider outcome is not automatically
+resent. Viewing the catalogue never enables permissions. Real-user acceptance
+of the revised screen remains a separate check from backend tests.
 
 Under **Profile → Services**, every verified member, including a viewer,
 sees Day-ahead prices, Visualisations, Analysis, Meteorology and Forecasting.

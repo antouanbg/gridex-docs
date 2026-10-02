@@ -1,5 +1,40 @@
 # GrideX public documentation rules
 
+- For each new feature or changed workflow, require an owner-reviewed complete
+  logic diagram and frontend desktop/mobile page mockup before implementation.
+  Identify roles, states, notifications, errors/retries, revocation and exact
+  existing menu placement; state explicitly if no UI changes. Record the
+  owner's approval and exact scope in the implementation repositories first.
+  Do not publish a partial or assistant-invented process as approved or live.
+- Every owner-approved form/screen must be stored with its approved visual and
+  a BG/EN description of placement, fields, validations, actions, role access,
+  status/error/empty states and outcome. Keep proposal and live guide distinct;
+  publish and link the guide from the corresponding live frontend page only
+  after implementation is verified.
+- За всяка нова функция/променен процес изисквай предварително прегледани от
+  собственика пълна диаграма на логиката и desktop/mobile макет на страницата.
+  Посочи роли, състояния, уведомления, отказ/повторен опит, отнемане и място
+  в менюто; ако UI не се променя, отбележи го. Първо се записват одобрението
+  и точният обхват в хранилищата за реализация. Не публикувай частичен или
+  измислен от асистента процес като одобрен или работещ.
+- За всяка одобрена форма/екран запази одобрения вид и BG/EN описание на
+  мястото, полетата, валидациите, действията, правата, статусите/грешките и
+  резултата. Разграничи предложение от работещо ръководство; публикувай и
+  свържи помощта от реалния екран след проверено внедряване.
+
+- First place each new feature's full process, role-specific desktop/mobile
+  screens and form description in Git as clearly marked DRAFT documentation.
+  Present that exact version to the owner. Implementation starts only after
+  explicit owner approval of both the documented logic and screens. Keep draft
+  specifications out of live help navigation until the implementation is
+  verified; revise and re-approve changed scope.
+- Първо качи пълния процес, отделните desktop/mobile екрани по роли и
+  описанието на формите като ясно означена ЧЕРНОВА в Git документацията.
+  Представи точно тази версия на собственика. Реализацията започва само
+  след изрично одобрение на документираната логика и екраните. Не включвай
+  чернова в публичната помощ преди проверено внедряване; променен обхват
+  иска ново одобрение.
+
 - Owner-approved project display name (2026-09-30): use **Antouan** in both
   Bulgarian and English project credits and new documentation. Do not invent
   titles or restore a former full name. Preserve historical Git metadata,

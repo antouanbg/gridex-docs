@@ -330,3 +330,13 @@ over the local HTTPS proxy, with CSS and JavaScript MIME checks passing. Direct
 public-hostname checks from this Mac timed out because the external route/VPN
 was unavailable; verify both URLs from an external network. This is an open
 verification item, not evidence that the docs service failed.
+## 2026-10-02 — approved access model in BG and EN help
+
+`organisations-and-access` now has parallel `#rights-matrix` and
+`#approved-members` sections in Bulgarian and English. The matrix explains
+human read-only OpenRemote Manager, realm-local backend Asset clients,
+GrideX role/Site checks and separate service entitlements. The member page
+links to these anchors. Docusaurus build and TypeScript pass. Keep the
+production-status note until backend role migration, portal deployment and
+real-account acceptance are verified; source documentation alone is not a
+live entitlement.

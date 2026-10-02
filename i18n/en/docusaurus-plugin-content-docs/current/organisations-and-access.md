@@ -152,7 +152,27 @@ explicit: membership without a Site grant does not expose another customer's
 data. The current member invitation flow cannot delegate the organisation
 administrator role.
 
-### Approved members and their access
+### Where permissions are checked {#rights-matrix}
+
+**GrideX** checks membership, role and assigned Sites. **OpenRemote** owns
+the actual Assets and exact links to the Site, ROCK/ESP and its other child
+devices. Access is shown only when both checks succeed.
+
+| GrideX role | Direct OpenRemote Manager | Changes |
+| --- | --- | --- |
+| Platform administrator | Read-only in their own realm | Verified actions through GrideX |
+| Organisation administrator | Read-only for assigned Assets | Manages their organisation through GrideX |
+| Viewer | Read-only for explicitly linked Assets | Their administrator assigns Sites |
+| Operator, energy manager, integrator | The same restricted read access | Approved actions pass through GrideX |
+
+GrideX uses a **separate service client per organisation** to create Assets
+and change links. It is not a human sign-in, and its token never reaches the
+browser. `write:assets` is broader than link management; it is confined to
+that realm, while the backend checks and audits actions. Removing a Site must
+also remove and recheck links to its child Assets. Prices and Visualisations
+have separate service permissions.
+
+### Approved members and their access {#approved-members}
 
 **Status on 2 October 2026:** the new screen below is approved and its source
 has been published, but it is not enabled on the live portal. A live

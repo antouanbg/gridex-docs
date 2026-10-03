@@ -1,5 +1,47 @@
 # GrideX documentation handoff
+
+## Current release — 2026-10-03 / Текущо внедряване
+
+Supersedes earlier “not deployed” notes below. Approved three-role Users screens
+merged in energy-os PR #105 (52321e6); Pages deployment 37151980982 succeeded.
+Public https://gridex.tech/release.json confirmed the exact merge SHA.
+Backend PR #98 (160191f) deployed API-only with backup, healthy; no new migration.
+82 browser tests, 29 frontend tests, typecheck/build, and GitHub CI passed.
+API: 148 pass/1 skip. Read-only live probe confirms both organisations,
+five-service catalogue, member counts 1/2, OpenRemote links and realm denial.
+No real grants or emails changed in tests. Real-account acceptance is pending.
+Regression: server-render test counted only double-quoted lazy imports and an
+obsolete count; corrected to both quote styles and the 22 current modules.
+Mobile access error now has icon/text grid cells instead of a narrow text cell.
+Canonical BG/EN docs: /approved-users-screens/ and /en/approved-users-screens/.
+БГ: одобрените екрани и личното Отмени/Спри са публикувани. Обектите, услугите
+и ролите остават отделни права. Публикуването е проверено; тестът с реалните
+три акаунта не се представя като вече приключен.
 Repository / GitHub: `antouanbg/gridex-docs`
+
+## 2026-10-03 — three Users screens approved / три одобрени екрана
+
+Documentation build regression: inline details/summary markup failed MDX parsing.
+Separated tags and Markdown blocks; BG/EN typecheck/build and deployment rerun.
+Keep this structure in future screenshot pages. Dependency audit reports 36
+findings (2 moderate, 34 high); dependency remediation is separate from this scope.
+БГ: поправено е MDX форматирането на разгъваемите мобилни снимки; проверката
+и компилацията се повтарят и за двата езика.
+
+Owner approved Settings → Users three-role mockup and requested documentation.
+Canonical public reference: gridex-docs /approved-users-screens/ (BG) and
+/en/approved-users-screens/ (EN); static/approved/users-three-roles.html retains
+the layout with sanitized example identities. Six screenshots cover three
+roles at 1024/390px. Backend action mapping: docs/APPROVED_USERS_LAYOUT_API.md
+in backend repository. Latest suite: 148 pass, 1 skipped; no new live grants/mail.
+Owner confirmed personal-only cancel/stop and new admin approval to re-enable.
+Source includes two protected endpoints, five backend regression tests and BG/EN
+controls with confirmation. Typecheck, frontend build and four targeted browser
+tests passed. New portal layout and endpoints remain undeployed.
+БГ: трите екрана са одобрени; публичните копия са с примерни самоличности.
+Пазят се desktop/mobile и съответствието с API. Макетът не доказва живо
+внедряване. Отмени/Спри записва само личния ефект; ново включване изисква
+админско одобрение. Има код и тестове, без промяна на реални права.
 
 ## 2026-10-03 — approved migration 023 applied / миграция 023 приложена
 

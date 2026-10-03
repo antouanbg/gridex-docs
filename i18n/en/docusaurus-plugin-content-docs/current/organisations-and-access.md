@@ -194,6 +194,13 @@ accepted entries, filters and pagination. No additional Accept button is added.
 
 ### Approved members and their access {#approved-members}
 
+See the [three approved Settings — Users screens](./approved-users-screens.md)
+with desktop and mobile references. The organisation administrator sees
+**name/email, role, Sites, services and actions** for each member. Open that
+person's “Rights and services” to edit access. A service not approved for the
+organisation remains visible with an explanation, but cannot be enabled.
+Sites and services are saved separately; neither automatically grants the other.
+
 The organisation-administrator screen is one continuous page, without tabs:
 **Available services → New member invitation → Member invitations → Approved
 members and services**. All five catalogue entries remain visible without

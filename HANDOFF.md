@@ -3,6 +3,20 @@ Repository / GitHub: `antouanbg/gridex-docs`
 
 ## 2026-10-03 — approved migration 023 applied / миграция 023 приложена
 
+Verification update: Docusaurus BG/EN deployed with scripts/deploy-local.sh;
+typecheck/build and live proxy HTML/CSS/JS MIME checks passed. Both
+/navigation-and-permissions/ and /en/navigation-and-permissions/ contain
+menu-matrix and authority-matrix. Normal-DNS auth request timed out (000);
+forced local proxy returned issuer 200 and admin denial 404. External web
+probe could not access the docs URLs. Public-network acceptance is not proven
+by these local checks; do not diagnose a site outage without VPN/route evidence.
+Docs npm ci reported 36 dependency advisories (2 moderate, 34 high); no blind
+audit fix applied. Follow-up: assess dependency tree and static-build exposure.
+БГ: BG/EN помощта е внедрена; локалният жив proxy обслужва матриците и правилни
+CSS/JS типове. Външната проверка остава мрежово непотвърдена. npm отчете
+36 предупреждения за зависимости (34 high); необходим е отделен анализ,
+без автоматично обновяване на несъвместими версии.
+
 Owner explicitly approved migration 023 and restart of gridex-api in this chat.
 Backup created in the private runtime backup directory; no credentials published.
 Deployment returned NAVIGATION_API_HEALTHY. Read-only verification: 27 rows,

@@ -5,6 +5,8 @@ sidebar_position: 2
 
 # Navigation, services and permissions
 
+Binding visual reference: [the three approved Users screens](./approved-users-screens.md).
+
 > Approved structure, implementation in progress. This describes the contract,
 > not confirmation that every screen has already been deployed.
 

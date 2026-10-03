@@ -6,8 +6,8 @@ sidebar_position: 3
 # Settings — Users: approved design
 
 **Approved by the owner on 2026-10-03.** These three mockups are the binding
-reference for the next implementation, not screenshots of an already deployed
-new portal. Public copies use example addresses and an example organisation.
+reference for the deployed screen, not screenshots containing real customer
+data. Public copies use example addresses and an example organisation.
 Layout, colours, forms and permitted actions must not change without approval.
 Images retain the approved Bulgarian source labels; matching English workflows
 and verification status are described below.
@@ -76,8 +76,8 @@ failures**. This does not establish end-to-end acceptance with three real accoun
 | Member roster, roles, Sites and services | API exists; OpenRemote links verified |
 | Invitation, history, resend pending invitation | API exists |
 | Email after action | Queue and tests exist; actual receipt not tested in this review |
-| Personal request cancellation / personal service stop | New source and tests exist; not deployed live yet |
-| New layout on the live portal | **Not deployed yet** |
+| Personal request cancellation / personal service stop | Protected APIs and controls deployed; personal scope only |
+| New layout on the live portal | **Published on 2026-10-03** — Settings → Users |
 
 The initial review found a missing personal cancellation API. Following the
 explicit confirmation below, protected actions and tests were added.
@@ -93,9 +93,13 @@ The owner confirmed the following, superseding the earlier open note:
 - Re-enabling requires new approval from the organisation administrator.
 - An error never produces local-only success; state must be verified again.
 
-New APIs and controls are implemented in source. Four targeted BG/EN browser
-and locale tests passed, alongside typechecking and the frontend build.
-**This addition is not deployed live yet.** No additional migration is needed.
+New APIs and controls are deployed. 82 browser and 29 frontend server-render/API
+checks passed; GitHub CI succeeded. The public release confirmed `52321e6`;
+backend PR #98, `160191f`, is healthy after its rollout. Read-only verification
+confirmed catalogue entries, members and OpenRemote links for existing
+organisations. No real grants were changed for testing.
+**Acceptance with all three real accounts remains a separate check.**
+No additional migration is needed for personal stop.
 
 ## Implementation rules
 

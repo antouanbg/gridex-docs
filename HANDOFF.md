@@ -1,6 +1,103 @@
 # GrideX documentation handoff
 Repository / GitHub: `antouanbg/gridex-docs`
 
+## 2026-10-03 — approved migration 023 applied / миграция 023 приложена
+
+Verification update: Docusaurus BG/EN deployed with scripts/deploy-local.sh;
+typecheck/build and live proxy HTML/CSS/JS MIME checks passed. Both
+/navigation-and-permissions/ and /en/navigation-and-permissions/ contain
+menu-matrix and authority-matrix. Normal-DNS auth request timed out (000);
+forced local proxy returned issuer 200 and admin denial 404. External web
+probe could not access the docs URLs. Public-network acceptance is not proven
+by these local checks; do not diagnose a site outage without VPN/route evidence.
+Docs npm ci reported 36 dependency advisories (2 moderate, 34 high); no blind
+audit fix applied. Follow-up: assess dependency tree and static-build exposure.
+БГ: BG/EN помощта е внедрена; локалният жив proxy обслужва матриците и правилни
+CSS/JS типове. Външната проверка остава мрежово непотвърдена. npm отчете
+36 предупреждения за зависимости (34 high); необходим е отделен анализ,
+без автоматично обновяване на несъвместими версии.
+
+Owner explicitly approved migration 023 and restart of gridex-api in this chat.
+Backup created in the private runtime backup directory; no credentials published.
+Deployment returned NAVIGATION_API_HEALTHY. Read-only verification: 27 rows,
+revision 1; API healthy, anonymous navigation request returns 401. API started
+2026-10-03T18:54:45Z. Existing environment and other containers preserved.
+Backend PR #96 merged to main (4649ce1). Frontend PR #105 is not deployed yet;
+do not claim the new menu is live merely because its API is ready.
+The full BG/EN menu-role-account-data matrix and OpenRemote responsibility
+matrix are in docs navigation-and-permissions, with approvals/revocation,
+infrastructure prerequisites, five-column member design and unresolved items.
+Previous pending-approval notes below are historical and superseded here.
+
+БГ: изрично одобрената миграция 023 е приложена след частен backup.
+Потвърдени са 27 записа, revision 1, здрав API и отказ 401 без вход.
+Рестартиран е само gridex-api; другите контейнери и настройки са запазени.
+Backend #96 е в main. Frontend #105 още не е внедрен. Пълната матрица BG/EN
+и отговорностите на OpenRemote са описани; бъдещи услуги/драйвери,
+неуточнени права и целият стар i18n не се обявяват за готови.
+
+## 2026-10-03 implementation checkpoint / проверка на реализацията
+
+Navigation migration 023 seeds 27 approved entries; authenticated
+GET /api/v1/me/navigation returns identity-bound presentation states, no-store.
+Existing resource authorization remains mandatory. Frontend consumes catalogue
+order/visibility; known route/component mapping remains in source. Asset presence
+still comes from authorised inventory requests, not new local inventory records.
+Keyed BG/EN navigation resources and the five-column member register are implemented.
+Database migration dry-run succeeded with ROLLBACK (27 rows); not yet applied.
+Backend suite: 144 tests, 143 pass, 1 skip, zero failures. All four navigation
+unit/HTTP tests pass. Frontend TypeScript/build pass, eight invitation/member
+tests pass; demo checks pass at 360/390/430, new route tests at 390/1440 pass.
+Full browser regression rerun: 79 passed, zero failures.
+Docusaurus BG/EN typecheck/build pass. Live migration/API/frontend acceptance
+still pending. Older inline translations and remaining view integration are
+NOT claimed fully migrated. Do not call this a completed production rollout.
+
+БГ: има работещ локален каталог/API и петколонна таблица; тестовете по-горе
+са проверени. Пробата на миграцията е върната назад. Всички 79 браузърни теста
+минават; живото внедряване и приемането остават отделни стъпки. Не разширявай права
+и не представяй неприключените екрани/преводи като готови.
+
+Follow-up regression evidence: initial full browser run 57/79, next 74/79.
+Failures exposed a real navigation-shell regression when catalogue verification
+failed and stale test expectations for renamed routes/collapsed member details.
+Fixed safe shell links and anonymous-only demo navigation; last nine targeted
+tests pass, including all five remaining failures. Full rerun passed all 79 tests.
+БГ: отстранено е скриване на основните връзки при непроверим каталог и показване
+на демо навигация след неуспешна проверка на вход. Пълният набор е успешен.
+
+Publication: frontend PR #105, backend PR #96, documentation PR #48.
+Live deployment is blocked pending explicit owner approval for migration 023
+and gridex-api restart. The execution reviewer rejected the combined merge/live
+operation before execution; no live migration or restart occurred. Keep frontend
+deployment behind the backend schema/API rollout. Browser fixtures are not proof
+of production role acceptance; some screenshots intentionally show unavailable
+dependencies. Full legacy i18n conversion remains outstanding.
+БГ: чака се изрично одобрение за миграция 023 и рестарт само на gridex-api.
+Не представяй Git публикацията и локалните тестове като живо внедряване.
+
+## 2026-10-03 — approved dynamic navigation / динамична навигация
+
+Owner approved PostgreSQL navigation metadata with existing service grants;
+OpenRemote remains inventory/identity/Site authority. AGENTS contains the
+binding hierarchy, user feedback for denied versus unverifiable access,
+BG/EN locale resources and future-language extension rule. No blanket email
+notification on denial, new rights or fallback demo data is authorised.
+Status: LOCAL / implementation ongoing, not migrated or deployed.
+Frontend navigation labels now use keyed BG/EN resources; legacy inline
+translations still need migration. Full effective-navigation API, database
+seed/migration, access feedback wiring and end-to-end role/tenant tests remain.
+Test incident: localhost preview initially blocked by sandbox (EPERM), not a
+website outage. JSON imports in Node tests required type:json attributes;
+source corrected. Re-run localization suite and TypeScript before publication.
+
+БГ: одобрено е динамично меню от PostgreSQL с текущите разрешения за услуги;
+OpenRemote остава единствен източник за инвентар и Обекти. Липсващо право,
+чакаща заявка и непроверим достъп се съобщават различно. AGENTS е актуализиран.
+Само локална подготовка: няма приложена миграция/жив release. Менютата вече
+ползват BG/EN ключове; останалите inline преводи, API и цялостните тестове
+предстоят. Не представяй подготовката като завършено внедряване.
+
 ## 2026-10-02 — remove in-session account switching
 
 Owner explicitly removed Switch account/user. The account menu now retains

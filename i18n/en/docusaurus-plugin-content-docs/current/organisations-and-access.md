@@ -9,6 +9,8 @@ description: Who can invite, how invitations are accepted and how Site access is
 import DocsHero from '@site/src/components/DocsHero';
 import GuideNotice from '@site/src/components/GuideNotice';
 
+> The current approved structure and matrices are in [Navigation, services and permissions](./navigation-and-permissions.md#menu-matrix). Section names here follow the new structure; live rollout verification is separate from approval.
+
 <DocsHero
   compact
   eyebrow="GRIDEX · ACCESS AND ORGANISATIONS"
@@ -42,7 +44,7 @@ organisation**. They do not create a new organisation and are not instructions
 for the platform administrator.
 
 1. Sign in to your organisation and open
-   [Customers & contracts → Users & invitations](https://gridex.tech/customers/users/).
+   [Settings → Users](https://gridex.tech/settings/users/).
 2. Select your organisation, enter your colleague's email, choose a role and
    select only the Sites they need. If there are no Sites yet, the invitation
    can grant membership **without** Site access.
@@ -110,7 +112,7 @@ the organisation is suspended.
 
 If the **first administrator** invitation is still **Sent** but its link has
 expired, the platform administrator opens
-[Customers & contracts → Users & invitations](https://gridex.tech/customers/users/)
+[Settings → Users](https://gridex.tech/settings/users/)
 and selects **Resend invitation** beside **Revoke**. This sends a fresh 24-hour
 link to the same email and Keycloak account, without creating another
 organisation. The button is unavailable for an accepted or revoked invitation.
@@ -179,13 +181,13 @@ have separate service permissions.
 
 ### One shared administrative design
 
-Under **Customers & contracts → Users & invitations**, the platform administrator
+Under **Settings → Users**, the platform administrator
 first selects an approved organisation and manages its five service rows. This is
 followed by **New organisation invitation**, **Organisation invitations**, and
 **Approved organisations and services**. New invitations require the first
 administrator's first name, last name and email. The organisation administrator
 has the continuous page described below, scoped to their own organisation.
-The member's existing **Profile → Services** page remains unchanged in workflow.
+The member's existing **Services** page remains unchanged in workflow.
 All roles use the same GrideX cards, colours, status pills and buttons; actions
 remain subject to verified backend permissions. Invitation history includes
 accepted entries, filters and pagination. No additional Accept button is added.
@@ -195,9 +197,9 @@ accepted entries, filters and pagination. No additional Accept button is added.
 The organisation-administrator screen is one continuous page, without tabs:
 **Available services → New member invitation → Member invitations → Approved
 members and services**. All five catalogue entries remain visible without
-organisation grants; only the two active services can be requested. The member
-roster is on the left and the selected person's permissions on the right;
-mobile stacks them. Select
+organisation grants; only the two active services can be requested. The approved update replaces the side editor with five columns:
+Name/email, Role, Sites, Services, Actions. Details expand below the table;
+mobile uses cards. Select
 a person by name/email, change their role and Site checkboxes, choose
 **Review changes**, then **Save role and Sites**. Services are separate rows
 below the permissions. Search and pagination support larger rosters. A
@@ -211,7 +213,7 @@ A real-user test of role and Site editing through the portal remains a separate
 check. If the screen warns about an unverified link, do not treat the change
 as successful.
 
-Under **Customers & contracts → Users & invitations → Organisation members**,
+Under **Settings → Users**,
 the administrator sees all approved members of their organisation, not only
 invitations they personally sent. Each entry shows the email address, first
 and last name when present, current role, assigned Sites, separate services
@@ -251,7 +253,7 @@ status, not an assumed permission.
 3. The organisation administrator opens **Approved members and services**, selects the approved
    person and chooses **Grant and notify**. Access takes effect immediately,
    without another recipient Accept button. **Remove access** revokes it.
-4. A member may request a service for themselves under **Profile → Services**.
+4. A member may request a service for themselves under **Services**.
    Their own administrator decides; the member cannot request for the
    organisation, and the platform administrator cannot bypass this level.
 
@@ -268,7 +270,7 @@ are processed separately; an uncertain provider outcome is not automatically
 resent. Viewing the catalogue never enables permissions. Real-user acceptance
 of the revised screen remains a separate check from backend tests.
 
-Under **Profile → Services**, every verified member, including a viewer,
+Under **Services**, every verified member, including a viewer,
 sees Day-ahead prices, Visualisations, Analysis, Meteorology and Forecasting.
 Only the first two can be requested **independently**; the other three say
 Coming soon. Bulgaria (BG) is currently the only price zone. The requester,
@@ -285,7 +287,7 @@ access to that Site. Under Users & invitations
 a request never grants access.
 
 The platform administrator can grant a service to an active organisation under
-**Customers & contracts → Users & invitations**. This is only an organisation
+**Settings → Users**. This is only an organisation
 grant: no member is enabled automatically. The organisation administrator then
 explicitly enables each approved member in the same section. Without an
 individual grant, the service remains visible in the catalogue but its live
@@ -298,7 +300,7 @@ organisation grant removes all member grants; they do not return automatically.
    own state: enabled service, pending request, available to request or Coming
    soon. Only `day_ahead` and `visualisations` can be requested; requesting
    alone does not grant access.
-2. **Customers & contracts → Users & invitations → approved organisation:**
+2. **Settings → Users → approved organisation:**
    the platform administrator sees approved services, available but not yet
    approved services, and future services separately. They may enable a
    requestable service; Day-ahead additionally needs a BG zone grant. Removing
@@ -421,7 +423,7 @@ The photograph is illustrative, not a customer Site. Content last reviewed:
 
 Prepared for publication; the controls are not yet available in the live portal. Access controls were verified with synthetic organisations; the first real customer suspension and its email delivery remain unverified. This is separate from resending any onboarding invitation.
 
-Only the verified super administrator can use **Customers & contracts → Users & invitations → New organisation → Approved organisations**. The pilot organisation is protected and is not listed. A recent sign-in is required for changes.
+Only the verified super administrator can use **Settings → Users → New organisation → Approved organisations**. The pilot organisation is protected and is not listed. A recent sign-in is required for changes.
 
 Choose **Suspend organisation**, review the organisation name, then confirm. Access is blocked; existing sessions and streams end. Accounts, roles, Sites and OpenRemote inventory remain intact. Members see “Your organisation is temporarily suspended. Contact the super administrator.”
 

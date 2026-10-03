@@ -68,6 +68,87 @@ data. A Site with energy assets requires at least one infrastructure component.
 Navigation is loaded for the current identity. Every action is independently
 authorised on the server. No other user's data or demo substitute is shown.
 
+## Final navigation matrix {#menu-matrix}
+
+Approved target matrix, 2026-10-03. Visibility is not write authority.
+Demo contains sample data without real actions. Member includes Viewer,
+Operator, Energy manager and Integrator. Every action needs its role,
+authorised Site and service; menu visibility alone is insufficient.
+
+| Section — subsection | Role / condition | Account type | Data and description |
+| --- | --- | --- | --- |
+| Overview | Authorised data only | All + demo | Home after sign-in |
+| Sites | Admin creates; members see linked Sites | All + demo | Sites, available assets and authorised services; no separate Site Visualisations menu |
+| Energy assets | Site access and registered assets | All + demo | Registered inventory; offline does not mean absent |
+| Energy assets — Battery | Registered accessible battery | All + demo | Storage |
+| Energy assets — Inverter | Registered accessible inverter | All + demo | Production |
+| Energy assets — Charging station | Registered accessible station | All + demo | Charging |
+| Energy assets — Consumer and load | Registered accessible load | All + demo | Consumption; catalogue does not prove a working driver |
+| Infrastructure | Authorised Site; writes require existing permission | All + demo | One page: ROCK Pi, ESP, meter, router, controller, gateway, sensor, cloud connector |
+| Services | Everyone sees catalogue | All + demo | Personal requests/grants; administration in Settings — Users |
+| Services — Day-ahead prices | Platform admin or organisation + member grant + zone | Authorised live accounts; demo sample | BG only by default; full archive API remains platform-only |
+| Services — Graphs and visualisations | Organisation + member grant; authorised source | Authorised live accounts; demo sample | Price graph also needs Prices + Graphs + zone |
+| Services — Analysis | Coming soon, not requestable | All | Does not activate unfinished features |
+| Services — Meteorology | Coming soon, not requestable | All | Future service |
+| Services — Forecasting | Coming soon, not requestable | All | Future service |
+| Mode | Authorised Site and existing action permission | By permissions; demo | Does not automatically permit physical commands |
+| Mode — Logic | Existing role/Site checks | By permissions; demo | No new rights inferred from menu |
+| Mode — Schedule | Existing role/Site checks | By permissions; demo | Physical safeguards preserved |
+| Mode — Alarm | Authorised data only | By permissions; demo | New editing permissions remain unresolved |
+| Settings | Children filtered by permission | All + demo | Container, not general administrative authority |
+| Settings — Users | Platform / organisation admin | Admins; demo mockup | One page for organisations, people, invitations, roles, Sites and services |
+| Settings — Plan and subscription | Administrative scope | Admins; demo | Plan never auto-grants personal services |
+| Settings — Market | Platform / organisation admin | Admins; demo | Market configuration, not personal price service |
+| Settings — Market — Tariff and settlement | Platform / own organisation admin | Admins; demo | Tariff and distribution contract; full fields/validation pending |
+| Settings — Market — Balancing | Administrative section | Admins; demo | New operational permissions are not approved |
+| Settings — Profile | Current user only | All + demo | Personal data and preferences |
+| Settings — Profile — Documentation | Everyone | All | Contextual BG/EN help |
+| About us | Everyone | All | Information and protected enquiry |
+
+Live asset categories require registered accessible assets. Demo shows all four.
+PV installation and Thermal system are not destinations. At least one
+infrastructure component is required for a Site with energy assets.
+
+## Responsibility and OpenRemote matrix {#authority-matrix}
+
+| Resource / decision | Managed by | Authoritative source |
+| --- | --- | --- |
+| Organisation / separate realm | Platform admin through GrideX | OpenRemote / Keycloak; business state and binding in GrideX |
+| User / first and last name / identity | Invitation and verified registration | Keycloak; never invent missing names |
+| Role / membership | Admin within authorised scope | GrideX permissions checked against realm/membership |
+| Site | Administrator creates, not ordinary member | OpenRemote Site/Asset |
+| Member — Site | Admin links specific person and Site | OpenRemote links; GrideX orchestrates and verifies |
+| Asset / infrastructure | Authorised GrideX operations | OpenRemote Assets, parents, attributes and relationships |
+| Device commissioning | Currently organisation admin; verified platform actions separately | GrideX orchestration, OpenRemote inventory, Edge safeguards |
+| Organisation service / price zone | Platform admin | GrideX PostgreSQL catalogue and grants |
+| Personal service, including admin | Organisation admin | Separate personal grant in GrideX PostgreSQL |
+| Menu / order / prerequisite / translation key | Versioned approved matrix | PostgreSQL catalogue; known pages and BG/EN resources remain in code |
+| Human OpenRemote Manager | Read-only, including administrators | OpenRemote permissions and protected GrideX entry |
+| Backend service client | Separate per organisation, its realm only | Backend-only identity, not human login |
+
+## Approval and revocation {#approval-flow}
+
+1. Platform admin selects an approved active organisation and grants a service, including the price zone.
+2. Organisation admin also sees unapproved services and requests/cancels their request to platform admin.
+3. Organisation admin grants an available service to an approved member, including themselves, even without a prior request.
+4. Member requests their admin. The request is visible at the appropriate administrative level and a notification is sent; admin approves or rejects.
+5. Access takes effect after the administrative action — no second service Accept step.
+6. Organisation revocation removes personal grants; re-enabling does not restore them automatically.
+
+Platform admin does not request personal services; this does not automatically
+open foreign inventory in Manager. Registration invitations are separate from
+services. Accepted membership does not expire with its old email link. Member
+table has five columns: Name/email, Role, Sites, Services, Actions, with
+expandable details/mobile cards.
+See [Organisations, invitations and permissions](./organisations-and-access.md).
+
+## Verification boundary
+
+This matrix records final structural decisions, not a claim that every future
+service, driver or financial form is implemented. Unresolved permissions are
+not broadened. Full migration of legacy text to i18n and live-screen acceptance
+with real roles remain separate checks.
+
 ## Languages
 
 Bulgarian and English use matching translation keys. Menu labels are not

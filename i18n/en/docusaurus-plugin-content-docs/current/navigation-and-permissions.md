@@ -7,8 +7,9 @@ sidebar_position: 2
 
 Binding visual reference: [the three approved Users screens](./approved-users-screens.md).
 
-> Approved structure, implementation in progress. This describes the contract,
-> not confirmation that every screen has already been deployed.
+> Current approved matrix. Navigation and the Users screens are published; the demo follows the 27 catalogue entries. This does not mean that future services and operational forms are implemented. Limitations are stated below.
+
+Quick links: [menus](#menu-matrix) · [roles and actions](#role-actions) · [service requirements](#service-access) · [authoritative sources](#authority-matrix).
 
 ## Sections
 
@@ -127,6 +128,39 @@ infrastructure component is required for a Site with energy assets.
 | Menu / order / prerequisite / translation key | Versioned approved matrix | PostgreSQL catalogue; known pages and BG/EN resources remain in code |
 | Human OpenRemote Manager | Read-only, including administrators | OpenRemote permissions and protected GrideX entry |
 | Backend service client | Separate per organisation, its realm only | Backend-only identity, not human login |
+
+## Roles and actions {#role-actions}
+
+This table describes scope; it grants no new rights. Each operation independently checks identity, organisation and Site on the server.
+
+| Action | Platform administrator | Organisation administrator | Member |
+| --- | --- | --- | --- |
+| Organisations | Approve, invite, suspend within global scope | Own organisation only; cannot create another | No administrative access |
+| People, roles and Sites | View within global administrative scope | Manage own people and link permitted Sites | View linked Sites only; cannot create a Site |
+| Organisation service and price zone | Grant/revoke for a selected active organisation | Request from platform admin; cancel own pending request | Cannot request for the organisation |
+| Individual service grant | No self-approval; does not replace the organisation level for individual grants | Grant/revoke per approved person, including self | Request from own admin; cancel own request or stop own service |
+| Device commissioning | Explicitly supported global actions only | Organisation administrator | Not by default, including Integrator |
+| OpenRemote Manager | Protected entry, read-only human account | Same, limited to own realm | No administrative launch from this screen |
+
+Member includes Viewer, Operator, Energy manager and Integrator. Viewer is
+read-only. Other roles do not automatically receive every action, service or
+Site: separate server checks apply. Undefined operational rights are not granted.
+
+## Service requirements {#service-access}
+
+| What I want to view | Required rights / state |
+| --- | --- |
+| Catalogue and personal requests | Verified member; prior service approval is not required |
+| BG price chart | Organisation: Prices + Charts + BG zone; person: individual Prices + individual Charts |
+| Site measurements and charts | Organisation and person: Charts; plus access to the exact OpenRemote Site and available measurements |
+| Full price archive and ENTSO-E status | Platform administrator only; customer chart permission does not provide this |
+| Analysis, Meteorology, Forecasting | Coming soon; not requestable or enabled as live services |
+
+**Location:** catalogue and personal requests belong in **Services**; decisions
+for organisations and people belong in **Settings → Users**. **Settings → Market**
+holds tariff/contract and balancing settings, not personal wholesale prices.
+The platform administrator finds country-collection controls under
+**Services → Day-ahead prices**; collection and customer permissions are separate.
 
 ## Approval and revocation {#approval-flow}
 

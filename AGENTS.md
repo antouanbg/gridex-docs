@@ -1,5 +1,17 @@
 # GrideX public documentation rules
 
+## Documentation consistency gate — 2026-10-04
+
+Before publication run `node scripts/check-guide-consistency.mjs` and verify
+all current BG/EN guides against navigation-and-permissions, not historical
+HANDOFF entries. Keep menu, role/action and service-prerequisite matrices
+linked from the documentation home. A catalogue entry is not a grant; a saved
+notification is not delivered mail. Historical decisions stay dated and must
+not override the current matrix. This check supplements, not replaces, review.
+БГ: преди публикация провери БГ/EN страниците спрямо актуалната матрица.
+Матриците са видими от началото. Старите HANDOFF решения са история, не
+действащи указания. Каталогът не дава право; опашката не доказва доставен имейл.
+
 ## Approved Users reference — 2026-10-03 / Одобрен визуален шаблон
 
 ### Confirmed personal cancellation / Потвърдена лична отмяна

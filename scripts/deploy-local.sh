@@ -5,6 +5,7 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$root"
 npm ci
+node scripts/check-guide-consistency.mjs
 npm run typecheck
 npm run build
 

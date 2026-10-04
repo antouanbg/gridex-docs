@@ -1,6 +1,6 @@
 ---
 id: market-prices
-title: Market — day-ahead prices
+title: Services — day-ahead prices
 hide_title: true
 description: Service permissions and ENTSO-E provider status.
 ---
@@ -10,14 +10,14 @@ import GuideNotice from '@site/src/components/GuideNotice';
 
 <DocsHero
   compact
-  eyebrow="GRIDEX · MARKET"
+  eyebrow="GRIDEX · SERVICES"
   title="Electricity prices"
   description="A protected native-resolution price archive with explicit rights for each organisation and user."
   imageAlt="Illustrative image of solar panels and energy infrastructure"
   primaryHref="#access"
   primaryLabel="Who has access"
-  secondaryHref="https://gridex.tech/market/"
-  secondaryLabel="Open Market"
+  secondaryHref="https://gridex.tech/services/day-ahead/"
+  secondaryLabel="Open day-ahead prices"
 />
 
 <GuideNotice label="Archive and portal published; acceptance testing pending" tone="amber">
@@ -27,8 +27,8 @@ import GuideNotice from '@site/src/components/GuideNotice';
 ## Who has access? {#access}
 
 **Day-ahead prices** and **Visualisations** are separate services. For now,
-only **Bulgaria/BG** can be requested under Profile → Services. A request
-does not unlock data. Administrators see its stages under Users & invitations
+only **Bulgaria/BG** can be requested under Services. A request
+does not unlock data. Administrators see its stages under Settings → Users
 → Service requests. A BG price chart requires both individual service grants
 and the organisation's BG zone scope.
 
@@ -36,13 +36,13 @@ The platform administrator enables **Day-ahead** for an active organisation. Thi
 
 ## Which countries are collected?
 
-**Only Bulgaria (BG)** is fetched and stored by default. The platform administrator manages bidding-zone collection in **Market → Price collection by country**. Another zone is fetched and retained only after explicit confirmation there. Disabling collection stops new writes but preserves history. Earlier test records for other zones may remain in the protected archive; they do not mean collection is active.
+**Only Bulgaria (BG)** is fetched and stored by default. The platform administrator manages bidding-zone collection in **Services → Day-ahead prices → Price collection by country**. Another zone is fetched and retained only after explicit confirmation there. Disabling collection stops new writes but preserves history. Earlier test records for other zones may remain in the protected archive; they do not mean collection is active.
 
-After enabling the service for an organisation, the platform administrator may separately grant one of the collected zones under **Customers and contracts → Users and invitations → organisation → Day-ahead countries**. This does not enable any of its members or disclose price values. New customers receive no country automatically.
+After enabling the service for an organisation, the platform administrator may separately grant one of the collected zones under **Settings → Users → organisation → Day-ahead countries**. This does not enable any of its members or disclose price values. New customers receive no country automatically.
 
-The service is hidden from a member's live menu until they receive an individual grant. Day-ahead permission alone does not disclose price values: BG charts also need Visualisations and an organisation BG grant. Provider status remains restricted to the platform administrator.
+The service remains visible in the catalogue without approval; visibility does not grant access to data. Day-ahead permission alone does not disclose price values: BG charts also need Visualisations and an organisation BG grant. Provider status remains restricted to the platform administrator.
 
-The full price archive and direct API remain **platform-administrator-only**. In the live **Market** section (`gridex.tech/market/`), that administrator sees the last API check and the last complete dataset separately. A customer with both individual grants and organisation BG scope may open only the restricted BG charts. Demo data remain separate.
+The full price archive and direct API remain **platform-administrator-only**. In the live **Services → Day-ahead prices** section (`gridex.tech/services/day-ahead/`), that administrator sees the last API check and the last complete dataset separately. A customer with both individual grants and organisation BG scope may open only the restricted BG charts. Demo data remain separate.
 
 ## How are prices retained?
 
@@ -54,7 +54,7 @@ Using these prices for automatic battery control is a separate, not-yet-activate
 
 ## Grafana visualisations
 
-The BG dashboard shows native Bulgarian 15-minute prices; older hourly history remains hourly. Open it inside the portal from **Market → Show selected period** through a short-lived one-time launch. Choose **Today and tomorrow**, the last 48 hours, 7 or 30 days, or **Choose dates** for up to 31 consecutive delivery days. Custom dates run from midnight to midnight in Bulgaria time, including the last selected day and accounting for daylight saving. Changing the chart range does not change stored prices. The backend rechecks session and permissions on every request; there is no standalone public Grafana login. Its separate database role can read BG-only views, not the full archive. Future OpenRemote/Site visualisations need a separate source and organisation/Site isolation. Real customer-role browser acceptance testing is still pending.
+The BG dashboard shows native Bulgarian 15-minute prices; older hourly history remains hourly. Open it inside the portal from **Services → Day-ahead prices → Show selected period** through a short-lived one-time launch. Choose **Today and tomorrow**, the last 48 hours, 7 or 30 days, or **Choose dates** for up to 31 consecutive delivery days. Custom dates run from midnight to midnight in Bulgaria time, including the last selected day and accounting for daylight saving. Changing the chart range does not change stored prices. The backend rechecks session and permissions on every request; there is no standalone public Grafana login. Its separate database role can read BG-only views, not the full archive. Future OpenRemote/Site visualisations need a separate source and organisation/Site isolation. Real customer-role browser acceptance testing is still pending.
 
 ### Which day do the prices apply to?
 

@@ -1,5 +1,28 @@
 # GrideX documentation handoff
 
+## 2026-10-04 — approved documentation consistency correction
+
+Owner approved removal of obsolete instructions and visible unambiguous matrices.
+Corrected BG/EN organisation and price guides: Services for personal requests,
+Settings → Users for administration, Services → Day-ahead for price content.
+Settings → Market remains tariff/contract/balancing; collection controls currently
+remain in the day-ahead screen. Catalogue visibility is not data access.
+Notifications are queued separately; delivery is not implied by a saved decision.
+Home links menu/authority/role-action/service matrices and approved role screens.
+Historical entries below are retained as dated evidence, not current guidance.
+Regression: 8 BG/EN page pairs, required anchors and obsolete-name check added.
+Verified: consistency gate 8 BG/EN pairs; TypeScript and both locale builds pass.
+Deployed via deploy-local.sh; proxy CSS/JS MIME checks pass. Browser audit:
+four guide routes x BG/EN x 390/1440px, no overflow or page errors, all matrix
+anchors present. Public-DNS external reachability requires the known VPN route;
+the local proxy check is not external acceptance. Git publication is tracked in PR.
+Dependency audit reports 31 findings (2 moderate, 29 high); no blind upgrades
+were included in this documentation-only correction.
+БГ: изчистени са старите менюта и противоречията за уведомленията. Матриците
+са видими от началото; права за Обект, услуга и организация остават отделни.
+Няма промяна в реални права, API или одобренията. Историята долу не отменя
+актуалното ръководство. Не се твърди, че бъдещите услуги са внедрени.
+
 ## 2026-10-04 — demo follows database matrix / Демо по базата
 
 Owner explicitly requested every Demo page to follow the approved database

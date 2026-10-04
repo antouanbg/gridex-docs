@@ -94,8 +94,9 @@ The owner confirmed the following, superseding the earlier open note:
 - An error never produces local-only success; state must be verified again.
 
 New APIs and controls are deployed. 82 browser and 29 frontend server-render/API
-checks passed; GitHub CI succeeded. The public release confirmed `52321e6`;
-backend PR #98, `160191f`, is healthy after its rollout. Read-only verification
+checks passed; automated checks succeeded. Publication and backend health
+were verified after the update.
+Read-only verification
 confirmed catalogue entries, members and OpenRemote links for existing
 organisations. No real grants were changed for testing.
 **Acceptance with all three real accounts remains a separate check.**

@@ -27,6 +27,8 @@ import GuideNotice from '@site/src/components/GuideNotice';
   <p>The demo is open, but it contains sample values. Sign in does not create an account or grant permissions for customer Sites.</p>
 </GuideNotice>
 
+See the [current menu, role and service matrices](./navigation-and-permissions.md#menu-matrix) and the [approved role-specific screens](./approved-users-screens.md). Paths below are navigation locations; a named section within Users is not a separate menu.
+
 ## Who sends the invitation?
 
 The platform administrator invites the **first administrator** of a new
@@ -63,8 +65,7 @@ the same administrator. Resending creates a fresh link for the same user
 without duplicating the account or membership. Accepted or revoked invitations
 cannot be resent. The email alone does not activate access.
 
-A Viewer sees only their permitted data. Customers & contracts and Users &
-invitations are hidden from their menu, and a direct URL does not grant access.
+A Viewer sees only their permitted data. Settings → Users are hidden from their menu, and a direct URL does not grant access.
 If the session check is temporarily unavailable, the portal retries
 automatically without signing the user out or substituting demo data.
 
@@ -250,7 +251,7 @@ organisation**; Analysis, Meteorology and Forecasting say **Coming soon**.
 A disabled button grants no access. A failed check shows an unverified
 status, not an assumed permission.
 
-1. The organisation administrator opens **Users & invitations**, in **Available services**,
+1. The organisation administrator opens **Settings → Users**, in **Available services**,
    and chooses **Request** beside either available service. Prices currently
    request Bulgaria / BG. The request is recorded and the platform
    administrator is notified by email. Only the organisation administrator
@@ -289,7 +290,7 @@ service for an active organisation and separately grants its selected price
 zone; that organisation's administrator then enables the specific approved
 member. Visualisations do not inherit Day-ahead access: a BG price dashboard
 requires both service grants and BG zone scope. Site charts also require
-access to that Site. Under Users & invitations
+access to that Site. Under Settings → Users
 → Service requests each administrator sees their own decision stage. Declining
 a request never grants access.
 
@@ -303,7 +304,7 @@ organisation grant removes all member grants; they do not return automatically.
 
 ### Where services are managed
 
-1. **Profile → Services:** every verified member sees the catalogue and their
+1. **Services:** every verified member sees the catalogue and their
    own state: enabled service, pending request, available to request or Coming
    soon. Only `day_ahead` and `visualisations` can be requested; requesting
    alone does not grant access.
@@ -312,12 +313,12 @@ organisation grant removes all member grants; they do not return automatically.
    approved services, and future services separately. They may enable a
    requestable service; Day-ahead additionally needs a BG zone grant. Removing
    an organisation grant requires confirmation and deletes member grants.
-3. **Users & invitations → Services and member access:** the organisation
+3. **Settings → Users → Services and member access:** the organisation
    administrator sees approved services and enables approved members one by
    one. Services not approved for the organisation are informational only;
    this administrator cannot enable them at organisation level.
-4. **Users & invitations → Service requests:** each administrator sees their
-   own decision stage and history. No automatic email is sent. The other
+4. **Settings → Users → Service requests:** each administrator sees their
+   own decision stage and history. Notifications are queued separately; a saved decision does not confirm email delivery. The other
    three future services cannot be requested or granted yet.
 
 The BG price chart requires individual grants for both Day-ahead prices and
@@ -341,14 +342,13 @@ This is not a shared customer Grafana dashboard or a cross-tenant datasource.
 
 See the [Day-ahead guide](/market-prices/) for that service. The full archive
 and provider status remain platform-administrator-only. The restricted BG
-dashboard in Market requires both individual service grants and organisation
+dashboard in Services → Day-ahead prices requires both individual service grants and organisation
 BG scope; real customer-role acceptance testing is still pending.
 
 ## OpenRemote Manager administration {#openremote-manager}
 
 Organisation and platform administrators start at the
-[GrideX portal](https://gridex.tech/), sign in, then open **Customers & contracts
-→ Users & invitations → Organisation administration**. Select **Open OpenRemote
+[GrideX portal](https://gridex.tech/), sign in, then open **Settings → Users → Organisation administration**. Select **Open OpenRemote
 Manager** to create a one-time link valid for one minute and open Manager for
 the organisation in the current session. No email or separate setup identity
 is involved. The proxy checks access again for the page and its requests;

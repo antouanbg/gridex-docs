@@ -12,6 +12,17 @@ not override the current matrix. This check supplements, not replaces, review.
 Матриците са видими от началото. Старите HANDOFF решения са история, не
 действащи указания. Каталогът не дава право; опашката не доказва доставен имейл.
 
+## Public presentation privacy — 2026-10-04
+
+Owner requests no personal owner credits or project repository locations in
+public portal/help content, in either language. Keep open-source/MIT wording.
+This supersedes older public display-name instructions. Do not alter account
+identities, legal licence files, Git history or repository visibility. Preserve
+required third-party attribution; do not claim this hides a public repository.
+БГ: без лично име на собственика и адреси на проектните хранилища в сайта
+и публичната помощ. „Отворен код/MIT“ остава. Без промяна на акаунти,
+лицензионни файлове, Git история или видимост на хранилищата.
+
 ## Approved Users reference — 2026-10-03 / Одобрен визуален шаблон
 
 ### Confirmed personal cancellation / Потвърдена лична отмяна

@@ -11,6 +11,27 @@ Binding visual reference: [the three approved Users screens](./approved-users-sc
 
 Quick links: [menus](#menu-matrix) · [roles and actions](#role-actions) · [service requirements](#service-access) · [authoritative sources](#authority-matrix).
 
+## Overview {#overview}
+
+The landing screen summarises the selected authorised Site. Demo uses sample
+data; after sign-in missing measurements remain unverified, never zero or demo.
+Invalid quality means No valid data. With no Site, ask the administrator for
+access; connected infrastructure is under Infrastructure.
+
+## Profile {#profile}
+
+Settings → Profile displays verified identity, role and email notification
+preference. Notification consent covers supported events and is not a service
+grant. A saved preference does not prove delivered mail. Sign out returns to Demo;
+another account signs in after logout. Never enter passwords in an enquiry form.
+
+## Plan and subscription {#plans}
+
+Settings → Plan and subscription is an administrative section. The current live
+screen has no complete billing or plan editor and explains the missing integration.
+Demo content is not an active contract. Grant services in Settings → Users;
+personal requests belong in Services.
+
 ## Sections
 
 | Section | Subsections |
@@ -51,6 +72,19 @@ not imply approval of new fields or write permissions.
 
 ## Inventory {#inventory}
 
+Site cards list registered assets and infrastructure from verified OpenRemote
+inventory and personal service grants for the same organisation. Failed
+verification is distinct from a confirmed empty list. A service grants no extra
+Site or measurement access. Platform administrators need no self-approval,
+but customer data is not automatically accessible.
+Repeated records for one source/metric show the latest valid measurement.
+Different sources are never merged; repeated metric labels identify their source.
+Memory uses MiB and uptime uses hours.
+
+OpenRemote may show browser registrations such as Chrome or Opera Mobile.
+These are console resources, not energy assets or GrideX infrastructure.
+They are not automatically deleted; their presence alone does not prove foreign access.
+
 OpenRemote remains authoritative for Sites, assets and infrastructure. ROCK Pi,
 ESP, meters, routers, controllers, gateways, sensors and cloud connectors are
 infrastructure, not energy assets. A catalogue does not prove compatibility or
@@ -90,7 +124,7 @@ authorised Site and service; menu visibility alone is insufficient.
 | Infrastructure | Authorised Site; writes require existing permission | All + demo | One page: ROCK Pi, ESP, meter, router, controller, gateway, sensor, cloud connector |
 | Services | Everyone sees catalogue | All + demo | Personal requests/grants; administration in Settings — Users |
 | Services — Day-ahead prices | Platform admin or organisation + member grant + zone | Authorised live accounts; demo sample | BG only by default; full archive API remains platform-only |
-| Services — Graphs and visualisations | Organisation + member grant; authorised source | Authorised live accounts; demo sample | Price graph also needs Prices + Graphs + zone |
+| Services — Graphs and visualisations | Platform admin or organisation + member grant; always an authorised source | Authorised live accounts; demo sample | Platform admin sees only already-authorised Sites. Customer price graphs need Prices + Graphs + zone |
 | Services — Analysis | Coming soon, not requestable | All | Does not activate unfinished features |
 | Services — Meteorology | Coming soon, not requestable | All | Future service |
 | Services — Forecasting | Coming soon, not requestable | All | Future service |
@@ -152,7 +186,7 @@ Site: separate server checks apply. Undefined operational rights are not granted
 | --- | --- |
 | Catalogue and personal requests | Verified member; prior service approval is not required |
 | BG price chart | Organisation: Prices + Charts + BG zone; person: individual Prices + individual Charts |
-| Site measurements and charts | Organisation and person: Charts; plus access to the exact OpenRemote Site and available measurements |
+| Site measurements and charts | Platform admin without a personal grant, or organisation and person: Graphs; always access to the exact OpenRemote Site and measurements |
 | Full price archive and ENTSO-E status | Platform administrator only; customer chart permission does not provide this |
 | Analysis, Meteorology, Forecasting | Coming soon; not requestable or enabled as live services |
 

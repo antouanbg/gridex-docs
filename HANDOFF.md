@@ -1,5 +1,29 @@
 # GrideX documentation handoff
 
+## 2026-10-08 — remaining report corrections, source-ready
+
+N1 now uses existing verified hardware and same-organisation personal grants;
+no invented assets, rights or measurements. D6 deduplicates exact telemetry
+sources, retains distinct sensors, formats values and supplies BG/EN help for
+Overview/Profile/Plan. Browser console resources are explained, not deleted.
+95 local tests pass; final Site summary mobile check additionally verifies no
+foreign service grant appears. No rollout or real-account acceptance claimed.
+Diagnostic scope is approved and recorded in AGENTS, but its new cross-tenant
+approval/expiry/revocation workflow remains unimplemented, requiring full screen
+and API specification before activation. API/proxy rollout is still separate.
+БГ: останалите поправки са в кода; няма нови реални права или клиентски данни.
+Локалните тестове не са външно приемане. Диагностичната политика е одобрена,
+но новият процес още не е реализиран. Предстоят публикуване и външен повторен тест.
+
+## 2026-10-08 — second audit source clarification, not deployed
+
+BG/EN approved-screen guidance distinguishes platform read-only roster from
+organisation editing. Chart access for the platform administrator bypasses only
+personal service approval, never verified Site/measurement access. The country
+layout change does not grant countries or start collection. Source/docs changes
+are not proof of external acceptance; API/proxy rollout approval is pending.
+БГ: уточненията са двуезични; няма промени по реални права или публикуване.
+
 ## 2026-10-08 — external audit correction (deployed; external acceptance pending)
 
 Approved role reference now declares UTF-8 and viewport explicitly. Nginx

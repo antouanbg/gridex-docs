@@ -1,5 +1,18 @@
 # GrideX public documentation rules
 
+## Confirmed diagnostic scope — 2026-10-08
+
+Platform administrators need no self-approval for services on their own authorised
+Sites. Customer Site diagnosis requires that organisation administrator's explicit
+approval: selected Sites, read-only, time-limited, immediately revocable, audited.
+This is an approved policy, NOT a deployed diagnostic grant workflow. Keep tenant
+isolation intact until the complete screen/API/expiry/revocation flow is approved
+and tested. Never silently use platform authority to read all customer Sites.
+БГ: супер администраторът не одобрява сам себе си. Клиентски Обекти за диагностика
+изискват изрично одобрение от организационния админ: избрани Обекти, само четене,
+срок, незабавна отмяна и одит. Това е одобрена политика, не внедрен механизъм.
+Пази изолацията до одобрен и проверен цялостен екран/API/изтичане/отнемане.
+
 ## Documentation consistency gate — 2026-10-04
 
 Before publication run `node scripts/check-guide-consistency.mjs` and verify

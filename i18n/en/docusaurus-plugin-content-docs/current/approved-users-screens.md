@@ -14,6 +14,12 @@ and verification status are described below.
 
 ## Platform administrator
 
+The member table action is “View”. Role and assigned Sites are text, not
+editable fields. Personal services show their status without grant/revoke
+buttons: the organisation administrator manages them.
+Day-ahead countries use separate checkbox rows with explanatory text.
+A zone not enabled for collection remains disabled; layout grants no access.
+
 ### Required visual checks
 
 The page title is “Users”. The active role comes from the verified account,

@@ -14,6 +14,22 @@ and verification status are described below.
 
 ## Platform administrator
 
+### Required visual checks
+
+The page title is “Users”. The active role comes from the verified account,
+not a demo profile. Services appear in this order: Day-ahead prices, Graphs
+and visualisations, Analysis, Meteorology, Forecasting. Each has a separate
+name, explanation, status and action. “Coming soon” grants no access and
+its action stays disabled.
+
+On mobile, fields have visible borders and buttons are at least 44 px tall.
+Checks cover 390, 1024 and 1440 px. Unverified permissions or an unavailable
+API produce an explicit error, never a false empty member or service list.
+A viewer opening the direct Users URL sees their own identity and a
+“Go to my services” link, without administrative data.
+
+These are acceptance criteria, not automatic proof of deployment.
+
 Only the current verified role. Approved organisation selector → five services →
 organisation requests → member inspection → new invitation → invitation history →
 approved organisation/service ledger. Platform grants organisation services and

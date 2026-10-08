@@ -1,5 +1,12 @@
 # GrideX documentation handoff
 
+## 2026-10-08 — external audit correction (not deployed)
+
+Approved role reference now declares UTF-8 and viewport explicitly. Nginx
+declares UTF-8 for text responses. BG/EN approved-screen help defines role,
+service order, failure-state and mobile acceptance. Preserve canonical layout.
+Publication/live validation remains pending; source checks are not acceptance.
+
 ## 2026-10-04 — public presentation privacy
 
 Owner approved removing personal owner credits and project repository URLs

@@ -1,11 +1,17 @@
 # GrideX documentation handoff
 
-## 2026-10-08 — external audit correction (not deployed)
+## 2026-10-08 — external audit correction (deployed; external acceptance pending)
 
 Approved role reference now declares UTF-8 and viewport explicitly. Nginx
 declares UTF-8 for text responses. BG/EN approved-screen help defines role,
 service order, failure-state and mobile acceptance. Preserve canonical layout.
-Publication/live validation remains pending; source checks are not acceptance.
+PR #53 merged as 23a120b. Deployed through scripts/deploy-local.sh; BG/EN,
+CSS/JS MIME and canonical HTML content-type text/html; charset=utf-8 checks pass
+through the local proxy. Browser characterSet UTF-8 and Cyrillic verified.
+External VPN/real-account acceptance remains pending; local checks do not prove it.
+Build dependency audit reports 47 findings (15 moderate, 16 high, 16 critical).
+Runtime serves static output; dependency remediation needs a separately tested
+update, not npm audit fix --force. Existing lockfile was preserved.
 
 ## 2026-10-04 — public presentation privacy
 

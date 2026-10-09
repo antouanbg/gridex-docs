@@ -11,7 +11,7 @@ import GuideNotice from '@site/src/components/GuideNotice';
 
 ## Organisation and personal service approval {#service-approval-levels}
 
-> Review-ready clarification; not yet deployed or accepted with real accounts.
+> Published on 2026-10-09; post-deployment acceptance with real accounts is pending.
 
 “Approved for the organisation” and “Enabled for you” are separate grants.
 Organisation approval does not automatically enable its administrator or members.

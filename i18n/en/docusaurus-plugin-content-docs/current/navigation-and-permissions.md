@@ -96,7 +96,7 @@ data. A Site with energy assets requires at least one infrastructure component.
 
 ## Access feedback
 
-> Review-ready clarification; not yet deployed or accepted with real accounts.
+> Published on 2026-10-09; post-deployment acceptance with real accounts is pending.
 
 “Approved for the organisation” and “Enabled for you” are separate grants.
 Organisation approval does not automatically enable its administrator or members.

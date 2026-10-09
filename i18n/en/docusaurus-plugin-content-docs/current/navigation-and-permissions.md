@@ -96,6 +96,17 @@ data. A Site with energy assets requires at least one infrastructure component.
 
 ## Access feedback
 
+> Review-ready clarification; not yet deployed or accepted with real accounts.
+
+“Approved for the organisation” and “Enabled for you” are separate grants.
+Organisation approval does not automatically enable its administrator or members.
+If only organisation approval exists, the organisation administrator follows
+Settings → Users → their own row → My services, then uses the existing grant action.
+An ordinary member requests the service in Services. A pending request grants nothing.
+Platform administrators do not approve themselves; customer Site access is not expanded.
+An unavailable check is not a confirmed denial. The Site must be accessible before
+service status can be disclosed; a foreign Site may remain unavailable without revealing its existence.
+
 - **Not permitted:** verification succeeded but access has not been granted.
 - **Awaiting approval:** a request exists; it does not yet grant access.
 - **Coming soon:** the feature is not active yet.

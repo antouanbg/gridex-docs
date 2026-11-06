@@ -1,0 +1,314 @@
+[
+  {
+    "title": [
+      "Прогнозна услуга и сценарии",
+      "Forecast service and scenarios"
+    ],
+    "location": [
+      "Услуги / Прогнозиране - проектен модул",
+      "Services / Forecasting - project module"
+    ],
+    "intro": [
+      "Прогнозната спецификация свързва три времеви реда: производство, потребление и пазарна цена. Базовият хоризонт е 72 часа с 15-минутни позиции. Прогнозният резултат служи като вход за оптимизация, а не като директна команда.",
+      "The forecast specification connects three time series: generation, consumption and market price. The baseline horizon is 72 hours in 15-minute intervals. Forecast output feeds optimisation rather than acting as a direct command."
+    ],
+    "rows": [
+      [
+        "Производство",
+        "Generation",
+        "PV мощност според история, радиация, температура и облачност.",
+        "PV power from history, irradiance, temperature and cloud cover."
+      ],
+      [
+        "Потребление",
+        "Demand",
+        "Товар с календарни фактори, история и производствен план.",
+        "Load with calendar factors, history and production plan."
+      ],
+      [
+        "Цена",
+        "Price",
+        "Борсова цена и прогнозен източник, отделени от крайната тарифа.",
+        "Wholesale price and forecast source, separate from final tariff."
+      ],
+      [
+        "Метод",
+        "Method",
+        "Специфициран модел LightGBM; отделна цел за всеки времеви ред.",
+        "Specified LightGBM model; separate target for each series."
+      ],
+      [
+        "Проследимост",
+        "Traceability",
+        "Версия на модел, период, входни версии и оценка за увереност.",
+        "Model version, period, input versions and confidence estimate."
+      ]
+    ],
+    "detail": [
+      "Използват се исторически признаци за 15 минути, 1 час, 24 часа и 7 дни, средни стойности за 1/24 часа и календарни признаци. Проверката на модела следва хронологията, за да не използва бъдещи данни при оценката на минал период. Прогнозната и реализираната доходност се показват отделно.",
+      "Inputs include lags of 15 minutes, 1 hour, 24 hours and 7 days, 1/24-hour averages and calendar features. Model validation follows chronological order to avoid using future data when evaluating an earlier period. Forecast and realised returns are shown separately."
+    ]
+  },
+  {
+    "title": [
+      "Параметри на управление и прогноза",
+      "Control and forecast parameters"
+    ],
+    "location": [
+      "Режим / Логика",
+      "Mode / Logic"
+    ],
+    "intro": [
+      "Параметрите описват поведението на стратегията и допустимата възраст на входните данни. Диапазоните по-долу са от функционалния договор; ефективната настройка се ограничава допълнително от оборудването и политиката на Обекта.",
+      "Parameters define strategy behaviour and acceptable input age. The ranges below come from the functional contract; effective settings are further constrained by equipment and Site policy."
+    ],
+    "rows": [
+      [
+        "Контролен интервал",
+        "Control interval",
+        "1–900 секунди; отделен от измерване и публикуване.",
+        "1–900 seconds; separate from measurement and publication."
+      ],
+      [
+        "Преоптимизация",
+        "Re-optimisation",
+        "1–1440 минути; период за ново изчисление.",
+        "1–1440 minutes; recalculation interval."
+      ],
+      [
+        "Прогнозен хоризонт",
+        "Forecast horizon",
+        "1–168 часа; максимална възраст на входа 1–1440 минути.",
+        "1–168 hours; input maximum age 1–1440 minutes."
+      ],
+      [
+        "Увереност",
+        "Confidence",
+        "Праг 0–100%; условие за използване на прогнозата.",
+        "Threshold 0–100%; condition for using a forecast."
+      ],
+      [
+        "Предварителен заряд",
+        "Pre-charge",
+        "Хоризонт 1–72 часа при ограничаване на пикове.",
+        "1–72-hour horizon for peak shaving."
+      ],
+      [
+        "Преход и резервен режим",
+        "Ramp and fallback",
+        "Темп kW/min; безопасен покой, самоконсумация или следване на график.",
+        "Ramp in kW/min; safe idle, self-consumption or schedule following."
+      ]
+    ],
+    "detail": [
+      "Примерно правило: при ниско очаквано слънчево производство утре запази SOC 80%, а заряд от мрежата разреши само под икономическия праг. 80% е примерна настройка, не универсален препоръчан резерв. Потребителската конфигурация не променя защитните ограничения на BMS.",
+      "Example rule: when tomorrow’s expected solar production is low, preserve 80% SOC and permit grid charging only below the economic threshold. 80% is an example setting, not a universal recommended reserve. User configuration does not alter BMS protective limits."
+    ]
+  },
+  {
+    "title": [
+      "Тарифен модел и разчет за период",
+      "Tariff model and period calculation"
+    ],
+    "location": [
+      "Настройки / Пазар / Тарифа и сетълмент",
+      "Settings / Market / Tariff and settlement"
+    ],
+    "intro": [
+      "Тарифният профил събира цената на енергията и приложимите договорни компоненти. Разделят се покупка и продажба, количество и единична цена, прогнозен разчет и окончателно отчетен период.",
+      "A tariff profile combines energy price with applicable contractual components. Purchase and sale, quantity and unit price, forecast calculations and final accounting periods remain separate."
+    ],
+    "rows": [
+      [
+        "Версия и валидност",
+        "Version and validity",
+        "Име, договорна препратка, начало/край и валута.",
+        "Name, contract reference, validity dates and currency."
+      ],
+      [
+        "Покупка / продажба",
+        "Purchase / sale",
+        "Отделни цени или договорни връзки към пазарен индекс.",
+        "Separate prices or contractual links to a market index."
+      ],
+      [
+        "Такси",
+        "Fees",
+        "Търговец, борса, мрежа и износ според договора.",
+        "Trader, exchange, network and export charges per contract."
+      ],
+      [
+        "Небаланс",
+        "Imbalance",
+        "Избран риск/разход и приложима договорна методика.",
+        "Selected risk/cost and applicable contractual method."
+      ],
+      [
+        "Периоден резултат",
+        "Period result",
+        "Приход от износ минус внос и включени разходи.",
+        "Export revenue minus import and included costs."
+      ]
+    ],
+    "detail": [
+      "При променлива цена разходът се сумира по интервали: енергията в MWh се умножава по съответната цена в EUR/MWh. Например 10 kW средна мощност за 15 минути е 2,5 kWh, или 0,0025 MWh; при 100 EUR/MWh енергийният компонент е 0,25 EUR. Данъци и други договорни компоненти се добавят само когато са приложими и зададени. Разчетът не заменя фактурата на доставчика.",
+      "For variable pricing, cost is summed by interval: MWh energy multiplied by the matching EUR/MWh price. For example, 10 kW average power over 15 minutes is 2.5 kWh, or 0.0025 MWh; at 100 EUR/MWh the energy component is EUR 0.25. Taxes and other contractual components are added only when applicable and configured. The calculation does not replace the supplier’s invoice."
+    ]
+  },
+  {
+    "title": [
+      "Балансиране и производствен контекст",
+      "Balancing and production context"
+    ],
+    "location": [
+      "Настройки / Пазар / Балансиране; Услуги / Анализ",
+      "Settings / Market / Balancing; Services / Analytics"
+    ],
+    "intro": [
+      "Проектният модул за балансиране сравнява договорения график с измерената позиция на Обекта. Индустриалните интеграции добавят очакваното натоварване от производствените планове към прогнозата за потребление.",
+      "The project balancing module compares the contracted schedule with the Site’s measured position. Industrial integrations add expected production-plan demand to the load forecast."
+    ],
+    "rows": [
+      [
+        "График",
+        "Schedule",
+        "Идентификатор, версия, доставка, времева зона и интервални позиции.",
+        "Identifier, version, delivery date, time zone and interval positions."
+      ],
+      [
+        "Отклонение",
+        "Deviation",
+        "Измерена енергия спрямо график при обща знакова конвенция.",
+        "Measured energy versus schedule under a shared sign convention."
+      ],
+      [
+        "Толеранс",
+        "Tolerance",
+        "Допустимо отклонение в мощност и тежест на придържане към графика.",
+        "Permitted power deviation and schedule-adherence weight."
+      ],
+      [
+        "ERP / MES / WMS",
+        "ERP / MES / WMS",
+        "Проектни връзки за поръчки, смени, товари и енергийни модели.",
+        "Project connections for orders, shifts, loads and energy models."
+      ],
+      [
+        "VPP / DSO / общности",
+        "VPP / DSO / communities",
+        "Отделни проектни интерфейси, договори и правила за участие.",
+        "Separate project interfaces, contracts and participation rules."
+      ]
+    ],
+    "detail": [
+      "За сравним отчет се пазят произходът на данните и версията на графика. Прогнозните цени за небаланс и окончателните стойности са различни набори. Участието в балансиращ пазар, агрегиране или енергийна общност се определя от съответния оператор и договор, не само от наличието на измервания.",
+      "Comparable reporting retains data provenance and schedule version. Forecast imbalance prices and final prices are distinct datasets. Balancing-market participation, aggregation or an energy community depends on the relevant operator and contract, not only on available measurements."
+    ]
+  },
+  {
+    "title": [
+      "Разширения и конфигурации на продукта",
+      "Product extensions and configurations"
+    ],
+    "location": [
+      "Пълен проектен каталог",
+      "Full project catalogue"
+    ],
+    "intro": [
+      "Разширенията допълват основния енергиен модел чрез конкретен интеграционен и договорен обхват. Те се описват като опции на продукта, без да променят правилата за изолация, достъп и безопасност.",
+      "Extensions complement the core energy model through defined integration and contractual scope. They are product options that preserve isolation, access and safety rules."
+    ],
+    "rows": [
+      [
+        "Допълнителни драйвери",
+        "Additional drivers",
+        "Нови модели след определяне на протокол, регистри, единици и команди.",
+        "Additional models with specified protocol, registers, units and commands."
+      ],
+      [
+        "Cloud конектори",
+        "Cloud connectors",
+        "Връзка към външен доставчик с ограничени права и проследим източник.",
+        "External-provider connections with scoped permissions and traceable sources."
+      ],
+      [
+        "OCPP / портфейли",
+        "OCPP / portfolios",
+        "Зарядни интеграции и агрегиране на договорени Обекти.",
+        "Charging integrations and aggregation of agreed Sites."
+      ],
+      [
+        "Партньорски модел",
+        "Partner model",
+        "Проектни варианти за партньори, white-label и лицензионен обхват.",
+        "Project variants for partners, white-label and licensing scope."
+      ],
+      [
+        "Езици",
+        "Languages",
+        "BG/EN; разширяване чрез преводни каталози и локални формати.",
+        "BG/EN; extension through translation catalogues and locale formatting."
+      ],
+      [
+        "План и абонамент",
+        "Plan and subscription",
+        "Договорен пакет услуги и ресурси; цени и таксуване по оферта.",
+        "Contracted services/resource package; pricing and billing by quotation."
+      ]
+    ],
+    "detail": [
+      "Съществуващите търговски примерни стойности не се използват като клиентска оферта. Автоматичен избор по държава, допълнителни езици, канали за плащане и марка на партньор се определят в съответната проектна спецификация. Не се променя личният езиков избор само защото клиентът използва VPN.",
+      "Existing illustrative commercial values are not a customer quotation. Country-based suggestions, additional languages, payment channels and partner branding are defined in the relevant project specification. A user’s language choice is not changed merely because they use a VPN."
+    ]
+  },
+  {
+    "title": [
+      "Обновяване, непрекъсваемост и данни",
+      "Updates, continuity and data"
+    ],
+    "location": [
+      "Инфраструктура; експлоатационен план",
+      "Infrastructure; operations plan"
+    ],
+    "intro": [
+      "Жизненият цикъл на конфигурацията е отделен от жизнения цикъл на firmware. Всяка промяна има версия, целево устройство, право за изпълнение и отчетен резултат.",
+      "Configuration lifecycle is separate from firmware lifecycle. Every change has a version, target device, execution permission and recorded outcome."
+    ],
+    "rows": [
+      [
+        "Конфигурация",
+        "Configuration",
+        "Чернова, одобрение, получаване, прилагане и обратно прочитане.",
+        "Draft, approval, retrieval, application and readback."
+      ],
+      [
+        "Обновяване на Edge",
+        "Edge update",
+        "Контролирана доставка; ESP се обслужва през ROCK.",
+        "Controlled delivery; ESP devices are serviced through ROCK."
+      ],
+      [
+        "Локален журнал",
+        "Local journal",
+        "Ограничен по дисково пространство буфер за телеметрия.",
+        "Disk-bounded telemetry buffer."
+      ],
+      [
+        "Възстановяване",
+        "Recovery",
+        "Проектен процес за прехвърляне, потвърждение и обработка на повторения.",
+        "Project process for transfer, acknowledgement and duplicate handling."
+      ],
+      [
+        "Резервни копия",
+        "Backups",
+        "Бази, конфигурации и защитени ключове; срокове и тест за възстановяване.",
+        "Databases, configuration and protected keys; retention and recovery test."
+      ]
+    ],
+    "detail": [
+      "При прекъсната връзка състоянието на данните остава видимо. Неполучените измервания не се заменят с фиктивни стойности. Продължителността на локалното съхранение, допустимата загуба на данни и времето за възстановяване се оразмеряват за конкретния Обект. Резервните копия на измерванията и постоянният архив на пазарните цени имат отделни политики.",
+      "During a connection loss, data state remains visible. Unreceived measurements are not replaced with fabricated values. Local retention duration, acceptable data loss and recovery time are sized for the Site. Measurement backups and the permanent market-price archive have separate policies."
+    ]
+  }
+]

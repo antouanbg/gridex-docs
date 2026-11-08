@@ -1,5 +1,24 @@
 # GrideX documentation handoff
 
+## 2026-11-08 — Possible integrations / Възможни интеграции
+
+Owner requested a unified possible-integration catalogue, without readiness
+tiers. Edition 5 adds eight bilingual chapters (PDF pages 30–37): Edge hardware,
+two inverter lists, BESS/batteries, BMS profiles, meters, protocol bridges and
+Modbus selection. Exact-model/firmware/map compatibility qualification remains.
+No additional driver, command path or permission is implemented by this change.
+
+Sources: gridex-energy-os commit 421b667, app/data/supported-devices.ts and
+app/sections/devices.tsx; gridex-edge-gateway origin/main cfd0c63, README,
+docs/DRIVER_CATALOG.md and docs/SUNTECH_STE261L_PROTOCOL.md. Product examples
+remain described as examples; RS485 is not silently equated with Modbus,
+and CAN BMS bindings are not represented as complete inverter control APIs.
+Sources are recorded here, not exposed as project repository links in the PDF.
+
+БГ: двата PDF са по 43 страници с 37 навигационни отметки. Каталогът използва
+само производители/профили от посочените източници. Старото издание е запазено.
+Публикацията е на документи, без рестарт или промени на живи услуги и права.
+
 ## 2026-10-09 — service approval clarity (review only)
 
 Owner-approved scope: preserve organisation + member grants; distinguish their
@@ -729,3 +748,24 @@ Live checkpoint: after backend role migration and portal Pages deployment,
 `sh scripts/deploy-local.sh` returned `GRIDEX_DOCS_DEPLOYED` following BG/EN
 typecheck/build and local HTTPS/CSS/JS checks. BG/EN status was updated in
 PR #41. Signed-in real-user acceptance remains pending.
+# 2026-11-06 — Illustrated customer PDFs / Клиентски PDF с екрани
+
+Owner explicitly approved finishing without access to doc.gridex.tech,
+using repository documentation and approved screenshots. Edition 4.0 includes
+separate BG/EN 35-page PDFs, 29 navigation bookmarks and five pages of role
+reference screens. Reference images match main 288888d; only example identities
+appear. EN captions identify the Bulgarian screenshot interface explicitly.
+Sources and portable generator are included under scripts/customer-pdf.
+Both PDFs rendered and visually reviewed; extracted text checked for personal
+owner identity, private local paths and project repository URLs.
+Existing Drive-synchronised copies were verified by metadata and successful
+raw retrieval, avoiding duplicate uploads. No live container restart, role
+change or documentation-site deployment is part of this PDF publication.
+
+БГ: публикуването е на клиентските PDF и източниците им, не внедряване на
+услуги. Пълният продуктов обхват включва проектни опции; конкретните активирани
+модули са по конфигурация и договор. Макетите са ясно означени като примерни,
+не като нови снимки от живия сайт. Запазени са старите PDF версии в работната
+папка. При следваща редакция се обновяват и проверяват и двата езика.
+Checks passed: guide consistency (8 BG/EN pairs), TypeScript, Docusaurus BG/EN
+build, 35 pages and 29 PDF bookmarks per locale, rendered layout review.

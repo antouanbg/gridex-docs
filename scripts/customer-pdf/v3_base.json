@@ -1,0 +1,452 @@
+[
+  {
+    "title": [
+      "Платформа и продуктов обхват",
+      "Platform and product scope"
+    ],
+    "location": [
+      "Ръководство за клиента",
+      "Customer guide"
+    ],
+    "intro": [
+      "GrideX обединява енергийни активи, локална инфраструктура, пазарни данни и оперативни правила в обща среда за наблюдение и управление. Пълният продуктов обхват включва базови функции, конфигурируеми услуги и проектни разширения.",
+      "GrideX brings energy assets, local infrastructure, market data and operating rules into a common monitoring and management environment. The full product scope includes core functions, configurable services and project-specific extensions."
+    ],
+    "rows": [
+      [
+        "Обекти",
+        "Sites",
+        "Местоположения, активи, инфраструктура и достъп.",
+        "Locations, assets, infrastructure and access."
+      ],
+      [
+        "Енергийни активи",
+        "Energy assets",
+        "Батерии, инвертори, зарядни станции и товари.",
+        "Batteries, inverters, chargers and loads."
+      ],
+      [
+        "Услуги",
+        "Services",
+        "Цени, графики, анализ, метеорология и прогнози.",
+        "Prices, charts, analytics, weather and forecasts."
+      ],
+      [
+        "Режим",
+        "Mode",
+        "Стратегии, графици, лимити и аларми.",
+        "Strategies, schedules, limits and alarms."
+      ],
+      [
+        "Администрация",
+        "Administration",
+        "Организации, потребители, роли, услуги и настройки.",
+        "Organisations, users, roles, services and settings."
+      ]
+    ],
+    "detail": [
+      "Това е функционална спецификация на пълния продуктов обхват, а не списък на активираните услуги в конкретен акаунт. Проектните опции се включват в договорената конфигурация. Оборудването, интеграциите, правата и договорът определят приложимите функции. Стойностите в примерите са илюстративни.",
+      "This is a functional specification of the full product scope, not a list of services activated in a particular account. Project options form part of the agreed configuration. Equipment, integrations, permissions and the contract determine applicable functions. Example values are illustrative."
+    ]
+  },
+  {
+    "title": [
+      "Начало: покана, вход и профил",
+      "Getting started: invitation, sign-in and profile"
+    ],
+    "location": [
+      "Настройки / Профил",
+      "Settings / Profile"
+    ],
+    "intro": [
+      "Достъпът започва с покана по имейл. Получателят потвърждава адреса и задава парола в защитения екран за идентификация. След успешен вход порталът зарежда неговата организация, роли и разрешени Обекти.",
+      "Access starts with an email invitation. The recipient verifies the address and sets a password on the protected identity screen. After sign-in, the portal loads their organisation, roles and authorised Sites."
+    ],
+    "rows": [
+      [
+        "Идентичност",
+        "Identity",
+        "Имейл, собствено и фамилно име; отделна принадлежност към организация.",
+        "Email, first and last name; explicit organisation membership."
+      ],
+      [
+        "Вход",
+        "Sign-in",
+        "Имейлът насочва към правилната организация и се подава към екрана за парола.",
+        "Email routes to the correct organisation and passes to the password screen."
+      ],
+      [
+        "Възстановяване",
+        "Recovery",
+        "Процес за забравена парола чрез регистрирания имейл.",
+        "Forgot-password process through the registered email."
+      ],
+      [
+        "Лични настройки",
+        "Preferences",
+        "Език, часова зона, мерни единици, тема и известия.",
+        "Language, time zone, units, theme and notifications."
+      ],
+      [
+        "Изход",
+        "Sign-out",
+        "Изчистване на личния контекст и връщане към публичното демо.",
+        "Clear personal context and return to the public demo."
+      ]
+    ],
+    "detail": [
+      "Приетата регистрационна покана не изисква втори бутон „Приемам“ след идентификация. Смяната на човек на общ компютър става с Изход и нов Вход. Демо средата е отделна от клиентските данни и показва примерен продуктов обхват.",
+      "An accepted registration invitation does not require a second acceptance button after authentication. On a shared computer, changing person means signing out and signing in again. The demo is separate from customer data and illustrates the product scope."
+    ]
+  },
+  {
+    "title": [
+      "Навигация и работни екрани",
+      "Navigation and workspaces"
+    ],
+    "location": [
+      "Всички раздели",
+      "All sections"
+    ],
+    "intro": [
+      "Менюто се определя от самоличността, ролята, услугите и наличните активи. Административни действия и оперативни измервания са разделени, а един и същ Обект запазва общ контекст между екраните.",
+      "Navigation follows identity, role, services and available assets. Administrative actions are separate from operational measurements, while each Site retains a common context across screens."
+    ],
+    "rows": [
+      [
+        "Преглед",
+        "Overview",
+        "Мощности, енергийни потоци, състояние и основни показатели.",
+        "Power, energy flows, status and key indicators."
+      ],
+      [
+        "Обекти",
+        "Sites",
+        "Списък и детайл с активи, услуги и инфраструктура.",
+        "List and detail with assets, services and infrastructure."
+      ],
+      [
+        "Енергийни активи",
+        "Energy assets",
+        "Батерия; Инвертор; Зарядна станция; Консуматор и товар.",
+        "Battery; Inverter; Charging station; Consumer and load."
+      ],
+      [
+        "Инфраструктура",
+        "Infrastructure",
+        "Един раздел за контролери, електромери, сензори, рутери и конектори.",
+        "One section for controllers, meters, sensors, routers and connectors."
+      ],
+      [
+        "Услуги / Режим",
+        "Services / Mode",
+        "Лични услуги; логика, график и аларма.",
+        "Personal services; logic, schedule and alarm."
+      ],
+      [
+        "Настройки",
+        "Settings",
+        "Потребители; План и абонамент; Пазар; Профил и Документация.",
+        "Users; Plan and subscription; Market; Profile and Documentation."
+      ]
+    ],
+    "detail": [
+      "В реалния акаунт подразделът за вид енергиен актив се показва според достъпния инвентар. Временно offline оборудване запазва мястото си в списъка. В демото могат да се разглеждат всички категории. Помощта води към съответната тема в клиентската документация.",
+      "In a real account, asset-type subsections follow accessible inventory. Temporarily offline equipment remains in the list. The demo exposes all categories. Contextual help links to the relevant customer-documentation topic."
+    ]
+  },
+  {
+    "title": [
+      "Организации, потребители и права",
+      "Organisations, users and permissions"
+    ],
+    "location": [
+      "Настройки / Потребители",
+      "Settings / Users"
+    ],
+    "intro": [
+      "Всяка организация има изолиран контекст за потребители и данни. Достъпът се определя поотделно за човек, Обект, действие и услуга. Ролята задава набор права, а привързването към Обект определя къде важат те.",
+      "Each organisation has an isolated user and data context. Access is specified separately for person, Site, action and service. A role defines permissions; Site assignment determines where they apply."
+    ],
+    "rows": [
+      [
+        "Супер администратор",
+        "Platform administrator",
+        "Управлява организации, каталог и организационни разрешения; няма самоодобрение за личните услуги.",
+        "Manages organisations, catalogue and organisation grants; no self-approval for personal services."
+      ],
+      [
+        "Администратор на организация",
+        "Organisation administrator",
+        "Кани хора, задава роли и Обекти, разпределя одобрени услуги; създава Обекти.",
+        "Invites people, assigns roles/Sites and approved services; creates Sites."
+      ],
+      [
+        "Наблюдател",
+        "Observer",
+        "Чете разрешените данни; не създава Обекти и не изпълнява управление.",
+        "Reads authorised data; does not create Sites or execute control."
+      ],
+      [
+        "Оператор / енергиен мениджър",
+        "Operator / energy manager",
+        "Оперативни и стратегически действия според конкретните разрешения.",
+        "Operational and strategy actions under explicit permissions."
+      ],
+      [
+        "Интегратор",
+        "Integrator",
+        "Конфигурация и интеграция в предоставения обхват.",
+        "Configuration and integration within assigned scope."
+      ]
+    ],
+    "detail": [
+      "Таблицата за хората включва име и имейл, роля, Обекти, услуги и действия. Редакторът показва текущите назначения. Достъпът за диагностика до клиентски Обект изисква одобрение от неговия администратор, ограничен срок, само четене и възможност за незабавно отнемане.",
+      "The member table includes name/email, role, Sites, services and actions. The editor shows current assignments. Diagnostic access to a customer Site requires its administrator’s approval, a limited duration, read-only scope and immediate revocation."
+    ]
+  },
+  {
+    "title": [
+      "Услуги: заявки, разрешаване и спиране",
+      "Services: requests, grants and suspension"
+    ],
+    "location": [
+      "Услуги; Настройки / Потребители",
+      "Services; Settings / Users"
+    ],
+    "intro": [
+      "Разрешението на организацията и разрешението на конкретния човек са отделни. Администраторите могат да разрешават услуга и без предварителна заявка. Действието влиза в сила без второ приемане от получателя.",
+      "Organisation entitlement and individual entitlement are separate. Administrators can grant a service without a prior request. The action takes effect without a second acceptance by the recipient."
+    ],
+    "rows": [
+      [
+        "Организационно разрешение",
+        "Organisation entitlement",
+        "Супер администраторът избира организация и разрешава услуга/ценова зона.",
+        "Platform administrator selects an organisation and grants service/price zone."
+      ],
+      [
+        "Лично разрешение",
+        "Personal entitlement",
+        "Организационният админ разрешава на избран човек, включително на себе си.",
+        "Organisation administrator grants access to a selected person, including themselves."
+      ],
+      [
+        "Заявка от потребител",
+        "Member request",
+        "Появява се при неговия администратор за решение.",
+        "Appears for a decision by the member’s administrator."
+      ],
+      [
+        "Заявка от организация",
+        "Organisation request",
+        "Организационният админ заявява към супер администратора.",
+        "Organisation administrator requests access from the platform administrator."
+      ],
+      [
+        "Отмяна / спиране",
+        "Cancel / stop",
+        "Отмяна на чакаща заявка или прекратяване на лично активно разрешение.",
+        "Cancel a pending request or terminate a personal active grant."
+      ]
+    ],
+    "detail": [
+      "Етикетите „Одобрена за организацията“ и „Разрешена за Вас“ показват различни нива. Отнемането на организационна услуга прекратява зависимия личен достъп; повторното разрешаване не възстановява автоматично старите лични назначения. Каталогът включва цени ден напред, графики, анализ, метеорология и прогнозиране; конкретните активни модули следват договорения обхват.",
+      "Approved for the organisation and Enabled for you identify different levels. Revoking an organisation service terminates dependent personal access; re-enabling does not automatically restore old personal grants. The catalogue includes day-ahead prices, charts, analytics, weather and forecasting; active modules follow the agreed scope."
+    ]
+  },
+  {
+    "title": [
+      "Обекти и енергиен баланс",
+      "Sites and energy balance"
+    ],
+    "location": [
+      "Обекти / Преглед",
+      "Sites / Overview"
+    ],
+    "intro": [
+      "Обектът обединява местоположение, инфраструктура, активи и права. Наблюдението показва връзката между производство, товар, мрежов обмен и батерия в общ времеви контекст.",
+      "A Site combines location, infrastructure, assets and permissions. Monitoring shows generation, load, grid exchange and battery flows in a shared time context."
+    ],
+    "rows": [
+      [
+        "Идентификация",
+        "Identification",
+        "Име, организация, местоположение/часова зона и свързан основен запис.",
+        "Name, organisation, location/time zone and linked authoritative record."
+      ],
+      [
+        "Инвентар",
+        "Inventory",
+        "Поне една инфраструктурна връзка; списък на енергийните активи.",
+        "At least one infrastructure link; energy-asset inventory."
+      ],
+      [
+        "Текуща мощност",
+        "Current power",
+        "Производство, товар, внос/износ, заряд/разряд с единици и знак.",
+        "Generation, load, import/export, charge/discharge with units and sign."
+      ],
+      [
+        "Енергия за период",
+        "Period energy",
+        "Интегрирани количества в kWh/MWh за избрания период.",
+        "Integrated kWh/MWh quantities for the selected period."
+      ],
+      [
+        "Качество",
+        "Quality",
+        "Час на измерване, актуалност и състояние на източника.",
+        "Measurement time, freshness and source state."
+      ]
+    ],
+    "detail": [
+      "Обект се създава от администратор. Потребителите работят със зададените им Обекти. Нулева стойност означава измерена нула; липсващ източник се показва отделно. При сравнение на периоди се използват еднакви единици, времеви граници и правила за агрегация.",
+      "An administrator creates a Site. Members work with assigned Sites. Zero means measured zero; an unavailable source is displayed separately. Period comparisons use consistent units, time boundaries and aggregation rules."
+    ]
+  },
+  {
+    "title": [
+      "Батерия и BESS",
+      "Battery and BESS"
+    ],
+    "location": [
+      "Енергийни активи / Батерия",
+      "Energy assets / Battery"
+    ],
+    "intro": [
+      "Профилът на батерията събира технически параметри, текущо състояние и икономически настройки. За управлението едновременно се прилагат обектовите граници и моментните ограничения на BMS/PCS.",
+      "The battery profile combines technical parameters, current state and economic settings. Control applies both Site limits and current BMS/PCS constraints."
+    ],
+    "rows": [
+      [
+        "Капацитет и мощност",
+        "Capacity and power",
+        "Номинален/използваем капацитет; допустими мощности за заряд и разряд.",
+        "Nominal/usable capacity; permitted charge/discharge power."
+      ],
+      [
+        "SOC / SOH",
+        "SOC / SOH",
+        "Текущ заряд и оценка за състояние от BMS.",
+        "Charge level and BMS health estimate."
+      ],
+      [
+        "Работен диапазон",
+        "Operating range",
+        "Минимален, максимален и целеви SOC; авариен резерв.",
+        "Minimum, maximum and target SOC; emergency reserve."
+      ],
+      [
+        "Мрежов обмен",
+        "Grid exchange",
+        "Отделни разрешения за заряд от мрежата и разряд към нея.",
+        "Separate permissions for grid charging and export discharge."
+      ],
+      [
+        "Измервания",
+        "Measurements",
+        "Мощност, напрежение, ток, температура, енергийни броячи и аларми.",
+        "Power, voltage, current, temperature, energy counters and alarms."
+      ]
+    ],
+    "detail": [
+      "Референтното оборудване SunStorage PRO STE-261L-125P е AC-coupled система с номинална мощност 125 kW и капацитет 261 kWh. Тези стойности описват модела; параметрите на конкретния Обект се задават по неговата документация. Работният диапазон не увеличава фабричните ограничения.",
+      "The reference SunStorage PRO STE-261L-125P is an AC-coupled system rated at 125 kW and 261 kWh. These values describe that model; each Site is configured from its equipment documentation. The operating range does not raise factory limits."
+    ]
+  },
+  {
+    "title": [
+      "Инвертори и производство",
+      "Inverters and generation"
+    ],
+    "location": [
+      "Енергийни активи / Инвертор",
+      "Energy assets / Inverter"
+    ],
+    "intro": [
+      "Инверторният профил свързва производствените измервания с обектовия енергиен баланс. Използването на излишъка се определя от режима и приоритетите за батерия, товари, износ и ограничаване.",
+      "The inverter profile links generation measurements to the Site energy balance. Surplus use follows the mode and priorities for battery, loads, export and curtailment."
+    ],
+    "rows": [
+      [
+        "Технически профил",
+        "Technical profile",
+        "Производител, модел, сериен номер, драйвер и комуникационна връзка.",
+        "Manufacturer, model, serial number, driver and communication link."
+      ],
+      [
+        "Телеметрия",
+        "Telemetry",
+        "AC/PV мощност, напрежения, токове, честота, енергия и състояние.",
+        "AC/PV power, voltages, currents, frequency, energy and status."
+      ],
+      [
+        "Приоритет на излишъка",
+        "Surplus priority",
+        "Батерия, гъвкави товари, износ или ограничаване.",
+        "Battery, flexible loads, export or curtailment."
+      ],
+      [
+        "Мрежов лимит",
+        "Grid limit",
+        "Контрол спрямо PCC измерване и разрешения експортиран максимум.",
+        "Control against PCC measurement and permitted export maximum."
+      ]
+    ],
+    "detail": [
+      "При отрицателна цена политиката за продажба се разглежда заедно с локалното потребление, батерията и възможностите за ограничаване на инвертора. Измервателната поддръжка и командната поддръжка се определят по точния модел и протокол.",
+      "At negative prices, the sale policy is considered alongside local demand, the battery and inverter-curtailment capabilities. Measurement and command support are specified for the exact model and protocol."
+    ]
+  },
+  {
+    "title": [
+      "Зареждане и гъвкави товари",
+      "Charging and flexible loads"
+    ],
+    "location": [
+      "Енергийни активи / Зарядна станция; Консуматор и товар",
+      "Energy assets / Charging station; Consumer and load"
+    ],
+    "intro": [
+      "Гъвкавият товар описва потребление, което може да се разпредели във времето при спазване на мощност, приоритет и краен срок. Зарядните станции и индустриалните товари участват в общите обектови ограничения.",
+      "A flexible load describes consumption that can be scheduled within power, priority and deadline constraints. Chargers and industrial loads share Site-wide limits."
+    ],
+    "rows": [
+      [
+        "Мощност",
+        "Power",
+        "Минимална и максимална допустима мощност в kW.",
+        "Minimum and maximum permitted power in kW."
+      ],
+      [
+        "Енергийна цел",
+        "Energy target",
+        "Необходима енергия в kWh и краен срок.",
+        "Required energy in kWh and completion deadline."
+      ],
+      [
+        "Приоритет",
+        "Priority",
+        "Подреждане на товарите при ограничен ресурс.",
+        "Load ordering when resources are limited."
+      ],
+      [
+        "Състояние на зарядна",
+        "Charger state",
+        "Конектор, текуща мощност, енергия на сесията и обща енергия.",
+        "Connector, current power, session energy and total energy."
+      ],
+      [
+        "Интеграционна опция",
+        "Integration option",
+        "Профил за конкретна станция; OCPP като отделен проектен интерфейс.",
+        "Specific charger profile; OCPP as a separate project interface."
+      ]
+    ],
+    "detail": [
+      "Пример: цел 30 kWh до 07:00, максимум 11 kW и наличен евтин прозорец от четири часа. Минималното идеално време при тази мощност е около 2,73 часа; реалният план отчита загуби, ограничения на станцията и едновременни товари. Ценовото предпочитание не отменя крайния срок.",
+      "Example: 30 kWh by 07:00, an 11 kW limit and a four-hour low-price window. Ideal minimum duration at that power is about 2.73 hours; the actual plan accounts for losses, charger limits and simultaneous loads. Price preference does not override the deadline."
+    ]
+  }
+]

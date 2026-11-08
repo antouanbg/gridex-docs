@@ -1,5 +1,42 @@
 # GrideX public documentation
 
+## Customer PDF specification / Клиентска PDF спецификация
+
+Edition 5.0, 8 November 2026: two separate 43-page documents with a linked
+contents page and approved example screens for the three account roles.
+
+- [Български PDF](static/downloads/GrideX_Full_Product_Specification_BG_2026-11_v5.pdf)
+- [English PDF](static/downloads/GrideX_Full_Product_Specification_EN_2026-11_v5.pdf)
+
+Издание 5 добавя осем страници „Възможни интеграции“: инвертори, батерии/BMS,
+смартметри, протоколни мостове, Edge оборудване и Modbus съвместимост.
+Edition 5 adds eight pages of possible integrations: inverters, batteries/BMS,
+smart meters, protocol bridges, Edge equipment and Modbus compatibility.
+Previous edition 4 files remain available for reference.
+
+Пълен продуктов обхват: Обекти, активи, инфраструктура, услуги и права,
+стратегии, пазарни цени, икономика, прогнозиране и проектни разширения.
+Изображенията са одобрените примерни макети от тази документация,
+с примерни самоличности, а не нови снимки от клиентски акаунти.
+Английската версия има английски текст и пояснения; референтните екрани
+запазват оригиналния български интерфейс. Активираните модули се определят
+от клиентската конфигурация и договора.
+
+Full product scope covers Sites, assets, infrastructure, services/access,
+strategies, market prices, economics, forecasting and project extensions.
+Screens are the approved reference mockups with example identities, not
+new captures of customer accounts. The English edition has English prose
+and captions; screenshots retain the original Bulgarian interface.
+Activated modules depend on customer configuration and contract.
+
+Authoring sources: `scripts/customer-pdf/`. Install Python packages
+`reportlab` and `Pillow`, and DejaVu Sans regular/bold fonts. Set
+`GRIDEX_PDF_FONT_DIR` if fonts are not under `/usr/share/fonts/truetype/dejavu`,
+then run `python3 scripts/customer-pdf/build_full_spec.py` from the repository.
+Output goes to `static/downloads/`. Render and inspect both PDFs after edits;
+keep both locales in the same release. Git publication is separate from
+deploying the documentation website.
+
 Separate public Docusaurus site for `https://doc.gridex.tech`. Bulgarian is
 the default locale; English pages live under `/en/`. Build with `npm ci &&
 npm run build`. The static `build/` output is served by a read-only container

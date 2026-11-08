@@ -1,0 +1,290 @@
+[
+  [
+    "Стратегии: цел и граници",
+    "Strategies: purpose and boundaries",
+    [
+      [
+        "Осем режима, една контролна рамка",
+        "Eight modes, one control framework",
+        "Каталогът в backend разпознава: интелигентен хибрид, ценови арбитраж, самоконсумация, нулев износ, ограничаване на пиковете, следване на график, резервно захранване и ръчно управление. Мястото им в портала е „Режим“, в контекста на избрания Обект. Изборът на име на режим не е сам по себе си команда към батерията.",
+        "The backend catalogue recognises intelligent hybrid, price arbitrage, self-consumption, zero export, peak shaving, schedule following, backup reserve and manual control. Their portal location is Mode within the selected Site. Selecting a mode name is not, by itself, a battery command."
+      ],
+      [
+        "Единен модел за конфигурация",
+        "Unified configuration model",
+        "Стратегията на Обекта е версиониран документ с режим, параметри, входни данни и ограничения. Работният процес разделя подготовка, проверка, симулация, одобрение и активиране. Журналът свързва промяната с потребител, време и ревизия. Физическото управление остава подчинено на локалните защити.",
+        "The Site strategy is a versioned document containing mode, parameters, inputs and constraints. The workflow separates preparation, validation, simulation, approval and activation. The audit trail links each change to user, time and revision. Physical control remains subordinate to local safeguards."
+      ],
+      [
+        "Общи настройки",
+        "Shared settings",
+        "SOC границите са в диапазон 0–100%, минималната е под максималната, а резервът е вътре в тях. Прогнозният хоризонт е 1–168 часа; базовият профил използва 72 часа. Проекцията за цикли е за следващите 24 часа. Ценово водените стратегии задават два именувани източника за прогноза, техните версии и тегла. Изборът им е част от конфигурацията на прогнозната услуга.",
+        "SOC limits are within 0–100%, minimum is below maximum and reserve stays inside them. The forecast horizon is 1–168 hours; the baseline profile uses 72 hours. Cycle projection covers the next 24 hours. Price-driven strategies specify two named forecast sources, their versions and weights. Their selection belongs to forecast-service configuration."
+      ]
+    ]
+  ],
+  [
+    "Стратегии за енергия и цена",
+    "Energy and price strategies",
+    [
+      [
+        "Интелигентен хибрид",
+        "Intelligent hybrid",
+        "Цел: комбиниране на цени, PV производство, товар и заряд на батерията. Необходими входове: актуални измервания, прогнози, тарифи, резерв и технически ограничения. Настройките определят прогнозен хоризонт и целеви SOC преди очаквани пикове. Предвиденият резултат е план за заряд/разряд, а не гарантирана икономия.",
+        "Purpose: combine prices, PV production, load and battery charge. Inputs include current measurements, forecasts, tariffs, reserve and technical limits. Settings define the forecast horizon and target SOC before expected peaks. The intended output is a charge/discharge plan, not guaranteed savings."
+      ],
+      [
+        "Ценови арбитраж",
+        "Price arbitrage",
+        "Цел: зареждане в икономически изгодни интервали и разреждане при положителен нетен марж. Самата разлика между две борсови цени не е достатъчна: включват се енергията за заряд, преобразувателните загуби, таксите, рискът от небаланс и избраните разходи за батерията. Параметри: ценови прагове, минимален марж, резерв и лимити. Правилото за маржа се прилага към избрания ценови сценарий.",
+        "Purpose: charge during economically favourable intervals and discharge at a positive net margin. The spread between two wholesale prices alone is insufficient: charge energy, conversion losses, fees, imbalance risk and selected battery costs matter. Parameters include price thresholds, minimum margin, reserve and limits. The margin rule applies to the selected price scenario."
+      ],
+      [
+        "Самоконсумация",
+        "Self-consumption",
+        "PV енергията първо обслужва локалния товар; излишъкът може да зарежда батерията, а при дефицит тя може да захранва товара в допустимите граници. Нужни са съгласувани измервания на PV, PCC, товар и батерия. Резервът и допустимият внос се настройват за обекта. Настройката се свързва с конкретната схема на Обекта.",
+        "PV first serves local demand; surplus may charge the battery, which may support demand during a deficit within permitted limits. Consistent PV, PCC, load and battery measurements are required. Reserve and permitted import are Site-specific. The configuration is linked to the specific Site topology."
+      ]
+    ]
+  ],
+  [
+    "Стратегии за мрежата и графика",
+    "Grid and schedule strategies",
+    [
+      [
+        "Нулев износ",
+        "Zero export",
+        "Цел: поддържане на експорта в точката на присъединяване под зададен лимит чрез допустим заряд, управление на товари или ограничаване на производство. Нужен е надежден PCC електромер с проверен знак и актуалност. Пълна батерия, комуникационно закъснение или липсващо управление на PV ограничават възможностите. Това не е декларация за сертифицирана защита срещу износ.",
+        "Purpose: keep export at the connection point below a configured limit using permitted charging, load control or generation curtailment. A reliable PCC meter with validated sign and freshness is required. A full battery, communication delay or unavailable PV control limits performance. This is not a claim of certified export protection."
+      ],
+      [
+        "Ограничаване на пиковете",
+        "Peak shaving",
+        "Цел: ограничаване на върховата мощност спрямо договорен или технически праг. Настройки: праг, резерв и предварително зареждане. Нужни са достатъчно налична мощност и енергия в батерията. Ефектът върху сметката зависи от реалния договор; не всяка тарифа има такса за пикова мощност.",
+        "Purpose: limit peak demand against a contractual or technical threshold. Settings include threshold, reserve and pre-charge. Sufficient battery power and stored energy are required. Billing impact depends on the actual contract; not every tariff charges for peak demand."
+      ],
+      [
+        "Следване на график",
+        "Schedule following",
+        "Предвидено е следване на одобрен търговски график и отчитане на отклоненията по интервали. Нужни са версия на графика, времева зона, PCC измервания и правила за небаланс. За 15-минутен ден обичайно има 96 интервала, а при смяна на часовото време 92 или 100. Графикът и балансирането се свързват с договорния профил на търговеца.",
+        "The intended function follows an approved trading schedule and accounts for interval deviations. It requires schedule version, time zone, PCC measurements and imbalance rules. A 15-minute day normally has 96 intervals, or 92/100 at daylight-saving transitions. Schedule and balancing link to the trader’s contractual profile."
+      ]
+    ]
+  ],
+  [
+    "Резерв, ръчно управление и безопасност",
+    "Reserve, manual control and safety",
+    [
+      [
+        "Резервно захранване",
+        "Backup reserve",
+        "Режимът предвижда запазване на SOC за критични периоди и товари. Резервът намалява енергията, достъпна за арбитраж или самоконсумация. Реална островна работа, автоматично превключване и UPS функция зависят от PCS, електрическата схема и защитите; софтуерният режим не ги създава.",
+        "The mode retains SOC for critical periods and loads. Reserve reduces energy available for arbitrage or self-consumption. Actual islanding, automatic transfer and UPS operation depend on the PCS, electrical design and protection equipment; a software mode cannot create these capabilities."
+      ],
+      [
+        "Ръчно управление",
+        "Manual control",
+        "Backend има маршрут за одитирана заявка за мощност с отделно право за запис. Ръчната заявка не заобикаля локалните BMS лимити, блокировката преди внедряване или изтичането на команда. Успешно приета заявка трябва да се различава от потвърдена приложена мощност и от действително измерената мощност.",
+        "The backend has a route for an audited power request with a separate write permission. Manual requests do not bypass local BMS limits, the commissioning lock or command expiry. An accepted request must be distinguished from confirmed applied power and actual measured power."
+      ],
+      [
+        "Последна защитна граница",
+        "Final protective boundary",
+        "Edge контролът включва локална проверка на ограниченията, heartbeat/timeout и ограничаване в драйвера. Загубата на връзка не трябва да се представя като продължаващо потвърдено управление. Изпитват се граници на SOC, заряд/разряд, загуба на heartbeat, изтекла команда и безопасен изход. Наблюдателят няма право за управление само защото вижда графиката.",
+        "Edge control includes local limit checks, heartbeat/timeouts and driver-level clamping. Lost connectivity must not be presented as continuing confirmed control. Tests cover SOC bounds, charge/discharge limits, heartbeat loss, expired commands and safe fallback. Seeing a chart does not grant an observer control permission."
+      ]
+    ]
+  ],
+  [
+    "Жизнен цикъл на стратегията",
+    "Strategy lifecycle",
+    [
+      [
+        "Чернова, проверка и симулация",
+        "Draft, validation and simulation",
+        "Черновата се създава от конкретна базова версия. Всеки запис проверява ревизията и защитава паралелните редакции. Проверяват се параметрите, наличната батерия, измерването в точката на присъединяване и необходимите обектови настройки. Симулацията използва избран период до 168 часа и запазва версиите на входните данни за възпроизводимо сравнение.",
+        "A draft starts from a specific base version. Each save checks revision and protects concurrent edits. Checks cover parameters, battery availability, connection-point metering and required Site settings. Simulation uses a selected period up to 168 hours and retains input versions for reproducible comparison."
+      ],
+      [
+        "Активиране → потвърждение",
+        "Activation → confirmation",
+        "Активирането изисква съответно право, разрешени записи след внедряване, правилната ревизия и ключ срещу повторно изпълнение. Конфигурацията се записва в свързания Strategy Asset. Отговор „активира се“ означава заявка, не завършено прилагане. Статусът отделя желана от приложена ревизия, готовност за управление, валидност на лимитите и Edge свързаност.",
+        "Activation requires the relevant permission, writes enabled after commissioning, the correct revision and an idempotency key. Configuration is written to the linked Strategy Asset. An activating response means a request, not completed application. Status separates desired/applied revisions, control readiness, valid limits and Edge connectivity."
+      ],
+      [
+        "История и оперативно състояние",
+        "History and operational state",
+        "Историята показва версии, автор, време, избран режим и резултат от активирането. Операторът сравнява желаната и приложената версия и вижда причината при отказ. Състоянията „Чернова“, „Проверена“, „Активира се“ и „Активна“ обозначават отделни стъпки. Връщането към предишна конфигурация следва същите права и проверки.",
+        "History shows versions, author, time, selected mode and activation result. Operators compare desired and applied revisions and see the reason for a rejection. Draft, Validated, Activating and Active identify separate steps. Returning to an earlier configuration follows the same permissions and checks."
+      ]
+    ]
+  ],
+  [
+    "Икономика и защита от продажба на загуба",
+    "Economics and loss protection",
+    [
+      [
+        "Два независими енергийни пътя",
+        "Two independent energy paths",
+        "Изчисленията разграничават директна продажба от PV и разряд на батерия. Директната PV продажба не се натоварва с разход за батериен цикъл. За батерията се включват цена на изходната енергия, преобразувателна загуба и избрани разходи за деградация и амортизация. Общи компоненти са търговски и борсови такси, такси за износ, риск от небаланс и минимален марж.",
+        "Calculations distinguish direct PV sale from battery discharge. Direct PV sale is not charged for a battery cycle. Battery discharge includes source-energy cost, conversion loss and selected degradation/depreciation costs. Common components include trader/exchange fees, export fees, imbalance risk and minimum margin."
+      ],
+      [
+        "Паричен или пълен разход",
+        "Cash cost or full cost",
+        "Политиката „паричен разход“ отчита текущите разходи. „Пълен разход“ добавя включените амортизация и деградация. Минимална продажна цена = общ разход + минимален марж. Нетен марж = продажна цена − общ разход. Отделната забрана за износ при отрицателна цена е включена по подразбиране в валидатора. Резултатът определя икономическата допустимост на продажбата; локалните ограничения се проверяват отделно.",
+        "Cash-cost policy accounts for current expenses. Full-cost policy adds enabled depreciation and degradation. Minimum sale price = total cost + minimum margin. Net margin = sale price − total cost. A separate negative-price export block is enabled by default in validation. The result determines economic sale eligibility; local constraints are checked separately."
+      ],
+      [
+        "Илюстративен пример, не тарифа",
+        "Illustrative example, not a tariff",
+        "При цена на заряд 80 EUR/MWh и КПД 90% изчисленият разход за преобразуване е 8,89 EUR/MWh. При още 10 EUR/MWh разходи и минимален марж 5 EUR/MWh прагът е 103,89 EUR/MWh. Продажба при 120 дава изчислен марж 21,11 EUR/MWh преди други неприложени компоненти. Примерът не е прогноза за доходност или клиентска оферта.",
+        "At an 80 EUR/MWh charge price and 90% efficiency, calculated conversion cost is 8.89 EUR/MWh. With another 10 EUR/MWh in costs and a 5 EUR/MWh minimum margin, the threshold is 103.89 EUR/MWh. A sale at 120 gives a calculated margin of 21.11 EUR/MWh before any additional unapplied components. This is not a return forecast or customer quotation."
+      ]
+    ]
+  ],
+  [
+    "Батерийни цикли, произход и тарифи",
+    "Battery cycles, provenance and tariffs",
+    [
+      [
+        "Еквивалентни пълни цикли",
+        "Equivalent full cycles",
+        "Функцията за проекция приема използваем капацитет, заряд от мрежа, заряд от PV и разряд. Общите еквивалентни цикли са (заряд от мрежа + заряд от PV + разряд)/(2 × използваем капацитет). Отделно се изчислява зарядът от всеки източник, разделен на капацитета. Това е енергиен показател, не директно измерена загуба на живот на клетките.",
+        "The projection function accepts usable capacity, grid charge, PV charge and discharge. Equivalent full cycles = (grid charge + PV charge + discharge)/(2 × usable capacity). Charging from each source divided by capacity is also reported separately. This is an energy-throughput metric, not a direct measurement of cell life loss."
+      ],
+      [
+        "Произход на енергията",
+        "Energy provenance",
+        "Енергийният регистър разделя PV към батерия, мрежа към батерия, батерия към товар и батерия към мрежа. Изчисленията използват общи интервали и съгласувани PV/PCC/товар/батерия измервания. Към икономическия сценарий се свързват версии на цените, прогнозите, тарифите и батерийната конфигурация. Така един и същ заряд не се отчита два пъти като физически цикъл.",
+        "The energy ledger separates PV-to-battery, grid-to-battery, battery-to-load and battery-to-grid flows. Calculations use common intervals and consistent PV/PCC/load/battery measurements. Price, forecast, tariff and battery-configuration versions are linked to each economic scenario. This prevents the same charge being counted twice as a physical cycle."
+      ],
+      [
+        "Тарифи и договори",
+        "Tariffs and contracts",
+        "Място: Настройки / Пазар. Супер администраторът и организационният администратор управляват разрешените договорни настройки за ЕРП и търговец. Тарифата, мрежовите ограничения, балансирането и търговският график имат отделни версии. Борсовата цена се пази отделно от крайната тарифа. Справките разграничават енергиен разход, такси, прогнозен резултат и финансово приключен период.",
+        "Location: Settings / Market. Platform and organisation administrators manage authorised DSO and trader contract settings. Tariff, grid limits, balancing and trader schedule have separate versions. Wholesale price is stored separately from the final tariff. Reports distinguish energy cost, fees, forecast outcome and a financially closed period."
+      ]
+    ]
+  ],
+  [
+    "Цени: доставка, точност и архив",
+    "Prices: delivery, precision and archive",
+    [
+      [
+        "Кога са валидни цените",
+        "When prices apply",
+        "„Ден напред“ означава цена за конкретен бъдещ интервал на доставка, не цена към часа на изтеглянето. Екранът трябва да показва деня на доставка и часовата зона Europe/Sofia. ENTSO-E A44 е източникът за пазарните цени; наличието на утрешните данни зависи от публикацията при доставчика. Липсващи интервали не се запълват с нула или вчерашна цена.",
+        "Day-ahead means a price for a specific future delivery interval, not the price at download time. The display must identify delivery day and Europe/Sofia time zone. ENTSO-E A44 is the market-price source; tomorrow’s availability depends on the provider’s publication. Missing intervals are not filled with zero or yesterday’s price."
+      ],
+      [
+        "Гранулярност и обновяване",
+        "Granularity and refresh",
+        "За BG се поддържат оригиналните 15-минутни интервали; часовите стойности са съвместим агрегиран изглед, не замяна на оригинала. Документираният worker проверява почасово утрешните данни до пълнота и възстановява текущия ден при старт/смяна на деня. Почасова заявка не означава почасова пазарна резолюция. Отделят се последна API проверка, последен успешен пълен импорт и последен интервал с цена.",
+        "BG retains native 15-minute intervals; hourly values are a compatible aggregation, not a replacement for originals. The documented worker checks tomorrow hourly until complete and recovers the current day at startup/day rollover. An hourly request does not imply hourly market resolution. Last API check, last successful complete import and last priced interval are separate."
+      ],
+      [
+        "Управление на държави и достъп",
+        "Country management and access",
+        "По подразбиране се събират само данни за България. Друга държава/ценова зона се включва изрично от супер администратора. Архивът и ревизиите се пазят в отделна TimescaleDB без автоматично изтриване. Пълният аналитичен архив и служебната диагностика са за супер админа; клиентският изглед следва разрешената услуга, зона и личен достъп.",
+        "Only Bulgaria is collected by default. Another country/bidding zone requires explicit platform-administrator enablement. The archive and revisions are retained in a separate TimescaleDB without automatic deletion. The full analytical archive and provider diagnostics are platform-admin functions; the customer view follows service, zone and personal entitlements."
+      ]
+    ]
+  ],
+  [
+    "Графики, история и прогнози",
+    "Charts, history and forecasts",
+    [
+      [
+        "Два различни източника за визуализация",
+        "Two distinct visualisation sources",
+        "Вградената Grafana визуализация за BG използва разрешените пазарни данни. Графиките за конкретен Обект получават конфигурираната история на измерванията от OpenRemote чрез GrideX API. Правото за едната услуга не отваря произволна база или чужди Обекти. Периодите за пазарния изглед включват днес, утре, 48 часа, 7/30 дни и избран диапазон до 31 дни.",
+        "The embedded BG Grafana view uses authorised market data. Site charts obtain configured OpenRemote measurement history through the GrideX API. Entitlement to one service does not open arbitrary databases or foreign Sites. Market periods include today, tomorrow, 48 hours, 7/30 days and a custom range up to 31 days."
+      ],
+      [
+        "История на измерванията",
+        "Measurement history",
+        "Периодите за измерване, публикуване и heartbeat са различни настройки. Реализираният режим за история съхранява приетите времево означени събития за избраните метрики. Профилът е желана конфигурация, не потвърждение от устройството. Липсваща стойност остава липсваща; старо измерване не получава нов час. Празна история не доказва нулево потребление.",
+        "Measurement, publication and heartbeat periods are separate settings. The implemented history mode stores accepted timestamped events for selected metrics. A profile is desired configuration, not device acknowledgement. Missing values remain missing; old measurements do not receive new timestamps. Empty history does not establish zero consumption."
+      ],
+      [
+        "Метеорология, прогнозиране и анализ",
+        "Weather, forecasting and analytics",
+        "Трите модула са част от пълната проектна спецификация на услугите. Метеорологичните входове включват температура, слънчево излъчване, облачност и вятър. Прогнозата съчетава тези входове с историята на производство, товар и цена. Анализът сравнява прогнозирани и реални стойности, базов сценарий и избран график. Всеки резултат носи период, версия и единица.",
+        "These modules form part of the full project specification for services. Weather inputs include temperature, solar radiation, cloud cover and wind. Forecasting combines these inputs with generation, load and price history. Analytics compares predicted and actual values, baseline and selected schedule. Every result carries a period, version and unit."
+      ]
+    ]
+  ],
+  [
+    "Инфраструктура и провизиране",
+    "Infrastructure and provisioning",
+    [
+      [
+        "От избор до потвърден актив",
+        "From selection to confirmed asset",
+        "Администраторът създава Обект и избира одобрена инфраструктура/устройство с конкретен модел и роля. Backend проверява принадлежността към организацията и създава/свързва съответния OpenRemote запис. Чакащо или неуспешно провизиране не се показва като работещ актив. Повторение на операция не трябва да създава втори независим обект.",
+        "An administrator creates a Site and selects approved infrastructure/device with a specific model and role. The backend checks organisation ownership and creates/links the corresponding OpenRemote record. Pending or failed provisioning is not presented as a working asset. Repeating an operation must not create a second independent Site."
+      ],
+      [
+        "Хардуерен профил",
+        "Hardware profile",
+        "Наличният валидатор за референтната ROCK/ESP конфигурация описва един ROCK Pi E и ESP възли с по един CAN или изолиран RS485 порт за свързаното устройство. Драйверът се избира по тип, модел и протокол, а не само по марка. Референтен протокол от каталог не означава изпитана съвместимост. Модели извън потвърдения списък изискват лабораторна проверка.",
+        "The reference ROCK/ESP hardware validator describes one ROCK Pi E and ESP nodes with one CAN or isolated RS485 device port each. Driver selection follows type, model and protocol, not brand alone. A reference protocol in a catalogue does not establish tested compatibility. Models outside the confirmed list require laboratory validation."
+      ],
+      [
+        "Настройки и секрети",
+        "Settings and secrets",
+        "Конфигурационните секции покриват батерия, тарифа, прогноза, мрежа, зарядна станция, известия, търговски график и балансиране. Използват се ревизии за защита от конфликтни редакции. Пароли, ключове и детайли за връзка не трябва да се връщат като публични атрибути. Промяната на желана настройка и реалното ѝ прилагане от Edge са различни събития.",
+        "Configuration sections cover battery, tariff, forecast, grid, charger, notifications, trader schedule and balancing. Revisions protect against conflicting edits. Passwords, keys and connection details must not be returned as public attributes. Changing a desired setting and actual Edge application are separate events."
+      ]
+    ]
+  ],
+  [
+    "Свързаност, аларми и известия",
+    "Connectivity, alarms and notifications",
+    [
+      [
+        "Състояние на връзката",
+        "Connection state",
+        "Heartbeat е отделен от PCS/BMS измерванията. ROCK времето на получаване, успешният контакт с ESP и времето на измерването не са взаимозаменяеми. Документираните прагове по подразбиране са 30 секунди за остарял сигнал и 90 за offline; това са настройки, не SLA. Невиждано устройство е неизвестно, а не работещо.",
+        "Heartbeat is separate from PCS/BMS measurements. ROCK receipt time, successful ESP contact and measurement time are not interchangeable. Documented defaults are 30 seconds for stale and 90 for offline; these are settings, not an SLA. A never-seen device is unknown, not operational."
+      ],
+      [
+        "Еднократно уведомяване",
+        "One-shot notification",
+        "Потребителят включва известия от профила си за бъдещи инциденти на достъпните му Обекти. Изисква се потвърден имейл и повторна проверка на достъпа преди изпращане. Изпраща се най-много едно съобщение за offline епизод; възстановяване позволява нов инцидент. Късно включване не изпраща ретроспективен мейл. Отпаднал ROCK не поражда дублиращ мейл за всеки зависим ESP.",
+        "Users opt in through their profile for future incidents at accessible Sites. A verified email and renewed access check are required before sending. At most one message is sent per offline episode; recovery permits a new incident. Late opt-in does not send retrospective mail. An offline ROCK does not generate duplicate messages for each dependent ESP."
+      ],
+      [
+        "Доставка и различни типове съобщения",
+        "Delivery and different message types",
+        "При неопределен резултат от доставчика не се твърди получен мейл и не се прави сляпо повторение. Покани, решения за услуги, известия за прекъсване и клиентски запитвания са отделни процеси. Формата за запитване има защита от автоматизирани злоупотреби; приемане за изпращане не е доказателство за доставка в пощенската кутия. Подраздел „Аларма“ е в „Режим“.",
+        "An uncertain provider result is not claimed as received mail and is not blindly retried. Invitations, service decisions, connectivity alerts and customer enquiries are separate processes. The enquiry form has automated-abuse safeguards; acceptance for sending is not proof of inbox delivery. Alarm is a subsection of Mode."
+      ]
+    ]
+  ],
+  [
+    "Архитектура, експлоатация и поддръжка",
+    "Architecture, operations and support",
+    [
+      [
+        "Кой компонент какво обслужва",
+        "Component responsibilities",
+        "API обслужва идентичност, навигация, права, Обекти, настройки, стратегии и защитени входове. Keycloak обслужва идентичности и пароли; OpenRemote — регистъра и измерванията. Отделни процеси събират пазарни цени, heartbeat и история и изпращат предупреждения. MQTT брокерът обслужва разрешените устройства; proxy компонентите пазят публичните граници; Grafana визуализира разрешени данни.",
+        "The API handles identity, navigation, permissions, Sites, settings, strategies and protected entry. Keycloak manages identities/passwords; OpenRemote manages inventory and measurements. Separate processes collect market prices, heartbeats and history, and send warnings. MQTT serves authorised devices; proxies enforce public boundaries; Grafana visualises authorised data."
+      ],
+      [
+        "Оперативни проверки",
+        "Operational checks",
+        "Работните проверки покриват вход и изход, изолация на организациите, достъп до Обекти, услуги, актуални измервания, ценови интервали, известия и възстановяване след рестарт. Резултатът се проследява за отделните компоненти и за цялата услуга. Доставчикът и клиентът определят сроковете за реакция и възстановяване в договорения план за поддръжка.",
+        "Operational checks cover sign-in/out, organisation isolation, Site access, services, current measurements, price intervals, notifications and restart recovery. Results are tracked per component and end-to-end service. Provider and customer define response and recovery times in the agreed support plan."
+      ],
+      [
+        "Разгръщане и поддръжка",
+        "Deployment and support",
+        "Архитектурата разделя уеб портал, идентичност, API, регистър на активите, времеви данни, обработващи процеси и локално управление. Хостването се избира според обема данни, броя Обекти, наличността и политиката за резервни копия. Облачна виртуална машина, включително в Google Cloud, е вариант за разгръщане; ресурсите и възстановяването се оразмеряват за проекта.",
+        "The architecture separates portal, identity, API, asset inventory, time-series data, processing workers and local control. Hosting is selected according to data volume, Site count, availability and backup policy. A cloud virtual machine, including Google Cloud, is a deployment option; resources and recovery are sized for the project."
+      ]
+    ]
+  ]
+]

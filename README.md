@@ -2,11 +2,17 @@
 
 ## Customer PDF specification / Клиентска PDF спецификация
 
-Edition 4.0, 6 November 2026: two separate 35-page documents with a linked
+Edition 5.0, 8 November 2026: two separate 43-page documents with a linked
 contents page and approved example screens for the three account roles.
 
-- [Български PDF](static/downloads/GrideX_Full_Product_Specification_BG_2026-11_v4.pdf)
-- [English PDF](static/downloads/GrideX_Full_Product_Specification_EN_2026-11_v4.pdf)
+- [Български PDF](static/downloads/GrideX_Full_Product_Specification_BG_2026-11_v5.pdf)
+- [English PDF](static/downloads/GrideX_Full_Product_Specification_EN_2026-11_v5.pdf)
+
+Издание 5 добавя осем страници „Възможни интеграции“: инвертори, батерии/BMS,
+смартметри, протоколни мостове, Edge оборудване и Modbus съвместимост.
+Edition 5 adds eight pages of possible integrations: inverters, batteries/BMS,
+smart meters, protocol bridges, Edge equipment and Modbus compatibility.
+Previous edition 4 files remain available for reference.
 
 Пълен продуктов обхват: Обекти, активи, инфраструктура, услуги и права,
 стратегии, пазарни цени, икономика, прогнозиране и проектни разширения.

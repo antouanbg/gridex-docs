@@ -1,5 +1,24 @@
 # GrideX documentation handoff
 
+## 2026-11-08 — Possible integrations / Възможни интеграции
+
+Owner requested a unified possible-integration catalogue, without readiness
+tiers. Edition 5 adds eight bilingual chapters (PDF pages 30–37): Edge hardware,
+two inverter lists, BESS/batteries, BMS profiles, meters, protocol bridges and
+Modbus selection. Exact-model/firmware/map compatibility qualification remains.
+No additional driver, command path or permission is implemented by this change.
+
+Sources: gridex-energy-os commit 421b667, app/data/supported-devices.ts and
+app/sections/devices.tsx; gridex-edge-gateway origin/main cfd0c63, README,
+docs/DRIVER_CATALOG.md and docs/SUNTECH_STE261L_PROTOCOL.md. Product examples
+remain described as examples; RS485 is not silently equated with Modbus,
+and CAN BMS bindings are not represented as complete inverter control APIs.
+Sources are recorded here, not exposed as project repository links in the PDF.
+
+БГ: двата PDF са по 43 страници с 37 навигационни отметки. Каталогът използва
+само производители/профили от посочените източници. Старото издание е запазено.
+Публикацията е на документи, без рестарт или промени на живи услуги и права.
+
 ## 2026-10-09 — service approval clarity (review only)
 
 Owner-approved scope: preserve organisation + member grants; distinguish their
